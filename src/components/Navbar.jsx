@@ -1,15 +1,15 @@
 import { useState, Fragment } from 'react'
-import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import { Link } from 'react-router-dom'
+import { Dialog, Popover, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
   XMarkIcon,
   ChevronDownIcon,
   ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-  ArrowPathIcon,
 } from '@heroicons/react/24/outline'
+import InstagramIcon from '@mui/icons-material/Instagram'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import MailOutlineIcon from '@mui/icons-material/MailOutline'
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -21,13 +21,13 @@ export default function Navbar() {
       >
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link to="/" className="-m-1.5 p-1.5">
             <img
               className="h-8 w-auto"
               src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
               alt=""
             />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -117,29 +117,43 @@ export default function Navbar() {
               </Popover.Panel>
             </Transition>
           </Popover>
-          <a
-            href="/"
+          <Link
+            to="/"
             className="text-sm font-semibold leading-6 text-gray-900 text-white"
           >
             Галерея
-          </a>
-          <a
-            href="/"
+          </Link>
+          <Link
+            to="/"
             className="text-sm font-semibold leading-6 text-gray-900 text-white"
           >
             Контакти
-          </a>
-          <a
-            href="/"
+          </Link>
+          <Link
+            to="/"
             className="text-sm font-semibold leading-6 text-gray-900 text-white"
           >
             Про нас
-          </a>
+          </Link>
         </Popover.Group>
+
         <div className="hidden lg:flex lg:flex-1 lg:justify-end rounded-none">
+          <InstagramIcon
+            className="text-white mr-1 hover:opacity-70 cursor-pointer"
+            fontSize="medium"
+          />
+          <FacebookIcon
+            className="text-white mr-1 hover:opacity-70 cursor-pointer"
+            fontSize="medium"
+          />
+          <MailOutlineIcon
+            className="text-white mr-20 hover:opacity-70 cursor-pointer"
+            fontSize="medium"
+          />
+
           <select className="text-sm font-semibold leading-6 text-gray-900 text-black p-1  w-[60px] ">
-            <option  value="1">EN</option>
-            <option  value="2">UK</option>
+            <option value="1">EN</option>
+            <option value="2">UK</option>
           </select>
         </div>
       </nav>
@@ -152,14 +166,14 @@ export default function Navbar() {
         <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link to="/" className="-m-1.5 p-1.5">
               <span className="sr-only ">Your Company</span>
               <img
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                 alt=""
               />
-            </a>
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -173,20 +187,48 @@ export default function Navbar() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <a className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                <Link
+                  to="/"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
+                >
                   text
-                </a>
-                <a className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                </Link>
+                <Link
+                  to="/"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
+                >
                   text
-                </a>
-                <a className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                </Link>
+                <Link
+                  to="/"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
+                >
                   text
-                </a>
-                <a className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                </Link>
+                <Link
+                  to="/"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
+                >
                   text
-                </a>
+                </Link>
               </div>
-              <div className="py-6">
+
+              <div className="flex justify-center items-center">
+                {' '}
+                <InstagramIcon
+                  className=" mr-1 hover:opacity-70 cursor-pointer"
+                  fontSize="medium"
+                />
+                <FacebookIcon
+                  className=" mr-1 hover:opacity-70 cursor-pointer"
+                  fontSize="medium"
+                />
+                <MailOutlineIcon
+                  className="hover:opacity-70 cursor-pointer"
+                  fontSize="medium"
+                />
+              </div>
+              <div className="py-6 flex justify-center">
                 <select className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                   <option value="1">EN</option>
                   <option value="2">UK</option>
