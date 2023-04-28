@@ -1,4 +1,4 @@
-import { useState, Fragment } from 'react'
+import { useState, Fragment, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Dialog, Popover, Transition } from '@headlessui/react'
 import {
@@ -7,27 +7,37 @@ import {
   ChevronDownIcon,
   ChartPieIcon,
 } from '@heroicons/react/24/outline'
-import InstagramIcon from '@mui/icons-material/Instagram'
-import FacebookIcon from '@mui/icons-material/Facebook'
-import MailOutlineIcon from '@mui/icons-material/MailOutline'
+import LanguageSelect from './LanguageSelect'
+import SocialMedia from './SocialMedia'
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [showScrollNavbar, setShowScrollNavbar] = useState(false)
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        setShowScrollNavbar(true)
+      } else {
+        setShowScrollNavbar(false)
+      }
+    })
+  }, [])
+
   return (
-    <div className="fixed inset-x-0 top-0 z-50 bg-black opacity-80">
+    <div className="fixed inset-x-0 top-0 z-50 snap-y ">
       <nav
-        className="flex items-center justify-between p-6 lg:px-8 "
+        className={
+          showScrollNavbar
+            ? 'flex items-center justify-between py-4 px-10 lg:px-8 bg-orange-200 duration-200 shadow'
+            : 'flex items-center justify-between py-2 px-10 lg:px-8 duration-500'
+        }
         aria-label="Global"
       >
-        {/* Logo */}
-        <div className="flex lg:flex-1">
+        <div className="flex lg:flex-1 justify-evenly">
           <Link to="/" className="-m-1.5 p-1.5">
-            <img
-              className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt=""
-            />
+            <div className="h-[100px] w-[255px]  bg-[url('../public/images/Logo_4.png')] bg-center bg-cover bg-no-repeat "></div>
           </Link>
+          <div></div>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -39,12 +49,11 @@ export default function Navbar() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        {/* NavDesctop */}
 
-        {/*  */}
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-          <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 text-white">
+        <div className='flex items-center text-center'>
+          <Popover className="relative mr-10">
+            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 text-black">
               Меню
               <ChevronDownIcon
                 className="h-5 w-5 flex-none text-gray-400"
@@ -117,45 +126,31 @@ export default function Navbar() {
               </Popover.Panel>
             </Transition>
           </Popover>
-          <Link
-            to="/"
-            className="text-sm font-semibold leading-6 text-gray-900 text-white"
-          >
-            Галерея
-          </Link>
-          <Link
-            to="/"
-            className="text-sm font-semibold leading-6 text-gray-900 text-white"
-          >
-            Контакти
-          </Link>
-          <Link
-            to="/"
-            className="text-sm font-semibold leading-6 text-gray-900 text-white"
-          >
-            Про нас
-          </Link>
+          
+            {' '}
+            <Link
+              to="/"
+              className="text-sm font-semibold leading-6 text-gray-900 text-black mr-10 items-center text-center"
+            >
+              Галерея
+            </Link>
+            <Link
+              to="/"
+              className="text-sm font-semibold leading-6 text-gray-900 text-black mr-10"
+            >
+              Контакти
+            </Link>
+            <Link
+              to="/"
+              className="text-sm font-semibold leading-6 text-gray-900 text-black mr-40"
+            >
+              Про нас
+            </Link>
+          </div>
+          <div className="flex justify-center items-center">
+            <SocialMedia />
+          </div>
         </Popover.Group>
-
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end rounded-none">
-          <InstagramIcon
-            className="text-white mr-1 hover:opacity-70 cursor-pointer"
-            fontSize="medium"
-          />
-          <FacebookIcon
-            className="text-white mr-1 hover:opacity-70 cursor-pointer"
-            fontSize="medium"
-          />
-          <MailOutlineIcon
-            className="text-white mr-20 hover:opacity-70 cursor-pointer"
-            fontSize="medium"
-          />
-
-          <select className="text-sm font-semibold leading-6 text-gray-900 text-black p-1  w-[60px] ">
-            <option value="1">EN</option>
-            <option value="2">UK</option>
-          </select>
-        </div>
       </nav>
       <Dialog
         as="div"
@@ -163,17 +158,11 @@ export default function Navbar() {
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
+        {/* NavMobile */}
         <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link to="/" className="-m-1.5 p-1.5">
-              <span className="sr-only ">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
-            </Link>
+            <Link to="/" className="-m-1.5 p-1.5"></Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -183,56 +172,45 @@ export default function Navbar() {
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          {/* NavMobile */}
+          <div className="flex lg:flex-1 justify-center">
+            <Link to="/" className="-m-1.5 p-1.5">
+              <div className="h-[100px] w-[255px]  bg-[url('../public/images/Logo_4.png')] bg-center bg-cover bg-no-repeat "></div>
+            </Link>
+          </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
+              <div className="space-y-2 py-6 ">
                 <Link
                   to="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
                 >
-                  text
+                  Меню
                 </Link>
                 <Link
                   to="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
                 >
-                  text
+                  Галерея
                 </Link>
                 <Link
                   to="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
                 >
-                  text
+                  Контакти
                 </Link>
                 <Link
                   to="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
                 >
-                  text
+                  Про нас
                 </Link>
               </div>
 
               <div className="flex justify-center items-center">
-                {' '}
-                <InstagramIcon
-                  className=" mr-1 hover:opacity-70 cursor-pointer"
-                  fontSize="medium"
-                />
-                <FacebookIcon
-                  className=" mr-1 hover:opacity-70 cursor-pointer"
-                  fontSize="medium"
-                />
-                <MailOutlineIcon
-                  className="hover:opacity-70 cursor-pointer"
-                  fontSize="medium"
-                />
+                <SocialMedia />
               </div>
               <div className="py-6 flex justify-center">
-                <select className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                  <option value="1">EN</option>
-                  <option value="2">UK</option>
-                </select>
+                <LanguageSelect />
               </div>
             </div>
           </div>
