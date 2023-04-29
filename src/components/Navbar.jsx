@@ -24,12 +24,12 @@ export default function Navbar() {
   }, [])
 
   return (
-    <div className="fixed inset-x-0 top-0 z-50 snap-y ">
+    <div className="fixed inset-x-0 top-0 z-50 snap-y bg-slate-200">
       <nav
         className={
           showScrollNavbar
-            ? 'flex items-center justify-between py-1 px-6 lg:px-8 bg-white duration-300 shadow-lg shadow-bg-orange-50'
-            : 'flex items-center justify-between py-6 px-6 lg:px-8  duration-500 shadow-lg shadow-bg-orange-50'
+            ? 'flex items-center justify-between py-1 px-8 lg:px-8 bg-white duration-300 shadow-lg shadow-bg-orange-50'
+            : 'flex items-center justify-between py-4 px-8 lg:px-8  duration-500 '
         }
         aria-label="Global"
       >
@@ -50,7 +50,7 @@ export default function Navbar() {
         </div>
 
         <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
-          <div className="flex items-end mt-10">
+          <div className="flex items-end mt-5">
             <Popover className="relative mr-10 ">
               <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 text-black">
                 Меню

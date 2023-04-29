@@ -8,7 +8,7 @@ import Navbar from '../components/Navbar'
 const layout = ({ children }) => {
   return (
     <div
-      className="sm:w-[85%] sm:shadow-lg shadow-cyan-500"
+      className="sm:w-[100%] sm:shadow-lg shadow-cyan-500"
       style={{ margin: '0px auto' }}
     >
       <Navbar />

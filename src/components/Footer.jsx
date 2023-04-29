@@ -3,7 +3,7 @@ import SocialMedia from './SocialMedia'
 
 export default function Footer() {
   return (
-    <div className=" py-2 mb-10 sm:py-8 bg-zinc-200 ">
+    <div className=" py-2 my-7 sm:py-8 bg-zinc-200 ">
       <div className="mx-auto max-w-3xl px-6 lg:px-8 ">
         <div className="mx-auto mt-5 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-2 sm:max-w-xl sm:grid-cols-4 sm:gap-x-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 ">
           <Link
