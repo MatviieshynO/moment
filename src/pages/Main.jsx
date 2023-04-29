@@ -1,6 +1,8 @@
+import Header from '../components/Header'
 const Home = () => {
   return (
     <div>
+      <Header />
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet illum
       praesentium quae aperiam harum voluptate laborum pariatur! Ratione
       voluptatum quas, deleniti sapiente dolorem totam accusamus excepturi, quod

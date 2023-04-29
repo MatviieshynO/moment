@@ -28,14 +28,14 @@ export default function Navbar() {
       <nav
         className={
           showScrollNavbar
-            ? 'flex items-center justify-between py-0 px-6 lg:px-8 bg-orange-50 duration-300 shadow-lg shadow-bg-orange-50'
-            : 'flex items-center justify-between py-4 px-6 lg:px-8  duration-500 shadow-lg shadow-bg-orange-50'
+            ? 'flex items-center justify-between py-0 px-6 lg:px-8 bg-white duration-300 shadow-lg shadow-bg-orange-50'
+            : 'flex items-center justify-between py-6 px-6 lg:px-8  duration-500 shadow-lg shadow-bg-orange-50'
         }
         aria-label="Global"
       >
         <div className="flex lg:flex-1 justify-evenly">
           <Link to="/">
-            <div className="h-[75px] w-[200px] bg-[url('../public/images/Logo_1.png')] bg-center bg-cover bg-no-repeat "></div>
+            <div className="h-[65px] w-[200px] bg-[url('../public/images/Logo_1.png')] bg-center bg-cover bg-no-repeat "></div>
           </Link>
           <div></div>
         </div>
@@ -50,7 +50,7 @@ export default function Navbar() {
         </div>
 
         <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
-          <div className="flex">
+          <div className="flex items-end mt-10">
             <Popover className="relative mr-10 ">
               <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 text-black">
                 Меню

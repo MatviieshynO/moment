@@ -21,7 +21,7 @@ const ScrollToTopButton = () => {
   }
   console.log(showScrollButton)
   return (
-    <div className="fixed sm:bottom-[70px] sm:right-[50px] md:bottom-[80px] md:right-[50px] bottom-[0px] right-[45%] text-6xl">
+    <div className="fixed sm:bottom-[10%] sm:right-[3%] md:bottom-[10%] md:right-[3%] bottom-[-10px] right-[45%] text-6xl">
       {showScrollButton && (
         <KeyboardDoubleArrowUpIcon
           className="cursor-pointer hover:border-[1px] bg-incherit hover:bg-white"
