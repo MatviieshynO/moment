@@ -19,7 +19,6 @@ const ScrollToTopButton = () => {
       behavior: 'smooth',
     })
   }
-  console.log(showScrollButton)
   return (
     <div className="fixed sm:bottom-[10%] sm:right-[3%] md:bottom-[10%] md:right-[3%] bottom-[-9px] right-[45%] text-6xl">
       {showScrollButton && (

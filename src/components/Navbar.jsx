@@ -28,7 +28,7 @@ export default function Navbar() {
       <nav
         className={
           showScrollNavbar
-            ? 'flex items-center justify-between py-0 px-6 lg:px-8 bg-white duration-300 shadow-lg shadow-bg-orange-50'
+            ? 'flex items-center justify-between py-1 px-6 lg:px-8 bg-white duration-300 shadow-lg shadow-bg-orange-50'
             : 'flex items-center justify-between py-6 px-6 lg:px-8  duration-500 shadow-lg shadow-bg-orange-50'
         }
         aria-label="Global"
@@ -137,7 +137,7 @@ export default function Navbar() {
 
             <Link
               to="/"
-              className="text-sm font-semibold leading-6 text-gray-900 text-black mr-10 items-center text-center"
+              className="text-sm font-semibold leading-6 text-gray-900 text-black mr-10 items-center text-center "
             >
               Галерея
             </Link>
@@ -149,12 +149,14 @@ export default function Navbar() {
             </Link>
             <Link
               to="/"
-              className="text-sm font-semibold leading-6 text-gray-900 text-black mr-40"
+              className="text-sm font-semibold leading-6 text-gray-900 text-black mr-40 w-[60px]"
             >
               Про нас
             </Link>
           </div>
-          <LanguageSelect />
+          <div className="flex items-center">
+            <LanguageSelect />
+          </div>
           <div className="flex justify-center items-center">
             <SocialMedia />
           </div>

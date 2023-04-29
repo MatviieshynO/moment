@@ -5,7 +5,6 @@ import Layout from './layout/Layout'
 import Main from './pages/Main'
 import Legal from './pages/Legal'
 import PrivacyPolicy from './pages/PrivacyPolicy'
-import TermOfUse from './pages/TermsOfUse'
 import Page404 from './pages/Page404'
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
           <Route indexelement={<Main />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
-          <Route path="/terms" element={<TermOfUse />} />
           <Route path="/*" element={<Page404 />} />
         </Route>
       </Routes>

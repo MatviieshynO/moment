@@ -3,9 +3,9 @@ import SocialMedia from './SocialMedia'
 
 export default function Footer() {
   return (
-    <div className=" py-2 mb-7 sm:py-8 bg-zinc-200 ">
+    <div className=" py-2 mb-10 sm:py-8 bg-zinc-200 ">
       <div className="mx-auto max-w-3xl px-6 lg:px-8 ">
-        <div className="mx-auto mt-5 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-2 sm:max-w-xl sm:grid-cols-2 sm:gap-x-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 ">
+        <div className="mx-auto mt-5 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-2 sm:max-w-xl sm:grid-cols-4 sm:gap-x-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 ">
           <Link
             to="/privacy"
             className="col-span-2 max-h-7 w-full object-contain lg:col-span-1  text-black text-center border-b-[1px] border-black text-xs leading-8"
