@@ -5,6 +5,7 @@ import {
   Bars3Icon,
   ChevronDownIcon,
   ChartPieIcon,
+  XMarkIcon,
 } from '@heroicons/react/24/outline'
 import LanguageSelect from './LanguageSelect'
 import SocialMedia from './SocialMedia'
@@ -21,14 +22,14 @@ export default function Navbar() {
       }
     })
   }, [])
-
+  console.log(mobileMenuOpen)
   return (
-    <div className="fixed inset-x-0 top-0 z-50 snap-y">
+    <div className="fixed inset-x-0 top-0 z-20 snap-y">
       <nav
         className={
           showScrollNavbar
-            ? 'flex items-center justify-between py-2 px-8 lg:px-8 duration-400 bg-yellow-50 shadow-lg shadow-bg-orange-50'
-            : 'flex items-center justify-between py-6 px-8 lg:px-8 duration-400 text-white'
+            ? 'flex items-center justify-between py-2 px-8 lg:px-8 duration-500 bg-yellow-50 shadow-lg shadow-bg-orange-50'
+            : 'flex items-center justify-between py-6 px-8 lg:px-8 duration-500 text-white'
         }
         aria-label="Global"
       >
@@ -46,7 +47,7 @@ export default function Navbar() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-500"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
             onClick={() => setMobileMenuOpen(true)}
           >
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -195,9 +196,9 @@ export default function Navbar() {
         onClose={setMobileMenuOpen}
       >
         {/* NavMobile */}
-        <div className="fixed inset-0 z-40" />
+        <div className="fixed inset-0 z-0" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-white px-2 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          {/* <div className="flex justify-end mt-6 mr-4 ">
+          <div className="flex justify-end mt-12 mr-6 ">
             <button
               type="button"
               className="rounded-md text-gray-700 "
@@ -205,14 +206,14 @@ export default function Navbar() {
             >
               <XMarkIcon className="h-6 w-6 " aria-hidden="true" />
             </button>
-          </div> */}
-          {/* <div className="flex justify-center ">
+          </div>
+          <div className="flex justify-center ">
             <Link to="/" className="">
               <div className="h-[155px] w-[165px]  bg-[url('../public/images/Logo_2.png')] bg-center bg-cover bg-no-repeat "></div>
             </Link>
-          </div> */}
+          </div>
           {/*   */}
-          <div className="mt-60 flow-root">
+          <div className="mt-10 flow-root">
             <div className="-my-6 ">
               <div className="space-y-2 py-6 ">
                 <Link
