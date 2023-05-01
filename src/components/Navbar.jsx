@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { Dialog, Popover, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
-  XMarkIcon,
   ChevronDownIcon,
   ChartPieIcon,
 } from '@heroicons/react/24/outline'
@@ -28,27 +27,26 @@ export default function Navbar() {
       <nav
         className={
           showScrollNavbar
-            ? 'flex items-center justify-between py-0 px-8 lg:px-8 duration-700 bg-yellow-50 shadow-lg shadow-bg-orange-50'
-            : 'flex items-center justify-between py-2 px-8 lg:px-8 duration-700 text-white'
+            ? 'flex items-center justify-between py-2 px-8 lg:px-8 duration-400 bg-yellow-50 shadow-lg shadow-bg-orange-50'
+            : 'flex items-center justify-between py-6 px-8 lg:px-8 duration-400 text-white'
         }
         aria-label="Global"
       >
-        <div className="flex lg:flex-1 justify-evenly">
+        <div className="flex lg:flex-1 justify-start">
           <Link to="/">
             <div
               className={
                 showScrollNavbar
                   ? "h-[75px] w-[220px] bg-[url('../public/images/Logo_1.png')] bg-center bg-cover bg-no-repeat text-black"
-                  : "h-[45px] w-[175px] bg-[url('../public/images/Logo_1.png')] bg-center bg-cover bg-no-repeat text-white"
+                  : "h-[85px] w-[245px] bg-[url('../public/images/Logo_1.png')] bg-center bg-cover bg-no-repeat text-white"
               }
             ></div>
           </Link>
-          <div></div>
         </div>
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-600"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-500"
             onClick={() => setMobileMenuOpen(true)}
           >
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -56,12 +54,22 @@ export default function Navbar() {
         </div>
 
         <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
-          <div className="flex items-end mt-5">
+          <div className="flex items-end pt-10">
             <Popover className="relative mr-10 ">
-              <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-400">
+              <Popover.Button
+                className={
+                  showScrollNavbar
+                    ? 'flex items-center gap-x-1 text-lg font-semibold leading-6 text-gray-900 font-serif tracking-widest'
+                    : 'flex items-center gap-x-1 text-lg font-semibold leading-6 text-gray-300 font-serif tracking-widest'
+                }
+              >
                 Меню
                 <ChevronDownIcon
-                  className="h-5 w-5 flex-none text-gray-400"
+                  className={
+                    showScrollNavbar
+                      ? 'h-5 w-5 flex-none text-gray-900'
+                      : 'h-5 w-5 flex-none text-gray-50'
+                  }
                   aria-hidden="true"
                 />
               </Popover.Button>
@@ -113,7 +121,7 @@ export default function Navbar() {
                         >
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="mt-1 text-gray-600">Десерти</p>
+                        <p className="mt-1 text-gray-900">Десерти</p>
                       </div>
                     </div>
                   </div>
@@ -133,7 +141,7 @@ export default function Navbar() {
                         >
                           <span className="absolute inset-0" />
                         </a>
-                        <p className="mt-1 text-gray-600">Канапки</p>
+                        <p className="mt-1 text-gray-900">Канапки</p>
                       </div>
                     </div>
                   </div>
@@ -143,19 +151,31 @@ export default function Navbar() {
 
             <Link
               to="/"
-              className="text-sm font-semibold leading-6 text-gray-400 mr-10 items-center text-center "
+              className={
+                showScrollNavbar
+                  ? 'text-lg font-semibold leading-6 text-gray-900 mr-10 items-center text-center font-serif'
+                  : 'text-lg font-semibold leading-6 text-gray-200 mr-10 items-center text-center font-serif'
+              }
             >
               Галерея
             </Link>
             <Link
               to="/"
-              className="text-sm font-semibold leading-6 text-gray-400 mr-10"
+              className={
+                showScrollNavbar
+                  ? 'text-lg font-semibold leading-6 text-gray-900 mr-10 font-serif tracking-widest'
+                  : 'text-lg font-semibold leading-6 text-gray-300 mr-10 font-serif tracking-widest'
+              }
             >
               Контакти
             </Link>
             <Link
               to="/"
-              className="text-sm font-semibold leading-6 text-gray-400 mr-40 w-[60px]"
+              className={
+                showScrollNavbar
+                  ? 'text-lg font-semibold leading-6 text-gray-900 mr-40 w-[100px] font-serif tracking-widest'
+                  : 'text-lg font-semibold leading-6 text-gray-300 mr-40 w-[100px] font-serif tracking-widest'
+              }
             >
               Про нас
             </Link>
@@ -197,7 +217,7 @@ export default function Navbar() {
               <div className="space-y-2 py-6 ">
                 <Link
                   to="/"
-                  className="-mx-0 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
+                  className="-mx-0 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-50 text-center"
                 >
                   Меню
                 </Link>
