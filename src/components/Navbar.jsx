@@ -15,7 +15,7 @@ export default function Navbar() {
   const [showScrollNavbar, setShowScrollNavbar] = useState(false)
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 10) {
         setShowScrollNavbar(true)
       } else {
         setShowScrollNavbar(false)
@@ -28,8 +28,8 @@ export default function Navbar() {
       <nav
         className={
           showScrollNavbar
-            ? 'flex items-center justify-between py-1 px-8 lg:px-8 bg-gray-300 duration-200 shadow-lg shadow-bg-orange-50'
-            : 'flex items-center justify-between py-6 px-8 lg:px-8 duration-500 text-white'
+            ? 'flex items-center justify-between py-0 px-8 lg:px-8 duration-700 bg-yellow-50 shadow-lg shadow-bg-orange-50'
+            : 'flex items-center justify-between py-2 px-8 lg:px-8 duration-700 text-white'
         }
         aria-label="Global"
       >
@@ -38,8 +38,8 @@ export default function Navbar() {
             <div
               className={
                 showScrollNavbar
-                  ? "h-[65px] w-[200px] bg-[url('../public/images/Logo_1.png')] bg-center bg-cover bg-no-repeat text-black"
-                  : "h-[65px] w-[200px] bg-[url('../public/images/Logo_1.png')] bg-center bg-cover bg-no-repeat text-white"
+                  ? "h-[75px] w-[220px] bg-[url('../public/images/Logo_1.png')] bg-center bg-cover bg-no-repeat text-black"
+                  : "h-[45px] w-[175px] bg-[url('../public/images/Logo_1.png')] bg-center bg-cover bg-no-repeat text-white"
               }
             ></div>
           </Link>
@@ -48,7 +48,7 @@ export default function Navbar() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-300"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-600"
             onClick={() => setMobileMenuOpen(true)}
           >
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -175,7 +175,7 @@ export default function Navbar() {
         onClose={setMobileMenuOpen}
       >
         {/* NavMobile */}
-        <div className="fixed inset-0 z-50" />
+        <div className="fixed inset-0 z-40" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-white px-2 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           {/* <div className="flex justify-end mt-6 mr-4 ">
             <button
@@ -192,7 +192,7 @@ export default function Navbar() {
             </Link>
           </div> */}
           {/*   */}
-          <div className="mt-40 flow-root">
+          <div className="mt-60 flow-root">
             <div className="-my-6 ">
               <div className="space-y-2 py-6 ">
                 <Link

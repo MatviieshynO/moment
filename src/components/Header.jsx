@@ -6,7 +6,7 @@ export default function Header() {
     <div className="">
       <Navbar />
 
-      <div className="relative isolate px-6 pt-14 lg:px-8 bg-slate-200 bg-[url('../public/images/header-bg.gif')] bg-start bg-cover bg-no-repeat">
+      <div className="relative isolate px-6 pt-14 lg:px-8 bg-slate-200 bg-[url('../public/images/header-bg.png')] bg-start bg-cover bg-no-repeat">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
