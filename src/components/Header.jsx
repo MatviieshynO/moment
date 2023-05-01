@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
-    <div>
+    <div className="">
       <Navbar />
 
-      <div className="relative isolate px-6 pt-14 lg:px-8 bg-slate-200">
+      <div className="relative isolate px-6 pt-14 lg:px-8 bg-slate-200 bg-[url('../public/images/slide-image-3.jpg')] bg-center bg-cover bg-no-repeat">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"

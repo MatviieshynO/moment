@@ -28,8 +28,8 @@ export default function Navbar() {
       <nav
         className={
           showScrollNavbar
-            ? 'flex items-center justify-between py-1 px-8 lg:px-8 bg-white duration-300 shadow-lg shadow-bg-orange-50'
-            : 'flex items-center justify-between py-4 px-8 lg:px-8  duration-500 '
+            ? 'flex items-center justify-between py-1 px-8 lg:px-8 duration-300 shadow-lg shadow-bg-orange-50'
+            : 'flex items-center justify-between py-4 px-8 lg:px-8 duration-500 '
         }
         aria-label="Global"
       >
@@ -169,9 +169,9 @@ export default function Navbar() {
         onClose={setMobileMenuOpen}
       >
         {/* NavMobile */}
-        <div className="fixed inset-0 z-50 " />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-2 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 ">
-          <div className="flex justify-end mt-6 mr-4">
+        <div className="fixed inset-0 z-50"/>
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-white px-2 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="flex justify-end mt-6 mr-4 ">
             <button
               type="button"
               className="rounded-md text-gray-700 "
@@ -180,14 +180,14 @@ export default function Navbar() {
               <XMarkIcon className="h-6 w-6 " aria-hidden="true" />
             </button>
           </div>
-          <div className="flex justify-center ">
+          {/* <div className="flex justify-center ">
             <Link to="/" className="">
               <div className="h-[155px] w-[165px]  bg-[url('../public/images/Logo_2.png')] bg-center bg-cover bg-no-repeat "></div>
             </Link>
-          </div>
+          </div> */}
           {/*   */}
-          <div className="mt-16 flow-root mt-">
-            <div className="-my-6">
+          <div className="mt-16 flow-root">
+            <div className="-my-6 ">
               <div className="space-y-2 py-6 ">
                 <Link
                   to="/"
