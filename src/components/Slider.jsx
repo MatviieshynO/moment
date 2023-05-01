@@ -8,13 +8,10 @@ const Slider = () => {
   return (
     <div
       id="carouselExampleCaptions"
-      className="relative sm:px-10 md:px-20 lg:px-40 xl:px-50"
+      className="relative sm:px-10 md:px-20 lg:px-40 xl:px-60"
       data-te-carousel-init
       data-te-carousel-slide
     >
-      <h3 className="text-center text-3xl my-8">
-        Екстерєр і інтерєр нашої кавярні
-      </h3>
       {/* <!--Carousel indicators--> */}
       <div
         className="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
@@ -55,7 +52,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="/images/slide-image-3.jpg"
+            src="/images/slide-image-4.jpg"
             className="block w-full h-[500px] bg-center bg-cover bg-no-repeat"
             alt="..."
           />
@@ -101,27 +98,25 @@ const Slider = () => {
 
       {/* <!--Carousel controls - prev item--> */}
       <button
-        className="absolute bottom-0 left-0 top-0 z-[1] flex w-[23%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+        className="absolute sm:left-10 md:left-12 lg:left-20 xl:left-30 bottom-0 left-0 top-0 z-[1] flex w-[23%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
         type="button"
         data-te-target="#carouselExampleCaptions"
         data-te-slide="prev"
       >
-        <span className="inline-block h-2 w-2 text-2xl md:ml-20 lg:ml-40">{'<<'}</span>
+        <span className="inline-block h-2 w-2 text-2xl">{'<'}</span>
         <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
           Previous
         </span>
       </button>
       {/* <!--Carousel controls - next item--> */}
       <button
-        className="absolute bottom-0 right-0 top-0 z-[1] flex w-[25%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+        className="absolute sm:right-10 md:right-12 lg:right-20 xl:right-30 bottom-0 right-0 top-0 z-[1] flex w-[25%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
         type="button"
         data-te-target="#carouselExampleCaptions"
         data-te-slide="next"
       >
-        <span className="inline-block h-2 text-2xl md:mr-20 lg:mr-40">{'>>'}</span>
-        <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-          dsd
-        </span>
+        <span className="inline-block h-2 text-2xl">{'>'}</span>
+        
       </button>
     </div>
   )

@@ -186,36 +186,36 @@ export default function Navbar() {
             </Link>
           </div>
           {/*   */}
-          <div className="mt-6 flow-root ">
+          <div className="mt-16 flow-root mt-">
             <div className="-my-6">
               <div className="space-y-2 py-6 ">
                 <Link
                   to="/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
+                  className="-mx-0 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
                 >
                   Меню
                 </Link>
                 <Link
                   to="/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
+                  className="-mx-0 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
                 >
                   Галерея
                 </Link>
                 <Link
                   to="/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
+                  className="-mx-0 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
                 >
                   Контакти
                 </Link>
                 <Link
                   to="/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
+                  className="-mx-0 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
                 >
                   Про нас
                 </Link>
               </div>
 
-              <div className="flex justify-center items-center">
+              <div className="flex justify-center items-center mt-10">
                 <LanguageSelect />
               </div>
               <div className="py-6 flex justify-center">
