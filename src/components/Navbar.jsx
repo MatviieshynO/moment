@@ -15,7 +15,7 @@ export default function Navbar() {
   const [showScrollNavbar, setShowScrollNavbar] = useState(false)
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 10) {
+      if (window.scrollY > 50) {
         setShowScrollNavbar(true)
       } else {
         setShowScrollNavbar(false)
@@ -24,25 +24,31 @@ export default function Navbar() {
   }, [])
 
   return (
-    <div className="fixed inset-x-0 top-0 z-50 snap-y bg-slate-200">
+    <div className="fixed inset-x-0 top-0 z-50 snap-y">
       <nav
         className={
           showScrollNavbar
-            ? 'flex items-center justify-between py-1 px-8 lg:px-8 duration-300 shadow-lg shadow-bg-orange-50'
-            : 'flex items-center justify-between py-4 px-8 lg:px-8 duration-500 '
+            ? 'flex items-center justify-between py-1 px-8 lg:px-8 bg-gray-300 duration-200 shadow-lg shadow-bg-orange-50'
+            : 'flex items-center justify-between py-6 px-8 lg:px-8 duration-500 text-white'
         }
         aria-label="Global"
       >
         <div className="flex lg:flex-1 justify-evenly">
           <Link to="/">
-            <div className="h-[65px] w-[200px] bg-[url('../public/images/Logo_1.png')] bg-center bg-cover bg-no-repeat "></div>
+            <div
+              className={
+                showScrollNavbar
+                  ? "h-[65px] w-[200px] bg-[url('../public/images/Logo_1.png')] bg-center bg-cover bg-no-repeat text-black"
+                  : "h-[65px] w-[200px] bg-[url('../public/images/Logo_1.png')] bg-center bg-cover bg-no-repeat text-white"
+              }
+            ></div>
           </Link>
           <div></div>
         </div>
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-300"
             onClick={() => setMobileMenuOpen(true)}
           >
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -52,7 +58,7 @@ export default function Navbar() {
         <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
           <div className="flex items-end mt-5">
             <Popover className="relative mr-10 ">
-              <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 text-black">
+              <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-400">
                 Меню
                 <ChevronDownIcon
                   className="h-5 w-5 flex-none text-gray-400"
@@ -94,7 +100,7 @@ export default function Navbar() {
                   {/* popers item2 */}
                   <div className="p-1">
                     <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg group-hover:bg-white">
                         <ChartPieIcon
                           className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
                           aria-hidden="true"
@@ -114,7 +120,7 @@ export default function Navbar() {
                   {/* popers item3 */}
                   <div className="p-1">
                     <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg group-hover:bg-white">
                         <ChartPieIcon
                           className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
                           aria-hidden="true"
@@ -137,19 +143,19 @@ export default function Navbar() {
 
             <Link
               to="/"
-              className="text-sm font-semibold leading-6 text-gray-900 text-black mr-10 items-center text-center "
+              className="text-sm font-semibold leading-6 text-gray-400 mr-10 items-center text-center "
             >
               Галерея
             </Link>
             <Link
               to="/"
-              className="text-sm font-semibold leading-6 text-gray-900 text-black mr-10"
+              className="text-sm font-semibold leading-6 text-gray-400 mr-10"
             >
               Контакти
             </Link>
             <Link
               to="/"
-              className="text-sm font-semibold leading-6 text-gray-900 text-black mr-40 w-[60px]"
+              className="text-sm font-semibold leading-6 text-gray-400 mr-40 w-[60px]"
             >
               Про нас
             </Link>
@@ -169,9 +175,9 @@ export default function Navbar() {
         onClose={setMobileMenuOpen}
       >
         {/* NavMobile */}
-        <div className="fixed inset-0 z-50"/>
+        <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-white px-2 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex justify-end mt-6 mr-4 ">
+          {/* <div className="flex justify-end mt-6 mr-4 ">
             <button
               type="button"
               className="rounded-md text-gray-700 "
@@ -179,14 +185,14 @@ export default function Navbar() {
             >
               <XMarkIcon className="h-6 w-6 " aria-hidden="true" />
             </button>
-          </div>
+          </div> */}
           {/* <div className="flex justify-center ">
             <Link to="/" className="">
               <div className="h-[155px] w-[165px]  bg-[url('../public/images/Logo_2.png')] bg-center bg-cover bg-no-repeat "></div>
             </Link>
           </div> */}
           {/*   */}
-          <div className="mt-16 flow-root">
+          <div className="mt-40 flow-root">
             <div className="-my-6 ">
               <div className="space-y-2 py-6 ">
                 <Link

@@ -4,7 +4,7 @@ import SocialMedia from './SocialMedia'
 export default function Footer() {
   return (
     // <!-- Footer container -->
-    <footer className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left mb-8">
+    <footer className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left pb-8">
       <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
         <div className="mr-12 hidden lg:block">
           <span>Зв'яжіться з нами в соціальних мережах</span>
@@ -216,12 +216,13 @@ export default function Footer() {
 
       {/* <!--Copyright section--> */}
       <div className="bg-neutral-200 p-6 text-center dark:bg-neutral-700">
-        <span>© 2023 Copyright:</span>
+        <span>© 2023 Авторське право : </span>
         <a
           className="font-semibold text-neutral-600 dark:text-neutral-400"
-          href="https://tailwind-elements.com/"
+          href="https://matviieshyn.vercel.app/"
+          target="blank"
         >
-          Tailwind Elements
+          Oleh Matviieshyn всі права захищені
         </a>
       </div>
     </footer>
