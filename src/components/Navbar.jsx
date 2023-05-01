@@ -28,18 +28,18 @@ export default function Navbar() {
       <nav
         className={
           showScrollNavbar
-            ? 'flex items-center justify-between py-2 px-8 lg:px-8 duration-500 bg-yellow-50 shadow-lg shadow-bg-orange-50'
+            ? 'flex items-center justify-between py-2 px-8 lg:px-8 duration-500 bg-amber-50 shadow-lg shadow-bg-orange-50'
             : 'flex items-center justify-between py-6 px-8 lg:px-8 duration-500 text-white'
         }
         aria-label="Global"
       >
-        <div className="flex lg:flex-1 justify-start">
+        <div className="flex lg:flex-1">
           <Link to="/">
             <div
               className={
                 showScrollNavbar
-                  ? "h-[75px] w-[220px] bg-[url('../public/images/Logo_1.png')] bg-center bg-cover bg-no-repeat text-black"
-                  : "h-[85px] w-[245px] bg-[url('../public/images/Logo_1.png')] bg-center bg-cover bg-no-repeat text-white"
+                  ? "lg:h-[75px] lg:w-[220px] lg:bg-[url('../public/images/Logo_1.png')] lg:bg-center lg:bg-cover lg:bg-no-repeat lg:text-black"
+                  : "lg:h-[85px] lg:w-[245px] lg:bg-[url('../public/images/Logo_1.png')] lg:bg-center lg:bg-cover lg:bg-no-repeat lg:text-white"
               }
             ></div>
           </Link>
@@ -47,7 +47,11 @@ export default function Navbar() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+            className={
+              showScrollNavbar
+                ? '-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700'
+                : '-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100'
+            }
             onClick={() => setMobileMenuOpen(true)}
           >
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -198,7 +202,7 @@ export default function Navbar() {
         {/* NavMobile */}
         <div className="fixed inset-0 z-0" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-white px-2 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex justify-end mt-12 mr-6 ">
+          <div className="flex justify-end mt-4 mr-6 ">
             <button
               type="button"
               className="rounded-md text-gray-700 "

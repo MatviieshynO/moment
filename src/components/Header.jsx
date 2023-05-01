@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
-    <div className="">
+    <div>
       <Navbar />
 
       <div className="relative isolate px-6 pt-14 lg:px-8 bg-slate-200 bg-[url('../public/images/header-bg.png')] bg-start bg-cover bg-no-repeat">
