@@ -31,7 +31,7 @@ export default function Navbar() {
       <nav
         className={
           showScrollNavbar
-            ? 'flex items-center justify-between py-2 px-8 lg:px-8 duration-500 bg-amber-50 shadow-lg shadow-bg-orange-50'
+            ? 'flex items-center justify-between py-2 px-8 lg:px-8 duration-500 bg-white shadow-lg shadow-bg-orange-50'
             : 'flex items-center justify-between py-6 px-8 lg:px-8 duration-1000 text-white'
         }
         aria-label="Global"
@@ -254,7 +254,7 @@ export default function Navbar() {
                     type="button"
                     data-te-collapse-init
                     data-te-target="#collapseOne5"
-                    aria-expanded="false"
+                    aria-expanded="true"
                     aria-controls="collapseOne5"
                   >
                     <div className="flex justify-center items-center">
