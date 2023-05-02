@@ -26,7 +26,7 @@ const Menu = () => {
   }, [])
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 80) {
         setShowScrollNavbar(true)
       } else {
         setShowScrollNavbar(false)
@@ -96,7 +96,7 @@ const Menu = () => {
                 {' '}
                 <button
                   type="button"
-                  className="inline-block rounded-l border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  className="inline-block rounded-l border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => scrollToSection(wafles)}
@@ -105,7 +105,7 @@ const Menu = () => {
                 </button>
                 <button
                   type="button"
-                  className="-ml-0.5 inline-block border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  className="-ml-0.5 inline-block border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => scrollToSection(wafles2)}
@@ -114,7 +114,7 @@ const Menu = () => {
                 </button>
                 <button
                   type="button"
-                  className="-ml-0.5 inline-block rounded-r border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  className="-ml-0.5 inline-block rounded-r border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => scrollToSection(Cheeseburger)}
@@ -123,7 +123,7 @@ const Menu = () => {
                 </button>
                 <button
                   type="button"
-                  className="-ml-0.5 inline-block rounded-r border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  className="-ml-0.5 inline-block rounded-r border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => scrollToSection(Sandwich)}
@@ -171,7 +171,7 @@ const Menu = () => {
               >
                 <button
                   type="button"
-                  className="inline-block rounded-l border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  className="inline-block rounded-l border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => scrollToSection(classicMenu)}
@@ -180,7 +180,7 @@ const Menu = () => {
                 </button>
                 <button
                   type="button"
-                  className="-ml-0.5 inline-block border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  className="-ml-0.5 inline-block border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => scrollToSection(someInteresting)}
@@ -189,7 +189,7 @@ const Menu = () => {
                 </button>
                 <button
                   type="button"
-                  className="-ml-0.5 inline-block rounded-r border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  className="-ml-0.5 inline-block rounded-r border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => scrollToSection(matcha)}
@@ -198,7 +198,7 @@ const Menu = () => {
                 </button>
                 <button
                   type="button"
-                  className="-ml-0.5 inline-block rounded-r border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  className="-ml-0.5 inline-block rounded-r border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => scrollToSection(summerMenu)}
