@@ -12,9 +12,11 @@ import SocialMedia from './SocialMedia'
 import { Collapse, initTE } from 'tw-elements'
 
 export default function Navbar() {
-  initTE({ Collapse })
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [showScrollNavbar, setShowScrollNavbar] = useState(false)
+  useEffect(() => {
+    initTE({ Collapse })
+  }, [mobileMenuOpen])
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 100) {
@@ -24,7 +26,6 @@ export default function Navbar() {
       }
     })
   }, [])
-  useEffect(() => {}, [])
   return (
     <div className="fixed inset-x-0 top-0 z-20 snap-y">
       <nav
@@ -247,7 +248,7 @@ export default function Navbar() {
                   Про нас
                 </Link> */}
 
-                <div>
+                <div id="accordionExample5">
                   <button
                     className="group relative flex w-full justify-center items-center rounded-t-[15px] border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]:bg-white [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]"
                     type="button"
