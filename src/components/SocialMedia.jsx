@@ -7,15 +7,15 @@ const SocialMedia = () => {
     <div className="flex border-b-[1px] border-black opacity-80 p-2">
       <InstagramIcon
         className=" mr-1 hover:opacity-70 cursor-pointer"
-        fontSize="large"
+        fontSize="medium"
       />
       <MailOutlineIcon
         className="hover:opacity-70 cursor-pointer"
-        fontSize="large"
+        fontSize="medium"
       />
       <LocationOnIcon
         className="hover:opacity-70 cursor-pointer"
-        fontSize="large"
+        fontSize="medium"
       />
     </div>
   )
