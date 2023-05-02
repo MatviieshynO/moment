@@ -1,12 +1,7 @@
-import { useState, Fragment, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Dialog, Popover, Transition } from '@headlessui/react'
-import {
-  Bars3Icon,
-  ChevronDownIcon,
-  ChartPieIcon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline'
+import { Dialog, Popover } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import LanguageSelect from './LanguageSelect'
 import SocialMedia from './SocialMedia'
 import { Collapse, initTE } from 'tw-elements'
