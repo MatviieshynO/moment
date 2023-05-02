@@ -148,20 +148,20 @@ const Menu = () => {
                   Сендвічі
                 </NavLink>
               </nav>
-              <div className="w-full h-[500px] bg-[silver] pt-10" ref={wafles}>
+              <div className="w-full h-[800px] bg-[silver] pt-10" ref={wafles}>
                 <h2 className="text-center p-2 m-2 text-2xl">wafles</h2>
               </div>
-              <div className="w-full h-[500px] bg-[orange] pt-10" ref={wafles2}>
+              <div className="w-full h-[800px] bg-[orange] pt-10" ref={wafles2}>
                 <h2 className="text-center p-2 m-2 text-2xl">wafles2</h2>
               </div>
               <div
-                className="w-full h-[500px] bg-[green] pt-10"
+                className="w-full h-[800px] bg-[green] pt-10"
                 ref={Cheeseburger}
               >
                 <h2 className="text-center p-2 m-2 text-2xl">Cheeseburger</h2>
               </div>
               <div
-                className="w-full h-[500px] bg-[yellow] pt-10"
+                className="w-full h-[800px] bg-[yellow] pt-10"
                 ref={Sandwich}
               >
                 <h2 className="text-center p-2 m-2 text-2xl">Sandwich</h2>
@@ -240,25 +240,25 @@ const Menu = () => {
                 </NavLink>
               </div>
               <div
-                className="w-full h-[500px] bg-[silver] pt-10"
+                className="w-full h-[800px] bg-[silver] pt-10"
                 ref={classicMenu}
               >
-                <h2 className="text-center p-2 m-2 text-2xl">wafles</h2>
+                <h2 className="text-center p-2 m-2 text-2xl">Класичне меню</h2>
               </div>
               <div
-                className="w-full h-[500px] bg-[orange] pt-10"
+                className="w-full h-[800px] bg-[orange] pt-10"
                 ref={someInteresting}
               >
-                <h2 className="text-center p-2 m-2 text-2xl">wafles2</h2>
+                <h2 className="text-center p-2 m-2 text-2xl">Щось цікаве</h2>
               </div>
-              <div className="w-full h-[500px] bg-[green] pt-10" ref={matcha}>
-                <h2 className="text-center p-2 m-2 text-2xl">Cheeseburger</h2>
+              <div className="w-full h-[800px] bg-[green] pt-10" ref={matcha}>
+                <h2 className="text-center p-2 m-2 text-2xl">Матча</h2>
               </div>
               <div
-                className="w-full h-[500px] bg-[yellow] pt-10"
+                className="w-full h-[800px] bg-[yellow] pt-10"
                 ref={summerMenu}
               >
-                <h2 className="text-center p-2 m-2 text-2xl">Sandwich</h2>
+                <h2 className="text-center p-2 m-2 text-2xl">Літнє меню</h2>
               </div>
             </div>
             {/*  */}
