@@ -56,7 +56,7 @@ export default function Navbar() {
             className={
               showScrollNavbar
                 ? '-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700'
-                : '-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100'
+                : '-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700'
             }
             onClick={() => setMobileMenuOpen(true)}
           >
@@ -66,100 +66,16 @@ export default function Navbar() {
 
         <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
           <div className="flex items-start p-10">
-            <Popover className="relative mr-10 ">
-              <Popover.Button
-                className={
-                  showScrollNavbar
-                    ? 'flex items-center gap-x-1 text-lg font-semibold leading-6 text-gray-900 font-serif tracking-widest'
-                    : 'flex items-center gap-x-1 text-lg font-semibold leading-6 text-gray-500 font-serif tracking-widest'
-                }
-              >
-                Меню
-                <ChevronDownIcon
-                  className={
-                    showScrollNavbar
-                      ? 'h-5 w-5 flex-none text-gray-900'
-                      : 'h-5 w-5 flex-none text-gray-50'
-                  }
-                  aria-hidden="true"
-                />
-              </Popover.Button>
-
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
-              >
-                <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-sm overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
-                  {/* popoper item1 */}
-                  <div className="p-1 ">
-                    <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50 ">
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <ChartPieIcon
-                          className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      <div className="flex-auto">
-                        <a
-                          href="/"
-                          className="block font-semibold text-gray-900"
-                        >
-                          <span className="absolute inset-0" />
-                        </a>
-                        <p className="mt-1 text-gray-600">Кава</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* popers item2 */}
-                  <div className="p-1">
-                    <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg group-hover:bg-white">
-                        <ChartPieIcon
-                          className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      <div className="flex-auto">
-                        <a
-                          href="/"
-                          className="block font-semibold text-gray-900"
-                        >
-                          <span className="absolute inset-0" />
-                        </a>
-                        <p className="mt-1 text-gray-900">Десерти</p>
-                      </div>
-                    </div>
-                  </div>
-                  {/* popers item3 */}
-                  <div className="p-1">
-                    <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
-                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg group-hover:bg-white">
-                        <ChartPieIcon
-                          className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
-                          aria-hidden="true"
-                        />
-                      </div>
-                      <div className="flex-auto">
-                        <a
-                          href="/"
-                          className="block font-semibold text-gray-900"
-                        >
-                          <span className="absolute inset-0" />
-                        </a>
-                        <p className="mt-1 text-gray-900">Канапки</p>
-                      </div>
-                    </div>
-                  </div>
-                </Popover.Panel>
-              </Transition>
-            </Popover>
-
+            <Link
+              to="/menu"
+              className={
+                showScrollNavbar
+                  ? 'text-lg font-semibold leading-6 text-gray-900 mr-10 items-center text-center font-serif'
+                  : 'text-lg font-semibold leading-6 text-gray-500 mr-10 items-center text-center font-serif'
+              }
+            >
+              Меню
+            </Link>
             <Link
               to="/"
               className={
@@ -228,7 +144,7 @@ export default function Navbar() {
             <div className="-my-6 ">
               <div className="space-y-2 py-6 ">
                 <Link
-                  to="/"
+                  to="/menu"
                   className="-mx-0 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-50 text-center"
                 >
                   Меню
