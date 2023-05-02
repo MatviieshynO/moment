@@ -26,6 +26,7 @@ export default function Navbar() {
       }
     })
   }, [])
+  console.log(showScrollNavbar)
   return (
     <div className="fixed inset-x-0 top-0 z-20 snap-y">
       <nav
