@@ -213,13 +213,15 @@ export default function Footer() {
 
       {/* <!--Copyright section--> */}
       <div className="bg-neutral-200 p-6 text-center dark:bg-neutral-700">
-        <span>© 2023 Авторське право : </span>
+        <span className="text-xs">
+          Всі права захищені © 2023 авторське право :{' '}
+        </span>
         <a
-          className="font-semibold text-neutral-600 dark:text-neutral-400"
+          className="text-xs font-semibold text-neutral-600 dark:text-neutral-400"
           href="https://matviieshyn.vercel.app/"
           target="blank"
         >
-          Oleh Matviieshyn всі права захищені
+          Oleh Matviieshyn
         </a>
       </div>
     </footer>

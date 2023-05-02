@@ -67,8 +67,8 @@ export default function Navbar() {
               <Popover.Button
                 className={
                   showScrollNavbar
-                    ? 'flex items-center gap-x-1 text-lg font-semibold leading-6 text-gray-900 font-serif tracking-widest'
-                    : 'flex items-center gap-x-1 text-lg font-semibold leading-6 text-gray-300 font-serif tracking-widest'
+                    ? 'flex items-center gap-x-1 text-base font-semibold leading-6 text-gray-900 font-serif tracking-widest'
+                    : 'flex items-center gap-x-1 text-base font-semibold leading-6 text-gray-300 font-serif tracking-widest'
                 }
               >
                 Меню
@@ -161,8 +161,8 @@ export default function Navbar() {
               to="/"
               className={
                 showScrollNavbar
-                  ? 'text-lg font-semibold leading-6 text-gray-900 mr-10 items-center text-center font-serif'
-                  : 'text-lg font-semibold leading-6 text-gray-200 mr-10 items-center text-center font-serif'
+                  ? 'text-base font-semibold leading-6 text-gray-900 mr-10 items-center text-center font-serif'
+                  : 'text-base font-semibold leading-6 text-gray-200 mr-10 items-center text-center font-serif'
               }
             >
               Галерея
@@ -171,8 +171,8 @@ export default function Navbar() {
               to="/"
               className={
                 showScrollNavbar
-                  ? 'text-lg font-semibold leading-6 text-gray-900 mr-10 font-serif tracking-widest'
-                  : 'text-lg font-semibold leading-6 text-gray-300 mr-10 font-serif tracking-widest'
+                  ? 'text-base font-semibold leading-6 text-gray-900 mr-10 font-serif tracking-widest'
+                  : 'text-base font-semibold leading-6 text-gray-300 mr-10 font-serif tracking-widest'
               }
             >
               Контакти
@@ -181,8 +181,8 @@ export default function Navbar() {
               to="/"
               className={
                 showScrollNavbar
-                  ? 'text-lg font-semibold leading-6 text-gray-900 mr-40 w-[100px] font-serif tracking-widest'
-                  : 'text-lg font-semibold leading-6 text-gray-300 mr-40 w-[100px] font-serif tracking-widest'
+                  ? 'text-base font-semibold leading-6 text-gray-900 mr-40 w-[100px] font-serif tracking-widest'
+                  : 'text-base font-semibold leading-6 text-gray-300 mr-40 w-[100px] font-serif tracking-widest'
               }
             >
               Про нас
