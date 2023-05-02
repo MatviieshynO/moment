@@ -1,11 +1,26 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import ScrollToButton from '../components/ScrollToTopButton'
 import { Tab, initTE, Ripple } from 'tw-elements'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 const Menu = () => {
   const [showScrollNavbar, setShowScrollNavbar] = useState(false)
+  const wafles = useRef(null)
+  const wafles2 = useRef(null)
+  const Cheeseburger = useRef(null)
+  const Sandwich = useRef(null)
+  const classicMenu = useRef(null)
+  const someInteresting = useRef(null)
+  const matcha = useRef(null)
+  const summerMenu = useRef(null)
+  const scrollToSection = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: 'smooth',
+    })
+  }
   useEffect(() => {
     initTE({ Tab, Ripple })
   }, [])
@@ -20,6 +35,7 @@ const Menu = () => {
   }, [])
   return (
     <div>
+      <ScrollToButton />
       {/* <Navbar /> */}
 
       <div className="mt-0 h-[600px]">
@@ -69,45 +85,70 @@ const Menu = () => {
           >
             {/* Foot content */}
             <div
-              className={
-                showScrollNavbar
-                  ? 'inline-flex  w-full  justify-center fixed top-0 duration-1000 bg-white'
-                  : 'inline-flex  w-full  justify-center duration-1000'
-              }
+              className="flex w-full justify-center duration-1000 flex-col items-center"
               role="group"
             >
-              <button
-                type="button"
-                className="inline-block rounded-l border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-                data-te-ripple-init
-                data-te-ripple-color="light"
+              <div
+                className={
+                  showScrollNavbar ? 'fixed top-0 bg-[silver]' : 'bg-white'
+                }
               >
-                Солені вафлі
-              </button>
-              <button
-                type="button"
-                className="-ml-0.5 inline-block border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-                data-te-ripple-init
-                data-te-ripple-color="light"
+                {' '}
+                <button
+                  type="button"
+                  className="inline-block rounded-l border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                  onClick={() => scrollToSection(wafles)}
+                >
+                  <h2>Солені вафлі</h2>
+                </button>
+                <button
+                  type="button"
+                  className="-ml-0.5 inline-block border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                  onClick={() => scrollToSection(wafles2)}
+                >
+                  Солодкі вафлі
+                </button>
+                <button
+                  type="button"
+                  className="-ml-0.5 inline-block rounded-r border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                  onClick={() => scrollToSection(Cheeseburger)}
+                >
+                  Чізбургери
+                </button>
+                <button
+                  type="button"
+                  className="-ml-0.5 inline-block rounded-r border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                  onClick={() => scrollToSection(Sandwich)}
+                >
+                  Сендвічі
+                </button>
+              </div>
+              <div className="w-full h-[500px] bg-[silver] pt-10" ref={wafles}>
+                <h2 className="text-center p-2 m-2 text-2xl">wafles</h2>
+              </div>
+              <div className="w-full h-[500px] bg-[orange] pt-10" ref={wafles2}>
+                <h2 className="text-center p-2 m-2 text-2xl">wafles2</h2>
+              </div>
+              <div
+                className="w-full h-[500px] bg-[green] pt-10"
+                ref={Cheeseburger}
               >
-                Солодкі вафлі
-              </button>
-              <button
-                type="button"
-                className="-ml-0.5 inline-block rounded-r border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-                data-te-ripple-init
-                data-te-ripple-color="light"
+                <h2 className="text-center p-2 m-2 text-2xl">Cheeseburger</h2>
+              </div>
+              <div
+                className="w-full h-[500px] bg-[yellow] pt-10"
+                ref={Sandwich}
               >
-                Чізбургери
-              </button>
-              <button
-                type="button"
-                className="-ml-0.5 inline-block rounded-r border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-                data-te-ripple-init
-                data-te-ripple-color="light"
-              >
-                Сендвічі
-              </button>
+                <h2 className="text-center p-2 m-2 text-2xl">Sandwich</h2>
+              </div>
             </div>
 
             {/*  */}
@@ -120,51 +161,78 @@ const Menu = () => {
           >
             {/* Drinks content */}
             <div
-              className={
-                showScrollNavbar
-                  ? 'inline-flex  w-full  justify-center fixed top-0 duration-1000 bg-white'
-                  : 'inline-flex  w-full  justify-center duration-1000'
-              }
+              className="flex w-full justify-center duration-1000 flex-col items-center"
               role="group"
             >
-              <button
-                type="button"
-                className="inline-block rounded-l border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-                data-te-ripple-init
-                data-te-ripple-color="light"
+              <div
+                className={
+                  showScrollNavbar ? 'fixed top-0 bg-[silver]' : 'bg-white'
+                }
               >
-                Класичне меню
-              </button>
-              <button
-                type="button"
-                className="-ml-0.5 inline-block border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-                data-te-ripple-init
-                data-te-ripple-color="light"
+                <button
+                  type="button"
+                  className="inline-block rounded-l border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                  onClick={() => scrollToSection(classicMenu)}
+                >
+                  Класичне меню
+                </button>
+                <button
+                  type="button"
+                  className="-ml-0.5 inline-block border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                  onClick={() => scrollToSection(someInteresting)}
+                >
+                  Щось цікаве
+                </button>
+                <button
+                  type="button"
+                  className="-ml-0.5 inline-block rounded-r border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                  onClick={() => scrollToSection(matcha)}
+                >
+                  Матча
+                </button>
+                <button
+                  type="button"
+                  className="-ml-0.5 inline-block rounded-r border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                  onClick={() => scrollToSection(summerMenu)}
+                >
+                  Літнє меню
+                </button>
+              </div>
+              <div
+                className="w-full h-[500px] bg-[silver] pt-10"
+                ref={classicMenu}
               >
-                Щось цікаве
-              </button>
-              <button
-                type="button"
-                className="-ml-0.5 inline-block rounded-r border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-                data-te-ripple-init
-                data-te-ripple-color="light"
+                <h2 className="text-center p-2 m-2 text-2xl">wafles</h2>
+              </div>
+              <div
+                className="w-full h-[500px] bg-[orange] pt-10"
+                ref={someInteresting}
               >
-                Матча
-              </button>
-              <button
-                type="button"
-                className="-ml-0.5 inline-block rounded-r border-2 border-primary px-2 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-                data-te-ripple-init
-                data-te-ripple-color="light"
+                <h2 className="text-center p-2 m-2 text-2xl">wafles2</h2>
+              </div>
+              <div className="w-full h-[500px] bg-[green] pt-10" ref={matcha}>
+                <h2 className="text-center p-2 m-2 text-2xl">Cheeseburger</h2>
+              </div>
+              <div
+                className="w-full h-[500px] bg-[yellow] pt-10"
+                ref={summerMenu}
               >
-                Літнє меню
-              </button>
+                <h2 className="text-center p-2 m-2 text-2xl">Sandwich</h2>
+              </div>
             </div>
             {/*  */}
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
