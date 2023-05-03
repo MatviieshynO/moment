@@ -1,12 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.is-active {
+/* .is-active {
   background-color: black;
-}
+} */
 .active {
   background-color: white;
+  border: 1px solid black;
 }
-.inactive {
+/* .inactive {
   background-color: red;
-}
+} */
