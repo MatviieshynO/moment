@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: 'Roboto Mono', monospace;
-}
-
 /* .is-active {
   background-color: rgb(139, 175, 42);
 } */

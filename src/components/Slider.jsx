@@ -66,7 +66,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_960_720.jpg"
+            src="https://cdn.pixabay.com/photo/2017/05/16/08/35/coffee-cup-2317201_960_720.jpg"
             className="block w-full bg-center bg-cover bg-no-repeat"
             alt="..."
           />
@@ -82,7 +82,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="https://cdn.pixabay.com/photo/2017/05/12/08/29/coffee-2306471_960_720.jpg"
+            src="https://cdn.pixabay.com/photo/2017/05/16/08/35/coffee-cup-2317201_960_720.jpg"
             className="block w-full bg-center bg-cover bg-no-repeat "
             alt="..."
           />
@@ -99,7 +99,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="https://cdn.pixabay.com/photo/2013/08/11/19/46/coffee-171653_960_720.jpg"
+            src="https://cdn.pixabay.com/photo/2017/05/16/08/35/coffee-cup-2317201_960_720.jpg"
             className="block w-full bg-center bg-cover bg-no-repeat"
             alt="..."
           />
@@ -115,7 +115,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="https://cdn.pixabay.com/photo/2015/06/24/01/15/coffee-819362_960_720.jpg"
+            src="https://cdn.pixabay.com/photo/2017/05/16/08/35/coffee-cup-2317201_960_720.jpg"
             className="block w-full bg-center bg-cover bg-no-repeat"
             alt="..."
           />
@@ -131,7 +131,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="https://cdn.pixabay.com/photo/2017/09/04/18/39/coffee-2714970_960_720.jpg"
+            src="https://cdn.pixabay.com/photo/2017/05/16/08/35/coffee-cup-2317201_960_720.jpg"
             className="block w-full bg-center bg-cover bg-no-repeat "
             alt="..."
             

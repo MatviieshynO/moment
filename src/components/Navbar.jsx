@@ -14,7 +14,7 @@ export default function Navbar() {
   }, [mobileMenuOpen])
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 10) {
         setShowScrollNavbar(true)
       } else {
         setShowScrollNavbar(false)
@@ -27,8 +27,8 @@ export default function Navbar() {
       <nav
         className={
           showScrollNavbar
-            ? 'flex items-center justify-between py-0 px-8 lg:px-8 duration-1000 bg-white shadow-lg shadow-bg-orange-50'
-            : 'flex items-center justify-between py-6 px-8 lg:px-8 duration-1000 text-white'
+            ? 'flex items-center justify-between py-0 px-8 lg:px-8 duration-200 bg-white shadow-lg shadow-bg-orange-50'
+            : 'flex items-center justify-between py-6 px-8 lg:px-8 duration-200 text-white'
         }
         aria-label="Global"
       >
@@ -45,7 +45,11 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="flex lg:hidden justify-between w-full">
-          {showScrollNavbar ? 'logo' : <div></div>}
+          {showScrollNavbar ? (
+            <div className="bg-[url('../public/images/LogoHomePage.gif')] h-[70px] w-40 bg-no-repeat bg-cover bg-center top-10"></div>
+          ) : (
+            <div></div>
+          )}
 
           <button
             type="button"
