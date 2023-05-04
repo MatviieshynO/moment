@@ -1,6 +1,4 @@
 import { NavLink } from 'react-router-dom'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import ProductCard from '../components/ProductCard'
 import ScrollToButton from '../components/ScrollToTopButton'
 import { Tab, initTE, Ripple } from 'tw-elements'
@@ -18,12 +16,14 @@ const Menu = () => {
   const summerMenu = useRef(null)
   const eat = useRef(null)
   const drink = useRef(null)
+
   const scrollToSection = (elementRef) => {
     window.scrollTo({
       top: elementRef.current.offsetTop,
       behavior: 'smooth',
     })
   }
+
   useEffect(() => {
     initTE({ Tab, Ripple })
   }, [])
@@ -36,16 +36,33 @@ const Menu = () => {
       }
     })
   }, [])
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      const scrollDistance = window.scrollY
+
+      document.querySelectorAll('.section').forEach((el, i) => {
+        if (
+          el.offsetTop - document.querySelector('.nav-link').clientHeight <=
+          scrollDistance
+        ) {
+          document.querySelectorAll('.nav-link a').forEach((el) => {
+            if (el.classList.contains('active')) {
+              el.classList.remove('active')
+            }
+          })
+        }
+      })
+    })
+  }, [])
 
   return (
     <div>
       <ScrollToButton />
-      {/* <Navbar /> */}
 
-      <div className="mt-0 h-[600px]">
+      <div className="mt-0">
         {/* <!--Tabs navigation--> */}
         <ul
-          className="mb-5 flex list-none flex-row flex-wrap border-b-0 pl-0"
+          className="nav mb-5 flex list-none flex-row flex-wrap border-b-0 pl-0"
           role="tablist"
           data-te-nav-ref
         >
@@ -96,18 +113,15 @@ const Menu = () => {
             >
               <nav
                 className={
-                  showScrollNavbar ? 'fixed top-0 bg-[silver]' : 'bg-white'
+                  showScrollNavbar
+                    ? 'nav-link fixed top-0 bg-white'
+                    : 'nav-link bg-white'
                 }
               >
                 {' '}
                 <NavLink
-                  exact
                   type="button"
-                  className={({ isActive }) =>
-                    isActive
-                      ? 'active inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
-                      : 'inactive inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
-                  }
+                  className="'inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => scrollToSection(wafles)}
@@ -116,11 +130,7 @@ const Menu = () => {
                 </NavLink>
                 <NavLink
                   type="button"
-                  className={({ isActive }) =>
-                    isActive
-                      ? 'active inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
-                      : 'inactive inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
-                  }
+                  className="'inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => scrollToSection(wafles2)}
@@ -129,11 +139,7 @@ const Menu = () => {
                 </NavLink>
                 <NavLink
                   type="button"
-                  className={({ isActive }) =>
-                    isActive
-                      ? 'active inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
-                      : 'inactive inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
-                  }
+                  className="'inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => scrollToSection(Cheeseburger)}
@@ -141,11 +147,7 @@ const Menu = () => {
                   Чізбургери
                 </NavLink>
                 <NavLink
-                  className={({ isActive }) =>
-                    isActive
-                      ? 'active inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
-                      : 'inactive inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
-                  }
+                  className="'inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'"
                   type="button"
                   data-te-ripple-init
                   data-te-ripple-color="light"
@@ -154,7 +156,7 @@ const Menu = () => {
                   Сендвічі
                 </NavLink>
               </nav>
-              <div className="w-full bg-[silver] pt-10" ref={wafles}>
+              <div className="section w-full bg-[silver] pt-10" ref={wafles}>
                 <h2 className="text-center p-2 m-2 text-2xl border-b-2">
                   Солодкі вафлі
                 </h2>
@@ -176,7 +178,7 @@ const Menu = () => {
                   price="50"
                 />
               </div>
-              <div className="w-full bg-[orange] pt-10" ref={wafles2}>
+              <div className="section w-full bg-[orange] pt-10" ref={wafles2}>
                 <h2 className="text-center p-2 m-2 text-2xl border-b-2">
                   Солені вафлі
                 </h2>
@@ -199,7 +201,10 @@ const Menu = () => {
                   price="50"
                 />
               </div>
-              <div className="w-full bg-[green] pt-10" ref={Cheeseburger}>
+              <div
+                className="section w-full bg-[green] pt-10"
+                ref={Cheeseburger}
+              >
                 <h2 className="text-center p-2 m-2 text-2xl border-b-2">
                   Чізбургери
                 </h2>
@@ -222,7 +227,7 @@ const Menu = () => {
                   price="580"
                 />
               </div>
-              <div className="w-full bg-[yellow] pt-10" ref={Sandwich}>
+              <div className="section w-full bg-[yellow] pt-10" ref={Sandwich}>
                 <h2 className="text-center p-2 m-2 text-2xl border-b-2">
                   Сендвічі
                 </h2>
@@ -341,16 +346,14 @@ const Menu = () => {
             >
               <div
                 className={
-                  showScrollNavbar ? 'fixed top-0 bg-[silver]' : 'bg-white'
+                  showScrollNavbar
+                    ? 'nav-link fixed top-0 bg-[silver]'
+                    : 'nav-link bg-white'
                 }
               >
                 <NavLink
                   type="button"
-                  className={({ isActive }) =>
-                    isActive
-                      ? 'active inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
-                      : 'inactive inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
-                  }
+                  className="inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal  transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => scrollToSection(classicMenu)}
@@ -359,11 +362,7 @@ const Menu = () => {
                 </NavLink>
                 <NavLink
                   type="button"
-                  className={({ isActive }) =>
-                    isActive
-                      ? 'active inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
-                      : 'inactive inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
-                  }
+                  className="inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal  transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => scrollToSection(someInteresting)}
@@ -372,11 +371,7 @@ const Menu = () => {
                 </NavLink>
                 <NavLink
                   type="button"
-                  className={({ isActive }) =>
-                    isActive
-                      ? 'active inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
-                      : 'inactive inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
-                  }
+                  className="inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal  transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => scrollToSection(matcha)}
@@ -385,11 +380,7 @@ const Menu = () => {
                 </NavLink>
                 <NavLink
                   type="button"
-                  className={({ isActive }) =>
-                    isActive
-                      ? 'active inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
-                      : 'inactive inline-block px-[1px]-[6px] pt-2 text-xs font-medium  leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10'
-                  }
+                  className="inline-block px-[1px] pb-[6px] pt-2 text-xs font-medium  leading-normal  transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                   onClick={() => scrollToSection(summerMenu)}
@@ -397,7 +388,10 @@ const Menu = () => {
                   Літнє меню
                 </NavLink>
               </div>
-              <div className="w-full  bg-[silver] pt-10" ref={classicMenu}>
+              <div
+                className="section w-full  bg-[silver] pt-10"
+                ref={classicMenu}
+              >
                 <h2 className="text-center p-2 m-2 text-2xl border-b-2">
                   Класичне меню
                 </h2>
@@ -420,7 +414,10 @@ const Menu = () => {
                   price="580"
                 />
               </div>
-              <div className="w-full bg-[orange] pt-10" ref={someInteresting}>
+              <div
+                className=" section w-full bg-[orange] pt-10"
+                ref={someInteresting}
+              >
                 <h2 className="text-center p-2 m-2 text-2xl border-b-2">
                   Щось цікаве
                 </h2>
@@ -443,7 +440,7 @@ const Menu = () => {
                   price="580"
                 />
               </div>
-              <div className="w-full  bg-[green] pt-10" ref={matcha}>
+              <div className=" section w-full  bg-[green] pt-10" ref={matcha}>
                 <h2 className="text-center p-2 m-2 text-2xl border-b-2">
                   Матча
                 </h2>
@@ -466,7 +463,10 @@ const Menu = () => {
                   price="580"
                 />
               </div>
-              <div className="w-full bg-[yellow] pt-10" ref={summerMenu}>
+              <div
+                className="section w-full bg-[yellow] pt-10"
+                ref={summerMenu}
+              >
                 <h2 className="text-center p-2 m-2 text-2xl border-b-2">
                   Літнє меню
                 </h2>
@@ -569,11 +569,9 @@ const Menu = () => {
                 </div>
               </div>
             </div>
-            {/*  */}
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
     </div>
   )
 }

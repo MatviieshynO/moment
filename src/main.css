@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 /* .is-active {
-  background-color: black;
+  background-color: rgb(139, 175, 42);
 } */
-.active {
-  background-color: white;
-  border: 1px solid black;
+a.active {
+  color: red;
 }
+
 /* .inactive {
   background-color: red;
 } */
