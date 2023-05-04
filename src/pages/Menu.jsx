@@ -2,6 +2,7 @@ import { Tab, initTE } from 'tw-elements'
 import { useRef, useEffect } from 'react'
 //Components
 import ScrollToTopButton from '../components/ScrollToTopButton'
+import ProductCard from '../components/ProductCard'
 
 const Menu = () => {
   useEffect(() => {
@@ -122,24 +123,88 @@ const Menu = () => {
                 </a>
               </li>
             </ul>
-            <div className="flex-column">
-              <h2 className="text-center">Їжа</h2>
-              <section
-                ref={sweetWaffles}
-                className="sectionFood bg-[red] h-[500px]"
-              ></section>
-              <section
-                ref={saltyWaffles}
-                className="sectionFood bg-[green] h-[500px]"
-              ></section>
-              <section
-                ref={Cheeseburgers}
-                className="sectionFood bg-[yellow] h-[500px]"
-              ></section>
-              <section
-                ref={Sandwiches}
-                className="sectionFood bg-[gray] h-[500px]"
-              ></section>
+            <div className="flex-column ">
+              <section ref={sweetWaffles} className="sectionFood ">
+                <h2 className="text-center text-2xl">sweetWaffles</h2>
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+              </section>
+              <section ref={saltyWaffles} className="sectionFood bg-[green] ">
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+              </section>
+              <section ref={Cheeseburgers} className="sectionFood bg-[yellow] ">
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+              </section>
+              <section ref={Sandwiches} className="sectionFood bg-[gray] ">
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+              </section>
             </div>
           </nav>
         </div>
