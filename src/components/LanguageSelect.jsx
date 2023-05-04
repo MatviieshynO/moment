@@ -9,10 +9,12 @@ const LanguageSelect = () => {
     setUnActiveBtn(!unActiveBtn)
   }
   return (
-    <div className="flex">
+    <div className="flex bg-inherit p-[2px] rounded m-[2px]">
       <button
         className={
-          activeBtn ? 'w-6 h-6 p-[2px] ml-[2px] bg-[#2d2d2d] rounded' : 'w-6 h-6 ml-[2px]'
+          activeBtn
+            ? 'w-9 h-8 p-[2px] ml-[2px] bg-[#2d2d2d] rounded'
+            : 'w-9 h-8 ml-[2px]'
         }
         onClick={onButtonChangeLanguage}
       >
@@ -20,7 +22,9 @@ const LanguageSelect = () => {
       </button>
       <button
         className={
-          unActiveBtn ? 'w-6 h-6 p-[2px] ml-[2px] bg-[#2d2d2d] rounded' : 'w-6 h-6 ml-[2px]'
+          unActiveBtn
+            ? 'w-9 h-8 p-[2px] ml-[2px] bg-[#2d2d2d] rounded'
+            : 'w-9 h-8 ml-[2px]'
         }
         onClick={onButtonChangeLanguage}
       >
