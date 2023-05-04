@@ -1,8 +1,11 @@
 import { Tab, initTE } from 'tw-elements'
 import { useRef, useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
 //Components
 import ScrollToTopButton from '../components/ScrollToTopButton'
 import ProductCard from '../components/ProductCard'
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace'
+import LanguageSelect from '../components/LanguageSelect'
 
 const Menu = () => {
   useEffect(() => {
@@ -33,7 +36,6 @@ const Menu = () => {
           el.offsetTop - document.querySelector(`.${navClass}`).clientHeight <=
           scrollDistans
         ) {
-          console.log(document.querySelector(`.${navClass}`).clientHeight)
           document.querySelectorAll(`.${navClass} a`).forEach((el) => {
             if (el.classList.contains('active')) {
               el.classList.remove('active')
@@ -53,6 +55,23 @@ const Menu = () => {
   return (
     <div className="flex-row justify-center w-full">
       <ScrollToTopButton />
+      <div className="flex items-center px-8 text-white bg-[#3b3a3a] justify-between gap-40">
+        <div>
+          <NavLink to="/">
+            <KeyboardBackspaceIcon
+              fontSize="medium"
+              sx={{
+                padding: '0px 2px',
+                borderRadius: '5px',
+              }}
+            />
+          </NavLink>
+        </div>
+
+        <div>
+          <LanguageSelect />
+        </div>
+      </div>
       {/* <!--Tabs navigation--> */}
       <ul
         className="mb-0 flex list-none flex-row flex-wrap border-b-0 pl-0 w-full justify-center bg-neutral-800 text-white"
@@ -125,7 +144,7 @@ const Menu = () => {
             </ul>
             <div className="flex-column mt-20">
               <section ref={sweetWaffles} className="sectionFood ">
-                <h4 className='text-center'>Солодкі вафлі</h4>
+                <h4 className="text-center">Солодкі вафлі</h4>
                 <ProductCard
                   url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
                   title="Солоні вафлі"

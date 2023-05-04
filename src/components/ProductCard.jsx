@@ -6,7 +6,7 @@ const ProductCard = ({ url, title, text, price }) => {
     initTE({ Ripple })
   }, [])
   return (
-    <div className="flex w-full pt-2 mx-auto justify-between bg-[#dad8d8] border dark:bg-neutral-700">
+    <div className="flex w-full pt-2 mx-auto justify-between bg-[#dad8d8] dark:bg-neutral-700">
       <div className="p-2 w-full">
         <h5 className="mb-2 text-lg font-medium leading-tight text-neutral-800 dark:text-neutral-50">
           {title}
@@ -25,7 +25,6 @@ const ProductCard = ({ url, title, text, price }) => {
         data-te-ripple-color="light"
       >
         <img className="h-full w-full rounded-[2px] p-2" src={url} alt="" />
-        <a href="#!"></a>
       </div>
     </div>
   )
