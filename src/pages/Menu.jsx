@@ -74,7 +74,7 @@ const Menu = () => {
       </div>
       {/* <!--Tabs navigation--> */}
       <ul
-        className="mb-0 flex list-none flex-row flex-wrap border-b-0 pl-0 w-full justify-center bg-neutral-800 text-white"
+        className="mb-0 flex sticky top-[-10px] list-none flex-row flex-wrap border-b-0 pl-0 w-full justify-center bg-neutral-800 text-white"
         id="tabs-tab3"
         role="tablist"
         data-te-nav-ref
@@ -120,7 +120,7 @@ const Menu = () => {
         >
           {/* Tab 1 content button version */}
           <nav className="flex-column w-full">
-            <ul className="navFood flex justify-center items-center sticky top-0 bg-black text-white text-xs text-center">
+            <ul className="navFood flex justify-center items-center sticky top-6 bg-black text-white text-xs text-center">
               <li className="p-2 my-2">
                 <a href="##" onClick={() => scrollToSection(sweetWaffles)}>
                   Солодкі вафлі
@@ -235,7 +235,7 @@ const Menu = () => {
         >
           {/* Tab 2 content button version */}
           <nav className="flex-column w-full">
-            <ul className="navDrinks flex justify-center items-center sticky top-0 bg-black text-white text-xs text-center">
+            <ul className="navDrinks flex justify-center items-center sticky top-6 bg-black text-white text-xs text-center">
               <li className="p-2 ">
                 <a href="##" onClick={() => scrollToSection(classicMenu)}>
                   Класичне меню
@@ -343,7 +343,7 @@ const Menu = () => {
           </nav>
         </div>
       </div>
-      <div className='p-4'>
+      <div className="p-4">
         <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
           Локалізація і адрес
         </h6>
