@@ -6,33 +6,26 @@ const ProductCard = ({ url, title, text, price }) => {
     initTE({ Ripple })
   }, [])
   return (
-    <div className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+    <div className="flex w-full pt-2 mx-auto justify-between bg-[#dad8d8] border dark:bg-neutral-700">
+      <div className="p-2 w-full">
+        <h5 className="mb-2 text-lg font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+          {title}
+        </h5>
+        <span className="text-[12px]">
+          {' '}
+          Ціна : <span className="text-[green] text-sm">{price} ₴</span>{' '}
+        </span>
+        <p className="text-[10px] text-neutral-600 dark:text-neutral-200">
+          {text}
+        </p>
+      </div>
       <div
-        className=" overflow-hidden bg-cover bg-no-repeat"
+        className=" overflow-hidden bg-cover bg-no-repeat w-[50%] h-full  "
         data-te-ripple-init
         data-te-ripple-color="light"
       >
-        <img className="rounded-t-lg" src={url} alt="" />
-        <a href="#!">
-          <div className="h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-        </a>
-      </div>
-      <div className="p-6">
-        <h5 className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-          {title}
-        </h5>
-        <span> price : {price}</span>
-        <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-          {text}
-        </p>
-        <button
-          type="button"
-          className="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-          data-te-ripple-init
-          data-te-ripple-color="light"
-        >
-          Button
-        </button>
+        <img className="h-full w-full rounded-[2px] p-2" src={url} alt="" />
+        <a href="#!"></a>
       </div>
     </div>
   )

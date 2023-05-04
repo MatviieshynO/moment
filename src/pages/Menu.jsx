@@ -123,9 +123,29 @@ const Menu = () => {
                 </a>
               </li>
             </ul>
-            <div className="flex-column ">
+            <div className="flex-column mt-20">
               <section ref={sweetWaffles} className="sectionFood ">
-                <h2 className="text-center text-2xl">sweetWaffles</h2>
+                <h4 className='text-center'>Солодкі вафлі</h4>
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="Солоні вафлі"
+                  text="Свіжі і дуже смачні, всіх запрошую покуштувати"
+                  price="250"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+              </section>
+              <section ref={saltyWaffles} className="sectionFood  ">
                 <ProductCard
                   url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
                   title="some title"
@@ -145,7 +165,7 @@ const Menu = () => {
                   price="500"
                 />
               </section>
-              <section ref={saltyWaffles} className="sectionFood bg-[green] ">
+              <section ref={Cheeseburgers} className="sectionFood ">
                 <ProductCard
                   url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
                   title="some title"
@@ -165,27 +185,7 @@ const Menu = () => {
                   price="500"
                 />
               </section>
-              <section ref={Cheeseburgers} className="sectionFood bg-[yellow] ">
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-              </section>
-              <section ref={Sandwiches} className="sectionFood bg-[gray] ">
+              <section ref={Sandwiches} className="sectionFood ">
                 <ProductCard
                   url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
                   title="some title"
@@ -240,22 +240,86 @@ const Menu = () => {
             </ul>
             <div className="flex-column">
               <h2 className="text-center">Напої</h2>
-              <section
-                ref={classicMenu}
-                className="sectionDrinks bg-[red] h-[500px]"
-              ></section>
-              <section
-                ref={summerMenu}
-                className="sectionDrinks bg-[green] h-[500px]"
-              ></section>
-              <section
-                ref={matcha}
-                className="sectionDrinks bg-[yellow] h-[500px]"
-              ></section>
-              <section
-                ref={someInteresting}
-                className="sectionDrinks bg-[gray] h-[500px]"
-              ></section>
+              <section ref={classicMenu} className="sectionDrinks ">
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+              </section>
+              <section ref={summerMenu} className="sectionDrinks">
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+              </section>
+              <section ref={matcha} className="sectionDrinks">
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+              </section>
+              <section ref={someInteresting} className="sectionDrinks">
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+                <ProductCard
+                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
+                  title="some title"
+                  text="some text"
+                  price="500"
+                />
+              </section>
             </div>
           </nav>
         </div>
