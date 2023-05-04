@@ -66,7 +66,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="https://cdn.pixabay.com/photo/2017/05/16/08/35/coffee-cup-2317201_960_720.jpg"
+            src="https://images.unsplash.com/photo-1542372147193-a7aca54189cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
             className="block w-full bg-center bg-cover bg-no-repeat"
             alt="..."
           />
@@ -82,7 +82,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="https://cdn.pixabay.com/photo/2017/05/16/08/35/coffee-cup-2317201_960_720.jpg"
+            src="https://images.unsplash.com/photo-1542372147193-a7aca54189cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
             className="block w-full bg-center bg-cover bg-no-repeat "
             alt="..."
           />
@@ -99,7 +99,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="https://cdn.pixabay.com/photo/2017/05/16/08/35/coffee-cup-2317201_960_720.jpg"
+            src="https://images.unsplash.com/photo-1542372147193-a7aca54189cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
             className="block w-full bg-center bg-cover bg-no-repeat"
             alt="..."
           />
@@ -115,7 +115,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="https://cdn.pixabay.com/photo/2017/05/16/08/35/coffee-cup-2317201_960_720.jpg"
+            src="https://images.unsplash.com/photo-1542372147193-a7aca54189cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
             className="block w-full bg-center bg-cover bg-no-repeat"
             alt="..."
           />
@@ -131,7 +131,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="https://cdn.pixabay.com/photo/2017/05/16/08/35/coffee-cup-2317201_960_720.jpg"
+            src="https://images.unsplash.com/photo-1542372147193-a7aca54189cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
             className="block w-full bg-center bg-cover bg-no-repeat "
             alt="..."
             

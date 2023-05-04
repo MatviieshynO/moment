@@ -55,8 +55,8 @@ export default function Navbar() {
             type="button"
             className={
               showScrollNavbar
-                ? '-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700'
-                : '-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700'
+                ? '-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-1000'
+                : '-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100'
             }
             onClick={() => setMobileMenuOpen(true)}
           >

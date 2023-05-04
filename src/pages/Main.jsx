@@ -1,5 +1,5 @@
 import Slider from '../components/Slider'
-import LogoClouds from '../components/Products'
+import ArrowSection from '../components/ArrowSection'
 import TeamSection from '../components/TeamSection'
 import BlogSection from '../components/BlogSection'
 import TimeWorksInf from '../components/TimeWorksInf'
@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div>
       <Slider />
-      <LogoClouds />
+      <ArrowSection />
       <TimeWorksInf />
       <TeamSection />
       <BlogSection />

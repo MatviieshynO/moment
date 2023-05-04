@@ -1,6 +1,19 @@
-export default function Products() {
+export default function ArrowSection() {
   return (
-    <div className="bg-slate-200 py-10 sm:py-32">
+    <div className="bg-white">
+      <div className="flex justify-center">
+        <div className="bg-[url('../public/images/arrowImage2.gif')] h-[70px] w-40 bg-no-repeat bg-cover bg-center top-10"></div>
+        <div className="flex items-center">
+          <a
+            href="https://www.instagram.com/moment.cv/"
+            target="blank"
+            className="pointer"
+          >
+            <div className="bg-[url('../public/images/instagramImage.png')] h-[50px] w-20 bg-no-repeat bg-contain bg-center top-10"></div>
+          </a>
+        </div>
+        <div className="bg-[url('../public/images/arrowImage.gif')] h-[70px] w-40 bg-no-repeat bg-cover bg-center top-10"></div>
+      </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
           Нашe меню
