@@ -123,7 +123,7 @@ export default function Navbar() {
       >
         {/* NavMobile */}
         <div className="fixed inset-0 z-0" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-white px-2 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-[#FFFFF4] px-2 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex justify-end mt-4 mr-6 ">
             <button
               type="button"
@@ -135,8 +135,7 @@ export default function Navbar() {
           </div>
           <div className="flex justify-center ">
             <Link to="/" className="">
-              <div className="bg-center bg-cover bg-no-repeat "></div>
-              {/* h-[155px] w-[165px]  bg-[url('../public/images/Logo_3.png')]  */}
+              <div className="bg-center bg-cover bg-no-repeat h-[155px] w-[165px]  bg-[url('../public/images/mobileMenuLogo.png')] "></div>
             </Link>
           </div>
           {/*   */}

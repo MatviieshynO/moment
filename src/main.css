@@ -6,7 +6,7 @@
   background-color: rgb(139, 175, 42);
 } */
 a.active {
-  color: red;
+  border: 2px solid red;
 }
 
 /* .inactive {

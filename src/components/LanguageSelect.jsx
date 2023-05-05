@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const LanguageSelect = () => {
   const [activeBtn, setActiveBtn] = useState(false)
@@ -13,7 +13,7 @@ const LanguageSelect = () => {
       <button
         className={
           activeBtn
-            ? 'w-9 h-8 p-[2px] ml-[2px] bg-[#2d2d2d] rounded'
+            ? 'w-9 h-8 p-[2px] ml-[2px] bg-[#e4e0e0] rounded'
             : 'w-9 h-8 ml-[2px]'
         }
         onClick={onButtonChangeLanguage}
@@ -23,7 +23,7 @@ const LanguageSelect = () => {
       <button
         className={
           unActiveBtn
-            ? 'w-9 h-8 p-[2px] ml-[2px] bg-[#2d2d2d] rounded'
+            ? 'w-9 h-8 p-[2px] ml-[2px] bg-[#e4e0e0] rounded'
             : 'w-9 h-8 ml-[2px]'
         }
         onClick={onButtonChangeLanguage}
@@ -35,17 +35,3 @@ const LanguageSelect = () => {
 }
 
 export default LanguageSelect
-//w-8 h-8 p-[2px] bg-black
-
-{
-  /* <select className="text-[12px] bg-inherit">
-        <option
-          value="1"
-          className="w-6 h-6 bg-[url('../public/images/usa-flag.png')]"
-        ></option>
-        <option
-          value="2"
-          className="w-6 h-6 bg-[url('../public/images/ua-flag.png')]"
-        ></option>
-      </select> */
-}
