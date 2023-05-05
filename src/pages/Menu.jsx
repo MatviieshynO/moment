@@ -59,7 +59,7 @@ const Menu = () => {
   addClassActive('sectionDrinks', 'navDrinks')
   //
   return (
-    <div className="flex-row justify-center w-full">
+    <div className="flex-row justify-center w-full box-border">
       <ScrollToTopButton />
       <div className="flex sticky top-[0px] items-center px-8 text-white bg-[#3b3a3a] justify-between gap-40">
         <div>
@@ -143,7 +143,7 @@ const Menu = () => {
                 </a>
               </li>
             </ul>
-            <div className="flex-column mt-20">
+            <div className="flex-column ">
               <section ref={saltyWaffles} className="sectionFood ">
                 <h4 className="text-center">Солодкі вафлі</h4>
                 <ProductCard
@@ -217,7 +217,7 @@ const Menu = () => {
         >
           {/* Tab 2 content button version */}
           <nav className="flex-column w-full">
-            <ul className="navDrinks flex justify-center items-center sticky top-[74px] bg-black text-white text-xs text-center">
+            <ul className="navDrinks flex  text-center w-full whitespace-nowrap  z-20  overflow-x-auto justify-center items-center sticky top-[74px] bg-black text-white text-xs">
               <li className="p-2 ">
                 <a href="##" onClick={() => scrollToSection(blackСoffee)}>
                   Чорна кава
@@ -250,7 +250,7 @@ const Menu = () => {
               </li>
               <li className="p-4 ">
                 <a href="##" onClick={() => scrollToSection(lemonadeAndOthers)}>
-                  <p>Лимонад та інше</p>
+                  Лимонад та інше
                 </a>
               </li>
               <li className="p-4 ">
