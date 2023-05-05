@@ -55,7 +55,7 @@ const Menu = () => {
   return (
     <div className="flex-row justify-center w-full">
       <ScrollToTopButton />
-      <div className="flex items-center px-8 text-black bg-[#fdfdfd] justify-between gap-40">
+      <div className="flex sticky top-[0px] items-center px-8 text-white bg-[#3b3a3a] justify-between gap-40">
         <div>
           <NavLink to="/">
             <KeyboardBackspaceIcon
@@ -74,15 +74,15 @@ const Menu = () => {
       </div>
       {/* <!--Tabs navigation--> */}
       <ul
-        className="flex sticky top-0  list-none flex-wrap justify-center bg-white pt-0"
+        className="mb-0 flex sticky top-10 list-none flex-row flex-wrap border-b-0 pl-0 w-full justify-center bg-neutral-800 text-white"
         id="tabs-tab3"
         role="tablist"
         data-te-nav-ref
       >
-        <li role="presentation" className="w-[50%]">
+        <li role="presentation">
           <a
             href="#foot"
-            className="w-full flex justify-center border-x-0 border-b-2 border-t-0 border-transparent px-10 pb-2 pt-2 text-xs font-medium uppercase leading-tight text-neutral-0 hover:isolate hover:border-transparent focus:isolate focus:border-transparent data-[te-nav-active]:border-black data-[te-nav-active]:text-black dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
+            className="mt-[2px] flex px-10 pb-2 pt-2 text-xs font-medium leading-tight text-neutral-0 hover:isolate hover:border-transparent hover:bg-black focus:isolate focus:border-transparent data-[te-nav-active]:border-white data-[te-nav-active]:text-white dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
             id="tabs-home-tab3"
             data-te-toggle="pill"
             data-te-target="#tabs-home3"
@@ -94,10 +94,10 @@ const Menu = () => {
             Їжа
           </a>
         </li>
-        <li role="presentation" className="w-[50%]">
+        <li role="presentation">
           <a
             href="#drinks"
-            className="flex border-x-0  justify-center border-b-2 border-t-0 border-transparent px-10 pb-2 pt-2 text-xs font-medium uppercase leading-tight text-neutral-0 hover:isolate hover:border-transparent focus:isolate focus:border-transparent data-[te-nav-active]:border-black data-[te-nav-active]:text-black dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
+            className="mt-[2px] flex border-x-0 border-b-2 border-t-0 border-transparent px-10 pb-2 pt-2 text-xs font-medium leading-tight text-neutral-0 hover:isolate hover:border-transparent hover:bg-black  data-[te-nav-active]:border-white data-[te-nav-active]:text-white dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
             id="tabs-profile-tab3"
             data-te-toggle="pill"
             data-te-target="#tabs-profile3"
@@ -112,7 +112,7 @@ const Menu = () => {
       {/* <!--Tabs content--> */}
       <div>
         <div
-          className="hidden opacity-100 transition-opacity   ease-linear data-[te-tab-active]:block"
+          className="hidden opacity-100 transition-opacity duration-0 ease-linear data-[te-tab-active]:block"
           id="tabs-home3"
           role="tabpanel"
           data-te-tab-active
@@ -120,7 +120,7 @@ const Menu = () => {
         >
           {/* Tab 1 content button version */}
           <nav className="flex-column w-full">
-            <ul className="navFood flex justify-center items-center sticky top-[31px] bg-white text-black text-xs text-center">
+            <ul className="navFood flex justify-center items-center sticky top-[74px] bg-black text-white text-xs text-center">
               <li className="p-2 my-2">
                 <a href="##" onClick={() => scrollToSection(sweetWaffles)}>
                   Солодкі вафлі
@@ -142,8 +142,8 @@ const Menu = () => {
                 </a>
               </li>
             </ul>
-            <div className="flex-column justify-center items-center">
-              <section ref={sweetWaffles} className="sectionFood">
+            <div className="flex-column mt-20">
+              <section ref={sweetWaffles} className="sectionFood ">
                 <h4 className="text-center">Солодкі вафлі</h4>
                 <ProductCard
                   url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
@@ -228,14 +228,14 @@ const Menu = () => {
           </nav>
         </div>
         <div
-          className="hidden opacity-0  data-[te-tab-active]:block"
+          className="hidden opacity-0 transition-opacity duration-0 data-[te-tab-active]:block"
           id="tabs-profile3"
           role="tabpanel"
           aria-labelledby="tabs-profile-tab3"
         >
           {/* Tab 2 content button version */}
           <nav className="flex-column w-full">
-            <ul className="navDrinks flex justify-center items-center sticky top-[31px] bg-white text-black text-xs text-center">
+            <ul className="navDrinks flex justify-center items-center sticky top-[74px] pt-2 bg-black text-white text-xs text-center">
               <li className="p-2 ">
                 <a href="##" onClick={() => scrollToSection(classicMenu)}>
                   Класичне меню
