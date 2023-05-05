@@ -235,7 +235,7 @@ const Menu = () => {
         >
           {/* Tab 2 content button version */}
           <nav className="flex-column w-full">
-            <ul className="navDrinks flex justify-center items-center sticky top-[74px] pt-2 bg-black text-white text-xs text-center">
+            <ul className="navDrinks flex justify-center items-center sticky top-[74px] bg-black text-white text-xs text-center">
               <li className="p-2 ">
                 <a href="##" onClick={() => scrollToSection(classicMenu)}>
                   Класичне меню
