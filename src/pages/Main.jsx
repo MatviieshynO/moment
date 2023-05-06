@@ -1,14 +1,14 @@
 import Slider from '../components/Slider'
-import ArrowSection from '../components/ArrowSection'
 import TeamSection from '../components/TeamSection'
 import BlogSection from '../components/BlogSection'
 import TimeWorksInf from '../components/TimeWorksInf'
+import Bunner from '../components/Bunner'
 
 const Home = () => {
   return (
     <div>
       <Slider />
-      <ArrowSection />
+      <Bunner />
       <TimeWorksInf />
       <TeamSection />
       <BlogSection />

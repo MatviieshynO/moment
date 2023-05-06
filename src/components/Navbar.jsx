@@ -6,6 +6,7 @@ import LanguageSelect from './LanguageSelect'
 import SocialMedia from './SocialMedia'
 import { Collapse, initTE } from 'tw-elements'
 
+
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [showScrollNavbar, setShowScrollNavbar] = useState(false)
@@ -37,7 +38,7 @@ export default function Navbar() {
           {showScrollNavbar ? (
             <div className="bg-[url('../public/images/LogoHomePage.gif')] h-[70px] w-40 bg-no-repeat bg-cover bg-center top-10"></div>
           ) : (
-            <div className="flex items-top w-[80%] justify-between">
+            <div className="flex items-top w-[70%] justify-between">
               <LanguageSelect />
               <SocialMedia />
             </div>

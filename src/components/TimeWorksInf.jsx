@@ -1,8 +1,10 @@
+import { NavLink } from 'react-router-dom'
+
 const links = [
-  { name: 'Посилання 1', href: '#' },
-  { name: 'Посилання 2', href: '#' },
-  { name: 'Посилання 3', href: '#' },
-  { name: 'Посилання 4', href: '#' },
+  { name: 'Перейти до нашого меню', href: '/menu' },
+  { name: 'Побачити фото нашого закладу', href: '/gallery' },
+  { name: 'Контактна інформація', href: '/contact' },
+  { name: 'Інформація про нас і наш заклад', href: '/about' },
 ]
 const stats = [
   { name: 'Статистика ', value: 'значення' },
@@ -13,7 +15,7 @@ const stats = [
 
 export default function TimeWorksInf() {
   return (
-    <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+    <div className="relative isolate overflow-hidden bg-gray-900 py-12 sm:py-32">
       <img
         src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
         alt=""
@@ -43,19 +45,37 @@ export default function TimeWorksInf() {
           }}
         />
       </div>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl"></h2>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            В блоці можна писати додаткову інформацію години роботи кафе 
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-6xl text-center">
+            Люди , які просто люблять якісну каву
+          </h2>
+          <p className="mt-2 text-sm leading-8 font-bold text-gray-300 text-center">
+            Кава - це те, що ми обожнюємо!
+          </p>
+          <p className="mt-2 text-sm leading-8 text-gray-300">
+            Це завжди найкращі сорти арабіки , свіжообсмажені зерна і правильні
+            пропорції.
+          </p>
+          <p className="mt-2 text-sm leading-8 text-gray-100">
+            Щодня перевіряємо все на якість, тестуємо нові сорти
+            вдосконалюємось, щоб наші гості отримували в чашці найкраще.
+          </p>
+          <p className="mt-2 text-sm leading-8 text-gray-200">
+            А для гостей, стаємо з часом як друзі, до яких можна прийти на
+            приємну розмову та насолодитись кавою з чимось смачненьким.
+          </p>
+          <p className="mt-2 text-sm leading-8 text-gray-300">
+            І це завжди приносить радість Здається що, все в цьому житті ми
+            робимо правильно.
           </p>
         </div>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
             {links.map((link) => (
-              <a key={link.name} href={link.href}>
+              <NavLink key={link.name} to={link.href}>
                 {link.name} <span aria-hidden="true">&rarr;</span>
-              </a>
+              </NavLink>
             ))}
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
