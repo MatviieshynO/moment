@@ -37,7 +37,7 @@ export default function Navbar() {
           {showScrollNavbar ? (
             <div className="bg-[url('../public/images/LogoHomePage.gif')] h-[70px] w-40 bg-no-repeat bg-cover bg-center top-10"></div>
           ) : (
-            <div className="flex items-top w-[60%] justify-between">
+            <div className="flex items-top w-[80%] justify-between">
               <LanguageSelect />
               <SocialMedia />
             </div>
@@ -52,7 +52,7 @@ export default function Navbar() {
             }
             onClick={() => setMobileMenuOpen(true)}
           >
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            <Bars3Icon className="h-8 w-8  mt-[6px]" aria-hidden="true" />
           </button>
         </div>
 
@@ -122,7 +122,7 @@ export default function Navbar() {
               className="rounded-md text-gray-700 "
               onClick={() => setMobileMenuOpen(false)}
             >
-              <XMarkIcon className="h-6 w-6 " aria-hidden="true" />
+              <XMarkIcon className="h-8 w-8 mt-[4px] " aria-hidden="true" />
             </button>
           </div>
           <div className="flex justify-center ">

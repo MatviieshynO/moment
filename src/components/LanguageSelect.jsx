@@ -86,7 +86,7 @@ export default function Example() {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+              <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-[#171717] py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                 {people.map((person) => (
                   <Listbox.Option
                     key={person.id}
@@ -100,30 +100,22 @@ export default function Example() {
                   >
                     {({ selected, active }) => (
                       <>
-                        <div className="flex items-center">
+                        <div className="flex items-center w-6">
                           <img
                             src={person.avatar}
                             alt=""
-                            className="h-5 w-5 flex-shrink-0 rounded-full"
+                            className="h-[25px] w-[45px] flex-shrink-0 rounded-full"
                           />
-                          <span
-                            className={classNames(
-                              selected ? 'font-semibold' : 'font-normal',
-                              'ml-3 block truncate'
-                            )}
-                          >
-                            {person.name}
-                          </span>
                         </div>
 
                         {selected ? (
                           <span
                             className={classNames(
                               active ? 'text-white' : 'text-indigo-600',
-                              'absolute inset-y-0 right-0 flex items-center pr-4'
+                              'absolute inset-y-0 right-0 flex items-center mr-2'
                             )}
                           >
-                            <CheckIcon className="h-5 w-5" aria-hidden="true" />
+                            <CheckIcon className="h-4 w-4" aria-hidden="true" />
                           </span>
                         ) : null}
                       </>
