@@ -5,10 +5,13 @@
 /* .is-active {
   background-color: rgb(139, 175, 42);
 } */
-a.active {
+.active {
   border: 2px solid red;
 }
 
 /* .inactive {
   background-color: red;
 } */
+body{
+  background-color: rgb(238, 235, 235);
+}

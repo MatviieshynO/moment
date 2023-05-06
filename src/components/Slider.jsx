@@ -57,7 +57,7 @@ const Slider = () => {
       </div>
 
       {/* <!--Carousel items--> */}
-      <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+      <div className="relative w-full overflow-hidden after:clear-both after:block after:content-[''] lg:max-h-[720px]">
         {/* <!--First item--> */}
         <div
           className="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
@@ -67,7 +67,7 @@ const Slider = () => {
         >
           <img
             src="https://images.unsplash.com/photo-1542372147193-a7aca54189cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-            className="block w-full bg-center bg-cover bg-no-repeat"
+            className="block w-full bg-center bg-contain bg-no-repeat"
             alt="..."
           />
           <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
@@ -134,7 +134,6 @@ const Slider = () => {
             src="https://images.unsplash.com/photo-1542372147193-a7aca54189cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
             className="block w-full bg-center bg-cover bg-no-repeat "
             alt="..."
-            
           />
           <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
             <h5 className="text-xl">Third slide label</h5>

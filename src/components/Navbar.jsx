@@ -23,7 +23,7 @@ export default function Navbar() {
   }, [])
   console.log(showScrollNavbar)
   return (
-    <div className="fixed inset-x-0 top-0 z-20 snap-y">
+    <div className="fixed inset-x-0 top-0 z-20 snap-y lg:w-[85%] lg:mx-auto">
       <nav
         className={
           showScrollNavbar
@@ -32,23 +32,15 @@ export default function Navbar() {
         }
         aria-label="Global"
       >
-        <div className="flex lg:flex-1">
-          <Link to="/">
-            <div
-              className={
-                showScrollNavbar
-                  ? ' lg:bg-center lg:bg-cover lg:bg-no-repeat lg:text-black'
-                  : ' lg:bg-center lg:bg-cover lg:bg-no-repeat lg:text-white'
-              }
-              // "lg:h-[150px] lg:w-[150px] lg:bg-[url('../public/images/Logo_3.png')]
-            ></div>
-          </Link>
-        </div>
-        <div className="flex lg:hidden justify-between w-full">
+        <div className="flex lg:flex-1"></div>
+        <div className="flex lg:hidden justify-between w-full ">
           {showScrollNavbar ? (
             <div className="bg-[url('../public/images/LogoHomePage.gif')] h-[70px] w-40 bg-no-repeat bg-cover bg-center top-10"></div>
           ) : (
-            <div></div>
+            <div className="flex items-top w-[60%] justify-between">
+              <LanguageSelect />
+              <SocialMedia />
+            </div>
           )}
 
           <button
@@ -71,7 +63,7 @@ export default function Navbar() {
               className={
                 showScrollNavbar
                   ? 'text-lg font-semibold leading-6 text-gray-900 mr-10 items-center text-center font-serif'
-                  : 'text-lg font-semibold leading-6 text-gray-500 mr-10 items-center text-center font-serif'
+                  : 'text-lg font-semibold leading-6 text-gray-100 mr-10 items-center text-center font-serif'
               }
             >
               Меню
@@ -81,7 +73,7 @@ export default function Navbar() {
               className={
                 showScrollNavbar
                   ? 'text-lg font-semibold leading-6 text-gray-900 mr-10 items-center text-center font-serif'
-                  : 'text-lg font-semibold leading-6 text-gray-500 mr-10 items-center text-center font-serif'
+                  : 'text-lg font-semibold leading-6 text-gray-100 mr-10 items-center text-center font-serif'
               }
             >
               Галерея
@@ -91,7 +83,7 @@ export default function Navbar() {
               className={
                 showScrollNavbar
                   ? 'text-lg font-semibold leading-6 text-gray-900 mr-10 font-serif tracking-widest'
-                  : 'text-lg font-semibold leading-6 text-gray-500 mr-10 font-serif tracking-widest'
+                  : 'text-lg font-semibold leading-6 text-gray-100 mr-10 font-serif tracking-widest'
               }
             >
               Контакти
@@ -101,7 +93,7 @@ export default function Navbar() {
               className={
                 showScrollNavbar
                   ? 'text-lg font-semibold leading-6 text-gray-900 mr-40 w-[100px] font-serif tracking-widest'
-                  : 'text-lg font-semibold leading-6 text-gray-500 mr-40 w-[100px] font-serif tracking-widest'
+                  : 'text-lg font-semibold leading-6 text-gray-100 mr-40 w-[100px] font-serif tracking-widest'
               }
             >
               Про нас

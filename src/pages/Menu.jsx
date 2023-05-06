@@ -58,6 +58,8 @@ const Menu = () => {
   addClassActive('sectionFood', 'navFood')
   addClassActive('sectionDrinks', 'navDrinks')
   //
+
+  //
   return (
     <div className="flex-row justify-center w-full box-border">
       <ScrollToTopButton />
@@ -217,7 +219,7 @@ const Menu = () => {
         >
           {/* Tab 2 content button version */}
           <nav className="flex-column w-full">
-            <ul className="navDrinks flex  text-center w-full whitespace-nowrap  z-20  overflow-x-auto justify-center items-center sticky top-[74px] bg-black text-white text-xs">
+            <ul className="navDrinks flex  text-center w-[100%] text-[1.5vw] whitespace-nowrap  z-20  overflow-x-auto justify-center items-center sticky top-[74px] bg-black text-white text-xs">
               <li className="p-2 ">
                 <a href="##" onClick={() => scrollToSection(blackСoffee)}>
                   Чорна кава
@@ -244,7 +246,7 @@ const Menu = () => {
                 </a>
               </li>
               <li className="p-4 ">
-                <a href="##" onClick={() => scrollToSection(coldMenu)}>
+                <a href="#coldMenu" onClick={() => scrollToSection(coldMenu)}>
                   Холодне меню
                 </a>
               </li>
