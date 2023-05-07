@@ -1,15 +1,14 @@
 const posts = [
   {
     id: 1,
-    title: 'Boost your conversion rate',
-    href: '#',
+    title: 'Про вашу кавярню',
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     date: 'Mar 16, 2020',
     datetime: '2020-03-16',
     author: {
       name: 'Michael Foster',
-      role: 'Co-Founder / CTO',
+      role: 'User',
       href: '#',
       imageUrl:
         'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
@@ -42,10 +41,8 @@ export default function RewiewsSection() {
               </div>
               <div className="group relative">
                 <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                  <a href={post.href}>
-                    <span className="absolute inset-0" />
-                    {post.title}
-                  </a>
+                  <span className="absolute inset-0" />
+                  {post.title}
                 </h3>
                 <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
                   {post.description}
@@ -59,10 +56,8 @@ export default function RewiewsSection() {
                 />
                 <div className="text-sm leading-6">
                   <p className="font-semibold text-gray-900">
-                    <a href={post.author.href}>
-                      <span className="absolute inset-0" />
-                      {post.author.name}
-                    </a>
+                    <span className="absolute inset-0" />
+                    {post.author.name}
                   </p>
                   <p className="text-gray-600">{post.author.role}</p>
                 </div>
