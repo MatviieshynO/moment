@@ -66,8 +66,8 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="https://images.unsplash.com/photo-1542372147193-a7aca54189cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-            className="block w-full bg-center bg-contain bg-no-repeat"
+            src="/images/slider-image-1.jpg"
+            className="block w-full h-full bg-center bg-contain bg-no-repeat"
             alt="..."
           />
           <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
@@ -82,8 +82,8 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="https://images.unsplash.com/photo-1542372147193-a7aca54189cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-            className="block w-full bg-center bg-cover bg-no-repeat "
+            src="/images/slider-image-2.jpg"
+            className="block w-full h-full bg-center bg-cover bg-no-repeat "
             alt="..."
           />
 
@@ -99,7 +99,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="https://images.unsplash.com/photo-1542372147193-a7aca54189cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+            src="/images/slider-image-3.jpg"
             className="block w-full bg-center bg-cover bg-no-repeat"
             alt="..."
           />
@@ -115,7 +115,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="https://images.unsplash.com/photo-1542372147193-a7aca54189cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+            src="/images/slider-image-4.jpg"
             className="block w-full bg-center bg-cover bg-no-repeat"
             alt="..."
           />
@@ -125,21 +125,6 @@ const Slider = () => {
           </div>
         </div>
         {/* item5 */}
-        <div
-          className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-          data-te-carousel-item
-          style={{ backfaceVisibility: 'hidden' }}
-        >
-          <img
-            src="https://images.unsplash.com/photo-1542372147193-a7aca54189cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-            className="block w-full bg-center bg-cover bg-no-repeat "
-            alt="..."
-          />
-          <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-            <h5 className="text-xl">Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
-        </div>
       </div>
 
       {/* <!--Carousel controls - prev item--> */}
