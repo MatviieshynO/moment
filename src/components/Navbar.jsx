@@ -6,7 +6,6 @@ import LanguageSelect from './LanguageSelect'
 import SocialMedia from './SocialMedia'
 import { Collapse, initTE } from 'tw-elements'
 
-
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [showScrollNavbar, setShowScrollNavbar] = useState(false)
@@ -116,7 +115,7 @@ export default function Navbar() {
       >
         {/* NavMobile */}
         <div className="fixed inset-0 z-0" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-[#FFFFF4] px-2 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-[#FFFFFF] px-2 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex justify-end mt-4 mr-6 ">
             <button
               type="button"
@@ -127,7 +126,7 @@ export default function Navbar() {
             </button>
           </div>
           <div className="flex justify-center ">
-            <Link to="/" className="">
+            <Link to="/">
               <div className="bg-center bg-cover bg-no-repeat h-[155px] w-[165px]  bg-[url('../public/images/mobileMenuLogo.png')] "></div>
             </Link>
           </div>
@@ -142,19 +141,19 @@ export default function Navbar() {
                   Меню
                 </Link>
                 <Link
-                  to="/"
+                  to="/gallery"
                   className="-mx-0 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
                 >
                   Галерея
                 </Link>
                 <Link
-                  to="/"
+                  to="/contact"
                   className="-mx-0 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
                 >
                   Контакти
                 </Link>
                 <Link
-                  to="/"
+                  to="/about"
                   className="-mx-0 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
                 >
                   Про нас
