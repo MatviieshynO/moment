@@ -21,7 +21,6 @@ export default function Navbar() {
       }
     })
   }, [])
-  console.log(showScrollNavbar)
   return (
     <div className="fixed inset-x-0 top-0 z-20 snap-y lg:w-[85%] lg:mx-auto">
       <nav
@@ -35,7 +34,9 @@ export default function Navbar() {
         <div className="flex lg:flex-1"></div>
         <div className="flex lg:hidden justify-between w-full ">
           {showScrollNavbar ? (
-            <div className="bg-[url('../public/images/LogoHomePage.gif')] h-[70px] w-40 bg-no-repeat bg-cover bg-center top-10"></div>
+            <Link to="/menu" className="w-full h-full">
+              <div className="bg-[url('../public/images/LogoHomePage.gif')] h-[70px] w-40 bg-no-repeat bg-cover bg-center top-10"></div>
+            </Link>
           ) : (
             <div className="flex items-top w-[70%] justify-between">
               <LanguageSelect />
@@ -134,6 +135,12 @@ export default function Navbar() {
           <div className="mt-10 flow-root">
             <div className="-my-6 ">
               <div className="space-y-2 py-6 ">
+                <Link
+                  to="/"
+                  className="-mx-0 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-50 text-center"
+                >
+                  Головна
+                </Link>
                 <Link
                   to="/menu"
                   className="-mx-0 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-50 text-center"

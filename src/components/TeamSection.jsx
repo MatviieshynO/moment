@@ -1,6 +1,7 @@
+/* eslint-disable jsx-a11y/no-redundant-roles */
 const people = [
   {
-    name: 'Олеся Матвієшин',
+    name: 'Матвієшин Олеся',
     role: 'Власниця кафе',
     imageUrl:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
@@ -13,7 +14,7 @@ const people = [
   },
 ]
 
-export default function Example() {
+export default function TeamSection() {
   return (
     <div className="bg-white py-8 sm:py-14">
       <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-10 px-6 lg:px-8 xl:grid-cols-3">

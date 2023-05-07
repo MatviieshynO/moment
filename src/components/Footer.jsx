@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Footer() {
   return (
     // <!-- Footer container -->
@@ -81,71 +83,76 @@ export default function Footer() {
           {/* <!-- Tailwind Elements section --> */}
           <div className="">
             <h6 className="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="mr-3 h-4 w-4"
-              >
-                <path d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
-              </svg>
-              Блок для додаткової інформації
+              Тут ви знайдете юридичну і контактну інформацію.
             </h6>
-            <p>
-              Тут ви можете використовувати текст для додаткової інформації про
-              ваш сайт
-            </p>
+            <p>А також корисні посилання, для кращого переміщення по сайтi</p>
           </div>
           {/* <!-- Products section --> */}
           <div className="">
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-              Ваші продукти чи страви
+              Посилання
             </h6>
             <p className="mb-4">
-              <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                Продукт 1
-              </a>
+              <Link
+                to="/menu"
+                className="text-neutral-600 dark:text-neutral-200"
+              >
+                Меню
+              </Link>
             </p>
             <p className="mb-4">
-              <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                Продукт 2
-              </a>
+              <Link
+                to="/gallery"
+                className="text-neutral-600 dark:text-neutral-200"
+              >
+                Галерея
+              </Link>
             </p>
             <p className="mb-4">
-              <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                Продукт 3
-              </a>
+              <Link
+                to="/contact"
+                className="text-neutral-600 dark:text-neutral-200"
+              >
+                Контакти
+              </Link>
             </p>
             <p>
-              <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                Продукт 4
-              </a>
+              <Link
+                to="/about"
+                className="text-neutral-600 dark:text-neutral-200"
+              >
+                Про нас
+              </Link>
             </p>
           </div>
           {/* <!-- Useful links section --> */}
           <div className="">
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-              Корисні ссилки
+              Юридична інформація
             </h6>
             <p className="mb-4">
-              <a href="#!" class="text-neutral-600 dark:text-neutral-200">
-                силка 1
-              </a>
+              <Link
+                to="/privacy"
+                class="text-neutral-600 dark:text-neutral-200"
+              >
+                Правила та умови
+              </Link>
             </p>
             <p className="mb-4">
-              <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                силка 2
-              </a>
+              <Link
+                to="/terms"
+                className="text-neutral-600 dark:text-neutral-200"
+              >
+                Безпечність даних
+              </Link>
             </p>
             <p className="mb-4">
-              <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                силка 3
-              </a>
-            </p>
-            <p>
-              <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                силка 4
-              </a>
+              <Link
+                to="/privacy"
+                className="text-neutral-600 dark:text-neutral-200"
+              >
+                Політика конфіденційності
+              </Link>
             </p>
           </div>
           {/* <!-- Contact section --> */}
@@ -163,7 +170,9 @@ export default function Footer() {
                 <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
                 <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
               </svg>
-              Чернівці, Україна
+              <a href="https://www.google.com/maps/place/55-010+%D0%A0%D0%B0%D0%B4%D0%B2%D0%B0%D0%BD%D1%96%D1%86%D0%B5/@51.051433,17.0944271,14z/data=!3m1!4b1!4m6!3m5!1s0x470fdcd936094ecb:0xe004eba23da99d6c!8m2!3d51.0489879!4d17.1112823!16s%2Fm%2F03gzc11">
+                Чернівці, Україна
+              </a>
             </p>
             <p className="mb-4 flex items-center justify-center md:justify-start">
               <svg
@@ -175,7 +184,7 @@ export default function Footer() {
                 <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
                 <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
               </svg>
-              info@example.com
+              <a href="mailto:info@example.com">info@example.com</a>
             </p>
             <p className="mb-4 flex items-center justify-center md:justify-start">
               <svg
@@ -190,22 +199,7 @@ export default function Footer() {
                   clipRule="evenodd"
                 />
               </svg>
-              + 01 234 567 88
-            </p>
-            <p className="flex items-center justify-center md:justify-start">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="mr-3 h-5 w-5"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 003 3h.27l-.155 1.705A1.875 1.875 0 007.232 22.5h9.536a1.875 1.875 0 001.867-2.045l-.155-1.705h.27a3 3 0 003-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0018 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM16.5 6.205v-2.83A.375.375 0 0016.125 3h-8.25a.375.375 0 00-.375.375v2.83a49.353 49.353 0 019 0zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 01-.374.409H7.232a.375.375 0 01-.374-.409l.526-5.784a.373.373 0 01.333-.337 41.741 41.741 0 018.566 0zm.967-3.97a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H18a.75.75 0 01-.75-.75V10.5zM15 9.75a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V10.5a.75.75 0 00-.75-.75H15z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              + 01 234 567 89
+              <a href="tel:+0123456788">+ 01 234 567 88</a>
             </p>
           </div>
         </div>
