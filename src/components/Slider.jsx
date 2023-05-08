@@ -59,7 +59,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="/images/slider-image-1.jpg"
+            src="images/slider-image_1.jpg"
             className="block w-full h-full bg-center bg-contain bg-no-repeat"
             alt="..."
           />
@@ -75,7 +75,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="/images/slider-image-2.jpg"
+            src="images/slider-image_2.jpg"
             className="block w-full h-full bg-center bg-cover bg-no-repeat "
             alt="..."
           />
@@ -92,7 +92,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="/images/slider-image-3.jpg"
+            src="images/slider-image_3.jpg"
             className="block w-full bg-center bg-cover bg-no-repeat"
             alt="..."
           />
@@ -108,7 +108,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="/images/slider-image-4.jpg"
+            src="images/slider-image_4.jpg"
             className="block w-full bg-center bg-cover bg-no-repeat"
             alt="..."
           />
