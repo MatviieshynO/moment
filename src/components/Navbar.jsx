@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <div className="fixed inset-x-0 top-0 z-20 snap-y lg:w-[85%] lg:mx-auto">
       <nav
-        className="flex items-center justify-between py-0 px-2 lg:px-8 duration-200 bg-white shadow-lg shadow-bg-orange-50"
+        className="flex items-center justify-between px-2 lg:px-8 duration-200 bg-white shadow-lg shadow-bg-orange-50"
         // {
         //   showScrollNavbar
         //     ? 'flex items-center justify-between py-0 px-8 lg:px-8 duration-200 bg-white shadow-lg shadow-bg-orange-50'
@@ -37,22 +37,22 @@ export default function Navbar() {
           {showScrollNavbar ? (
             <Link to="/menu" className="w-full h-full flex justify-center">
               <img
-                className="absolute rounded-full"
+                className="absolute rounded-full top-[-5px] right-[36%]"
                 src="images/mobileMenuLogo.png"
                 alt="ds"
-                width={70}
-                height={70}
+                width={85}
+                height={85}
               />
               {/* <div className="bg-[url('../public/images/mobileMenuLogo.png')]bg-no-repeat bg-contain bg-center top-10"></div> */}
             </Link>
           ) : (
             <Link to="/menu" className="w-full h-full flex justify-center">
               <img
-                className="absolute rounded-full top-0 right-[42vw]"
+                className="absolute rounded-full top-[-5px] right-1/3"
                 src="images/mobileMenuLogo.png"
                 alt="logo"
-                width={60}
-                height={120}
+                width={105}
+                height={105}
               />
               {/* <div className="bg-[url('../public/images/mobileMenuLogo.png')] h-[80px] w-40 bg-no-repeat bg-contain bg-center"></div> */}
             </Link>
@@ -60,7 +60,7 @@ export default function Navbar() {
 
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-md text-gray-1000"
+            className="inline-flex justify-center items-center rounded-md text-gray-1000 my-6 "
             // {
             //   showScrollNavbar
             //     ? '-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-1000'
