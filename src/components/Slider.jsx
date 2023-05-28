@@ -8,7 +8,7 @@ const Slider = () => {
   return (
     <div
       id="carouselExampleCaptions"
-      className="relative mt-14"
+      className="relative mt-20"
       data-te-carousel-init
       data-te-carousel-slide
     >
@@ -22,7 +22,7 @@ const Slider = () => {
           data-te-target="#carouselExampleCaptions"
           data-te-slide-to="0"
           data-te-carousel-active
-          className="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+          className="mx-[3px] box-content h-[2px] w-[40px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
           aria-current="true"
           aria-label="Slide 1"
         ></button>
@@ -30,21 +30,21 @@ const Slider = () => {
           type="button"
           data-te-target="#carouselExampleCaptions"
           data-te-slide-to="1"
-          className="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+          className="mx-[3px] box-content h-[2px] w-[40px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
           aria-label="Slide 2"
         ></button>
         <button
           type="button"
           data-te-target="#carouselExampleCaptions"
           data-te-slide-to="2"
-          className="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+          className="mx-[3px] box-content h-[2px] w-[40px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
           aria-label="Slide 3"
         ></button>
         <button
           type="button"
           data-te-target="#carouselExampleCaptions"
           data-te-slide-to="3"
-          className="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+          className="mx-[3px] box-content h-[2px] w-[40px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
           aria-label="Slide 4"
         ></button>
       </div>
@@ -60,7 +60,7 @@ const Slider = () => {
         >
           <img
             src="images/slider-image_1.png"
-            className="block w-full h-full bg-center bg-contain bg-no-repeat"
+            className="block w-full h-full bg-center bg-contain bg-no-repeat "
             alt="..."
           />
           <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
@@ -122,7 +122,7 @@ const Slider = () => {
 
       {/* <!--Carousel controls - prev item--> */}
       <button
-        className="absolute sm:left-10 md:left-12 lg:left-20 xl:left-30 bottom-0 left-0 top-0 z-[1] flex w-[23%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+        className="absolute sm:left-10 md:left-12 lg:left-20 xl:left-30 bottom-0 left-0 top-0 z-[1] flex w-[10%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
         type="button"
         data-te-target="#carouselExampleCaptions"
         data-te-slide="prev"
@@ -134,7 +134,7 @@ const Slider = () => {
       </button>
       {/* <!--Carousel controls - next item--> */}
       <button
-        className="absolute sm:right-10 md:right-12 lg:right-20 xl:right-30 bottom-0 right-0 top-0 z-[1] flex w-[25%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+        className="absolute sm:right-10 md:right-12 lg:right-20 xl:right-30 bottom-0 right-0 top-0 z-[1] flex w-[12%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
         type="button"
         data-te-target="#carouselExampleCaptions"
         data-te-slide="next"

@@ -37,22 +37,22 @@ export default function Navbar() {
           {showScrollNavbar ? (
             <Link to="/menu" className="w-full h-full flex justify-center">
               <img
-                className="absolute rounded-full top-[-5px] right-[36%]"
+                className="duration-300 absolute top-[-9px] left-1/2 transform -translate-x-1/2 -translate-y-[0px] rounded-full"
                 src="images/mobileMenuLogo.png"
                 alt="ds"
-                width={85}
-                height={85}
+                width={100}
+                height={100}
               />
               {/* <div className="bg-[url('../public/images/mobileMenuLogo.png')]bg-no-repeat bg-contain bg-center top-10"></div> */}
             </Link>
           ) : (
             <Link to="/menu" className="w-full h-full flex justify-center">
               <img
-                className="absolute rounded-full top-[-5px] right-1/3"
+                className="duration-300 absolute top-[-4px] left-1/2 transform -translate-x-1/2 -translate-y-[0px] rounded-full"
                 src="images/mobileMenuLogo.png"
                 alt="logo"
-                width={105}
-                height={105}
+                width={110}
+                height={110}
               />
               {/* <div className="bg-[url('../public/images/mobileMenuLogo.png')] h-[80px] w-40 bg-no-repeat bg-contain bg-center"></div> */}
             </Link>
@@ -60,7 +60,7 @@ export default function Navbar() {
 
           <button
             type="button"
-            className="inline-flex justify-center items-center rounded-md text-gray-1000 my-6 "
+            className="inline-flex justify-center items-center rounded-md text-gray-1000 my-7 mr-2"
             // {
             //   showScrollNavbar
             //     ? '-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-1000'
