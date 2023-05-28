@@ -36,11 +36,25 @@ export default function Navbar() {
         <div className="flex lg:hidden justify-between w-full ">
           {showScrollNavbar ? (
             <Link to="/menu" className="w-full h-full flex justify-center">
-              <div className="bg-[url('../public/images/mobileMenuLogo.png')]bg-no-repeat bg-contain bg-center top-10"></div>
+              <img
+                className="absolute rounded-full"
+                src="images/mobileMenuLogo.png"
+                alt="ds"
+                width={70}
+                height={70}
+              />
+              {/* <div className="bg-[url('../public/images/mobileMenuLogo.png')]bg-no-repeat bg-contain bg-center top-10"></div> */}
             </Link>
           ) : (
             <Link to="/menu" className="w-full h-full flex justify-center">
-              <div className="bg-[url('../public/images/mobileMenuLogo.png')] h-[80px] w-40 bg-no-repeat bg-contain bg-center"></div>
+              <img
+                className="absolute rounded-full top-0 right-[42vw]"
+                src="images/mobileMenuLogo.png"
+                alt="logo"
+                width={60}
+                height={120}
+              />
+              {/* <div className="bg-[url('../public/images/mobileMenuLogo.png')] h-[80px] w-40 bg-no-repeat bg-contain bg-center"></div> */}
             </Link>
           )}
 

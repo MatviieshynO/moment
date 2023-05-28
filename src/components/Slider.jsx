@@ -8,7 +8,7 @@ const Slider = () => {
   return (
     <div
       id="carouselExampleCaptions"
-      className="relative mt-16"
+      className="relative mt-20"
       data-te-carousel-init
       data-te-carousel-slide
     >

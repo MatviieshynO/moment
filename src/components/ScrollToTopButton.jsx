@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp'
+import { BsFillArrowUpCircleFill } from 'react-icons/bs'
 
 const ScrollToTopButton = () => {
   const [showScrollButton, setShowScrollButton] = useState(false)
@@ -20,12 +20,11 @@ const ScrollToTopButton = () => {
     })
   }
   return (
-    <div className="fixed sm:bottom-[10%] sm:right-[1%] md:bottom-[10%] md:right-[3%] bottom-[-9px] right-[45%] text-6xl">
+    <div className="fixed sm:bottom-[10%] sm:right-[1%] md:bottom-[10%] md:right-[3%] bottom-[-21px] right-[42%]">
       {showScrollButton && (
-        <KeyboardDoubleArrowUpIcon
-          className="cursor-pointer bg-incherit"
+        <BsFillArrowUpCircleFill
+          className="cursor-pointer bg-incherit text-5xl text-[#256469]"
           onClick={scrollToTop}
-          fontSize="large"
         />
       )}
     </div>
