@@ -8,7 +8,7 @@ const Slider = () => {
   return (
     <div
       id="carouselExampleCaptions"
-      className="relative"
+      className="relative mt-16"
       data-te-carousel-init
       data-te-carousel-slide
     >
@@ -59,7 +59,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="images/slider-image_1.jpg"
+            src="images/slider-image_1.png"
             className="block w-full h-full bg-center bg-contain bg-no-repeat"
             alt="..."
           />
@@ -75,7 +75,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="images/slider-image_2.jpg"
+            src="images/slider-image_2.png"
             className="block w-full h-full bg-center bg-cover bg-no-repeat "
             alt="..."
           />
@@ -92,7 +92,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="images/slider-image_3.jpg"
+            src="images/slider-image_3.png"
             className="block w-full bg-center bg-cover bg-no-repeat"
             alt="..."
           />
@@ -108,7 +108,7 @@ const Slider = () => {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img
-            src="images/slider-image_4.jpg"
+            src="images/slider-image_4.png"
             className="block w-full bg-center bg-cover bg-no-repeat"
             alt="..."
           />

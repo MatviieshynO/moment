@@ -24,36 +24,37 @@ export default function Navbar() {
   return (
     <div className="fixed inset-x-0 top-0 z-20 snap-y lg:w-[85%] lg:mx-auto">
       <nav
-        className={
-          showScrollNavbar
-            ? 'flex items-center justify-between py-0 px-8 lg:px-8 duration-200 bg-white shadow-lg shadow-bg-orange-50'
-            : 'flex items-center justify-between py-6 px-8 lg:px-8 duration-200 text-white'
-        }
+        className="flex items-center justify-between py-0 px-2 lg:px-8 duration-200 bg-white shadow-lg shadow-bg-orange-50"
+        // {
+        //   showScrollNavbar
+        //     ? 'flex items-center justify-between py-0 px-8 lg:px-8 duration-200 bg-white shadow-lg shadow-bg-orange-50'
+        //     : 'flex items-center justify-between py-0 px-8 lg:px-8 duration-200 text-white bg-white'
+        // }
         aria-label="Global"
       >
         <div className="flex lg:flex-1"></div>
         <div className="flex lg:hidden justify-between w-full ">
           {showScrollNavbar ? (
-            <Link to="/menu" className="w-full h-full">
-              <div className="bg-[url('../public/images/LogoHomePage.gif')] h-[70px] w-40 bg-no-repeat bg-cover bg-center top-10"></div>
+            <Link to="/menu" className="w-full h-full flex justify-center">
+              <div className="bg-[url('../public/images/mobileMenuLogo.png')]bg-no-repeat bg-contain bg-center top-10"></div>
             </Link>
           ) : (
-            <div className="flex items-top w-[70%] justify-between">
-              <LanguageSelect />
-              <SocialMedia />
-            </div>
+            <Link to="/menu" className="w-full h-full flex justify-center">
+              <div className="bg-[url('../public/images/mobileMenuLogo.png')] h-[80px] w-40 bg-no-repeat bg-contain bg-center"></div>
+            </Link>
           )}
 
           <button
             type="button"
-            className={
-              showScrollNavbar
-                ? '-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-1000'
-                : '-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100'
-            }
+            className="inline-flex items-center justify-center rounded-md text-gray-1000"
+            // {
+            //   showScrollNavbar
+            //     ? '-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-1000'
+            //     : '-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100'
+            // }
             onClick={() => setMobileMenuOpen(true)}
           >
-            <Bars3Icon className="h-8 w-8  mt-[6px]" aria-hidden="true" />
+            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
 
@@ -108,13 +109,13 @@ export default function Navbar() {
           </div>
         </Popover.Group>
       </nav>
+      {/* NavMobile */}
       <Dialog
         as="div"
         className="lg:hidden"
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
-        {/* NavMobile */}
         <div className="fixed inset-0 z-0" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-[#FFFFFF] px-2 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex justify-end mt-4 mr-6 ">
