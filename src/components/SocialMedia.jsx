@@ -1,27 +1,22 @@
-import InstagramIcon from '@mui/icons-material/Instagram'
-import MailOutlineIcon from '@mui/icons-material/MailOutline'
-import LocationOnIcon from '@mui/icons-material/LocationOn'
+import { AiFillInstagram } from 'react-icons/ai'
+import { GrMail } from 'react-icons/gr'
+import { MdWifiCalling3 } from 'react-icons/md'
 
 const SocialMedia = () => {
   return (
-    <div className="flex pt-[8px] mr-2">
-      <a href="https://www.instagram.com/moment.cv/" target="blank">
-        <InstagramIcon
-          className="hover:opacity-70 cursor-pointer mr-[2px] p-[2px] "
-          fontSize="large"
-        />
+    <div className="flex-column absolute top-[90px] left-[0] md:hidden bg-white rounded gsap-04">
+      <a
+        href="https://www.instagram.com/moment.cv/"
+        target="blank"
+        className="bg-[red]"
+      >
+        <AiFillInstagram className="cursor-pointer ml-[1px] text-2xl  rounded-full p-[3px] gsap-03" />
       </a>
       <a href="/" target="blank">
-        <MailOutlineIcon
-          className="hover:opacity-70 cursor-pointer"
-          fontSize="large"
-        />
+        <GrMail className="cursor-pointer ml-[1px] text-2xl ] rounded-full p-[3px] gsap-03" />
       </a>
       <a href="/" target="blank">
-        <LocationOnIcon
-          className="hover:opacity-70 cursor-pointer p-[2px]"
-          fontSize="large"
-        />
+        <MdWifiCalling3 className="cursor-pointer ml-[1px] text-2xl  rounded-full p-[3px] gsap-03" />
       </a>
     </div>
   )
