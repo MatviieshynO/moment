@@ -35,16 +35,6 @@ export default function Navbar() {
       }
     )
     gsap.fromTo(
-      '.gsap-02',
-      {
-        rotate: 0,
-      },
-      {
-        rotate: 1080,
-        duration: 2,
-      }
-    )
-    gsap.fromTo(
       '.gsap-03',
       {
         opacity: 0,
@@ -66,6 +56,18 @@ export default function Navbar() {
       }
     )
   }, [])
+  useEffect(() => {
+    gsap.fromTo(
+      '.gsap-02',
+      {
+        rotate: 0,
+      },
+      {
+        rotate: 1080,
+        duration: 2,
+      }
+    )
+  }, [mobileMenuOpen])
   return (
     <div className="fixed inset-x-0 top-0 z-20 snap-y lg:w-[85%] lg:mx-auto">
       <SocialMedia />
@@ -101,14 +103,23 @@ export default function Navbar() {
               />
             </Link>
           )}
-
-          <button
-            type="button"
-            className="inline-flex justify-center items-center rounded-md text-gray-1000 my-2 mr-2"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <Bars3Icon className="h-6 w-6 gsap-02" aria-hidden="true" />
-          </button>
+          {!mobileMenuOpen ? (
+            <button
+              type="button"
+              className="inline-flex justify-center items-center rounded-md text-gray-1000 my-2 mr-2"
+              onClick={() => setMobileMenuOpen(true)}
+            >
+              <Bars3Icon className="h-6 w-6 gsap-02" aria-hidden="true" />
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="inline-flex justify-center items-center rounded-md text-gray-1000 my-2 mr-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <XMarkIcon className="h-6 w-6 gsap-02" aria-hidden="true" />
+            </button>
+          )}
         </div>
 
         <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
@@ -169,54 +180,25 @@ export default function Navbar() {
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
-        <div className="fixed inset-0 z-0" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 top-0 z-20 w-[25%]  overflow-y-auto bg-white px-2 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex justify-end">
-            <button
+        <Dialog.Panel className="fixed inset-y-0 border right-0 top-[85px] z-20 w-[35%] h-[56%] bg-gradient-to-r from-[#092d42] via-[#005672] to-[#2683b1]  overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="flex-inline justify-center items-center content-center">
+            {/* <button
               type="button"
-              className="rounded-md text-gray-700 "
+              className=""
               onClick={() => setMobileMenuOpen(false)}
             >
-              <XMarkIcon className="h-2 w-2 mt-[4px] " aria-hidden="true" />
-            </button>
-          </div>
+              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+            </button> */}
 
-          {/*   */}
-          <div className="mt-10 flow-root">
-            <div className="-my-6 ">
-              <div className="space-y-2 py-6 ">
-                <Link
-                  to="/"
-                  className="-mx-0 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-50 text-center"
-                >
-                  Головна
-                </Link>
-                <Link
-                  to="/menu"
-                  className="-mx-0 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-50 text-center"
-                >
-                  Меню
-                </Link>
-                <Link
-                  to="/gallery"
-                  className="-mx-0 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
-                >
-                  Галерея
-                </Link>
-                <Link
-                  to="/contact"
-                  className="-mx-0 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
-                >
-                  Контакти
-                </Link>
-                <Link
-                  to="/about"
-                  className="-mx-0 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center"
-                >
-                  Про нас
-                </Link>
-              </div>
-            </div>
+            <Link to="/menu" className="flex">
+              Меню
+            </Link>
+            <Link to="/gallery" className="flex">
+              Про нас
+            </Link>
+            <Link to="/contact" className="flex">
+              Контакти
+            </Link>
           </div>
         </Dialog.Panel>
       </Dialog>
