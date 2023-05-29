@@ -67,6 +67,58 @@ export default function Navbar() {
         duration: 2,
       }
     )
+    gsap.fromTo(
+      '.gsap-05',
+      {
+        x: 400,
+        opacity: 0.5,
+      },
+      {
+        x: 0,
+        delay: 0.5,
+        opacity: 1,
+        duration: 1,
+      }
+    )
+    gsap.fromTo(
+      '.gsap-05-link1',
+      {
+        x: 400,
+        opacity: 0.5,
+      },
+      {
+        x: 0,
+        delay: 0.9,
+        opacity: 1,
+        duration: 0.5,
+      }
+    )
+    gsap.fromTo(
+      '.gsap-05-link2',
+      {
+        x: 400,
+        opacity: 0.5,
+      },
+      {
+        x: 0,
+        delay: 1.3,
+        opacity: 1,
+        duration: 0.5,
+      }
+    )
+    gsap.fromTo(
+      '.gsap-05-link3',
+      {
+        x: 400,
+        opacity: 0.5,
+      },
+      {
+        x: 0,
+        delay: 1.8,
+        opacity: 1,
+        duration: 0.5,
+      }
+    )
   }, [mobileMenuOpen])
   return (
     <div className="fixed inset-x-0 top-0 z-40 snap-y lg:w-[85%] lg:mx-auto">
@@ -84,7 +136,7 @@ export default function Navbar() {
           {showScrollNavbar ? (
             <Link to="/menu" className="w-full h-full flex justify-center">
               <img
-                className="duration-300 absolute top-[-9px] left-1/2 transform -translate-x-1/2 -translate-y-[0px] rounded-full"
+                className="duration-300 absolute top-[-7px] left-1/2 transform -translate-x-1/2 -translate-y-[0px] rounded-full"
                 src="images/mobileMenuLogo.png"
                 alt="ds"
                 width={90}
@@ -109,7 +161,7 @@ export default function Navbar() {
               className="inline-flex justify-center items-center rounded-md text-gray-1000 my-2 mr-2"
               onClick={() => setMobileMenuOpen(true)}
             >
-              <Bars3Icon className="h-6 w-6 gsap-02" aria-hidden="true" />
+              <Bars3Icon className="h-6 w-6 " aria-hidden="true" />
             </button>
           ) : (
             <button
@@ -180,18 +232,15 @@ export default function Navbar() {
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
-        <Dialog.Panel className="fixed right-[0] top-[72px] z-20 w-full p-4 h-full bg-gradient-to-r from-[#062e36] via-[#154354] to-[#b8c3cb] ">
-          <div className="flex-inline">
-            <Link to="/menu" className="flex text-white">
-              Меню
-            </Link>
-            <Link to="/" className="flex text-white">
-              Про нас
-            </Link>
-            <Link to="/" className="flex text-white">
-              Контакти
-            </Link>
-          </div>
+        <Dialog.Panel className=" gsap-05 fixed right-[0] top-[72px] z-20 w-full p-4 h-[60%] bg-gradient-to-r from-[#062e36] via-[#154354] to-[#b8c3cb] ">
+          <ul className="text-white text-center pt-20">
+            <li className="text-xl uppercase gsap-05-link1">Меню</li>
+            <li className="text-xl uppercase pt-6 gsap-05-link2">Контакти</li>
+            <li className="text-xl uppercase pt-6 gsap-05-link3">Про нас</li>
+            <br />
+            <hr />
+          </ul>
+          <LanguageSelect />
         </Dialog.Panel>
       </Dialog>
     </div>
