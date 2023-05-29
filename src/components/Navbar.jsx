@@ -249,7 +249,7 @@ export default function Navbar() {
           <ul className="text-white text-center pt-14">
             <li className="text-xl uppercase gsap-05-link1">Меню</li>
             <li className="text-xl uppercase pt-6 gsap-05-link2">Відгуки</li>
-            <li className="text-xl uppercase pt-6 gsap-05-link3">Контакти</li>
+            <li className="text-xl uppercase pt-6 gsap-05-link3">Години роботи</li>
             <li className="text-xl uppercase pt-6 gsap-05-link4">Про нас</li>
             <br />
             <hr />

@@ -3,7 +3,7 @@ import { useRef, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 //Components
 import ScrollToTopButton from '../components/ScrollToTopButton'
-import ProductCard from '../components/ProductCard'
+
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace'
 
 const Menu = () => {
@@ -143,66 +143,10 @@ const Menu = () => {
             <div className="flex-column ">
               <section ref={saltyWaffles} className="sectionFood ">
                 <h4 className="text-center">Солодкі вафлі</h4>
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="Солоні вафлі"
-                  text="Свіжі і дуже смачні, всіх запрошую покуштувати"
-                  price="250"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
               </section>
-              <section ref={sweetWaffles} className="sectionFood  ">
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-              </section>
+              <section ref={sweetWaffles} className="sectionFood  "></section>
 
-              <section ref={other} className="sectionFood ">
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-              </section>
+              <section ref={other} className="sectionFood "></section>
             </div>
           </nav>
         </div>
@@ -260,171 +204,27 @@ const Menu = () => {
               <h2 className="text-center">Напої</h2>
               <section ref={blackСoffee} className="sectionDrinks ">
                 <h2>Чорна кава</h2>
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
               </section>
               <section ref={coffeeDrinks} className="sectionDrinks">
                 <h2>Кавові напої</h2>
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
               </section>
               <section ref={cocoa} className="sectionDrinks">
                 <h2>Какао</h2>
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
               </section>
               <section ref={tea} className="sectionDrinks">
                 <h2>Чай</h2>
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
               </section>
               <section ref={matcha} className="sectionDrinks">
                 <h2>Матча</h2>
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
               </section>
               <section ref={coldMenu} className="sectionDrinks">
                 <h2>Холодне меню</h2>
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
               </section>
               <section ref={lemonadeAndOthers} className="sectionDrinks">
                 <h2>Лимонад і інше</h2>
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
               </section>
               <section ref={milkshakes} className="sectionDrinks">
                 <h2>Мілкшейки</h2>
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
-                <ProductCard
-                  url="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-                  title="some title"
-                  text="some text"
-                  price="500"
-                />
               </section>
             </div>
           </nav>
