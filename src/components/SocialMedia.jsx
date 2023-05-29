@@ -4,7 +4,7 @@ import { MdWifiCalling3 } from 'react-icons/md'
 
 const SocialMedia = () => {
   return (
-    <div className="flex-column absolute top-[58px] left-[-4px] md:hidden rounded bg-gradient-to-r from-[#092d42] via-[#005672] to-[#2683b1] gsap-04">
+    <div className="flex-column absolute top-[58px] z-30 left-[-4px] md:hidden rounded bg-gradient-to-r from-[#092d42] via-[#005672] to-[#2683b1] gsap-04">
       <a
         href="https://www.instagram.com/moment.cv/"
         target="blank"

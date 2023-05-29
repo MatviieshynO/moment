@@ -69,7 +69,7 @@ export default function Navbar() {
     )
   }, [mobileMenuOpen])
   return (
-    <div className="fixed inset-x-0 top-0 z-20 snap-y lg:w-[85%] lg:mx-auto">
+    <div className="fixed inset-x-0 top-0 z-40 snap-y lg:w-[85%] lg:mx-auto">
       <SocialMedia />
       <nav
         className={
@@ -180,23 +180,15 @@ export default function Navbar() {
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
-        <Dialog.Panel className="fixed inset-y-0 border right-0 top-[85px] z-20 w-[35%] h-[56%] bg-gradient-to-r from-[#092d42] via-[#005672] to-[#2683b1]  overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex-inline justify-center items-center content-center">
-            {/* <button
-              type="button"
-              className=""
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-            </button> */}
-
-            <Link to="/menu" className="flex">
+        <Dialog.Panel className="fixed right-[0] top-[72px] z-20 w-full p-4 h-full bg-gradient-to-r from-[#062e36] via-[#154354] to-[#b8c3cb] ">
+          <div className="flex-inline">
+            <Link to="/menu" className="flex text-white">
               Меню
             </Link>
-            <Link to="/gallery" className="flex">
+            <Link to="/" className="flex text-white">
               Про нас
             </Link>
-            <Link to="/contact" className="flex">
+            <Link to="/" className="flex text-white">
               Контакти
             </Link>
           </div>

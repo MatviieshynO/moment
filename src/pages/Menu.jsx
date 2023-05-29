@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom'
 import ScrollToTopButton from '../components/ScrollToTopButton'
 import ProductCard from '../components/ProductCard'
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace'
-import LanguageSelect from '../components/LanguageSelect'
 
 const Menu = () => {
   useEffect(() => {
@@ -74,10 +73,6 @@ const Menu = () => {
               }}
             />
           </NavLink>
-        </div>
-
-        <div>
-          <LanguageSelect />
         </div>
       </div>
       {/* <!--Tabs navigation--> */}
