@@ -119,6 +119,19 @@ export default function Navbar() {
         duration: 0.5,
       }
     )
+    gsap.fromTo(
+      '.gsap-05-link4',
+      {
+        x: 400,
+        opacity: 0.5,
+      },
+      {
+        x: 0,
+        delay: 2.3,
+        opacity: 1,
+        duration: 0.5,
+      }
+    )
   }, [mobileMenuOpen])
   return (
     <div className="fixed inset-x-0 top-0 z-40 snap-y lg:w-[85%] lg:mx-auto">
@@ -232,11 +245,12 @@ export default function Navbar() {
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
-        <Dialog.Panel className=" gsap-05 fixed right-[0] top-[72px] z-20 w-full p-4 h-[60%] bg-gradient-to-r from-[#062e36] via-[#154354] to-[#b8c3cb] ">
-          <ul className="text-white text-center pt-20">
+        <Dialog.Panel className=" gsap-05 fixed right-[0] top-[72px] z-20 w-full p-4 h-[65y%] bg-gradient-to-r from-[#062e36] via-[#154354] to-[#b8c3cb] ">
+          <ul className="text-white text-center pt-14">
             <li className="text-xl uppercase gsap-05-link1">Меню</li>
-            <li className="text-xl uppercase pt-6 gsap-05-link2">Контакти</li>
-            <li className="text-xl uppercase pt-6 gsap-05-link3">Про нас</li>
+            <li className="text-xl uppercase pt-6 gsap-05-link2">Відгуки</li>
+            <li className="text-xl uppercase pt-6 gsap-05-link3">Контакти</li>
+            <li className="text-xl uppercase pt-6 gsap-05-link4">Про нас</li>
             <br />
             <hr />
           </ul>
