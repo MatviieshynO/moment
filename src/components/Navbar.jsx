@@ -147,7 +147,7 @@ export default function Navbar() {
         <div className="flex lg:flex-1"></div>
         <div className="flex lg:hidden justify-between w-full ">
           {showScrollNavbar ? (
-            <Link to="/menu" className="w-full h-full flex justify-center">
+            <Link to="/" className="w-full h-full flex justify-center">
               <img
                 className="duration-300 absolute top-[-7px] left-1/2 transform -translate-x-1/2 -translate-y-[0px] rounded-full"
                 src="images/mobileMenuLogo.png"
@@ -158,7 +158,7 @@ export default function Navbar() {
               {/* <div className="bg-[url('../public/images/mobileMenuLogo.png')]bg-no-repeat bg-contain bg-center top-10"></div> */}
             </Link>
           ) : (
-            <Link to="/menu" className="w-full h-full flex justify-center">
+            <Link to="/" className="w-full h-full flex justify-center">
               <img
                 className="gsap-01 duration-300 absolute top-[-4px] left-1/2 transform -translate-x-1/2 -translate-y-[0px] rounded-full"
                 src="images/mobileMenuLogo.png"
@@ -247,9 +247,13 @@ export default function Navbar() {
       >
         <Dialog.Panel className=" gsap-05 fixed right-[0] top-[72px] z-20 w-full p-4 h-[65y%] bg-gradient-to-r from-[#062e36] via-[#154354] to-[#b8c3cb] ">
           <ul className="text-white text-center pt-14">
-            <li className="text-xl uppercase gsap-05-link1">Меню</li>
+            <li className="text-xl uppercase gsap-05-link1">
+              <Link to="/menu">Меню</Link>
+            </li>
             <li className="text-xl uppercase pt-6 gsap-05-link2">Відгуки</li>
-            <li className="text-xl uppercase pt-6 gsap-05-link3">Години роботи</li>
+            <li className="text-xl uppercase pt-6 gsap-05-link3">
+              Години роботи
+            </li>
             <li className="text-xl uppercase pt-6 gsap-05-link4">Про нас</li>
             <br />
             <hr />
