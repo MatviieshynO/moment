@@ -1,8 +1,14 @@
 import { useState } from 'react'
+import { InView } from 'react-intersection-observer'
+
+//Components
 
 const Menu = () => {
   //States
   const [openToggleMenu, setOpenToggleMenu] = useState(false)
+  const [saltedWaffles, setSaltedWaffles] = useState(null)
+  const [sweetWaffles, setSweetWaffles] = useState(null)
+  const [other, setOther] = useState(null)
 
   //Functions
   const openToToggleMenuHandlerDrinks = () => {
@@ -20,8 +26,8 @@ const Menu = () => {
         <div
           className={
             openToggleMenu
-              ? 'flex-column border mx-2 justify-center items-center cursor-pointer rounded '
-              : 'flex-column border mx-2 justify-center items-center cursor-pointer rounded opacity-50'
+              ? 'flex-column  mx-2 justify-center items-center cursor-pointer rounded '
+              : 'flex-column border-2 mx-2 justify-center items-center cursor-pointer rounded opacity-50'
           }
           onClick={openToToggleMenuHandlerDrinks}
         >
@@ -37,8 +43,8 @@ const Menu = () => {
         <div
           className={
             openToggleMenu
-              ? 'flex-column border mx-2 justify-center items-center cursor-pointer rounded opacity-50'
-              : 'flex-column border-2 border-[red] mx-2 justify-center items-center cursor-pointer rounded '
+              ? 'flex-column border-2 mx-2 justify-center items-center cursor-pointer rounded opacity-50'
+              : 'flex-column  mx-2 justify-center items-center cursor-pointer rounded '
           }
           onClick={openToToggleMenuHandlerFood}
         >
@@ -53,11 +59,11 @@ const Menu = () => {
         </div>
       </div>
       {/* subsections */}
-      <div className="flex w-full h-[400px] ">
+      <div className="flex w-full ">
         {openToggleMenu ? (
           <div className="w-full h-full mt-2">
             {/* Drinks subsections*/}
-            <div className="flex items-center border-y-[1px] border-black gap-8 overflow-auto">
+            <div className="flex items-center border-y-[1px] border-black gap-8 overflow-auto mx-2">
               <div className="flex-column m-[2px] h-full shrink-0">
                 <img
                   src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
@@ -129,7 +135,7 @@ const Menu = () => {
                 />
                 <h4 className="text-center text-[10px]">limonade and other</h4>
               </div>
-              <div className="flex-column m-[2px] h-full shrink-0 mr-2">
+              <div className="flex-column m-[2px] h-full shrink-0">
                 <img
                   src="https://thedairyalliance.com/wp-content/uploads/2020/05/blueberry-strawberry-and-banana-milk-shake-26493995.jpg"
                   alt="milkshakes"
@@ -144,38 +150,60 @@ const Menu = () => {
         ) : (
           <div className="w-full h-full mt-2">
             {/* Food subsections*/}
-            <div className="flex justify-center items-center gap-4 border-y-[1px] border-black">
-              <div className="flex-column m-[2px]">
-                <img
-                  src="https://prostoway.com/wp-content/uploads/2022/07/vafli_s_kuricei_i_zelyonim_lukom-516748-1280x720.jpg"
-                  alt="salted waffles"
-                  width={100}
-                  height={100}
-                  className="rounded"
-                />
-                <h4 className="text-center text-[10px]">salted waffles</h4>
-              </div>
-              <div className="flex-column m-[2px]">
-                <img
-                  src="https://cdn.abo.media/upload/article/o_1fma0tbome861ee21g7dmtijfp1k.jpg"
-                  alt="sweet waffles"
-                  width={100}
-                  height={100}
-                  className="rounded"
-                />
+            {sweetWaffles ? (
+              <div className="fixed top-20 text-white">dasdad</div>
+            ) : (
+              <div className="flex justify-center items-center gap-4 border-y-[1px] border-black">
+                <div className="flex-column m-[2px]">
+                  <img
+                    src="https://prostoway.com/wp-content/uploads/2022/07/vafli_s_kuricei_i_zelyonim_lukom-516748-1280x720.jpg"
+                    alt="salted waffles"
+                    width={100}
+                    height={100}
+                    className="rounded"
+                  />
+                  <h4 className="text-center text-[10px]">salted waffles</h4>
+                </div>
+                <div className="flex-column m-[2px]">
+                  <img
+                    src="https://cdn.abo.media/upload/article/o_1fma0tbome861ee21g7dmtijfp1k.jpg"
+                    alt="sweet waffles"
+                    width={100}
+                    height={100}
+                    className="rounded"
+                  />
 
-                <h4 className="text-center text-[10px]">sweet waffles</h4>
+                  <h4 className="text-center text-[10px]">sweet waffles</h4>
+                </div>
+                <div className="flex-column m-[2px] flex-nowrap">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGu8ustiJM8aWmo4zKtE4XDlpQRNzYzXCrMg&usqp=CAU"
+                    alt="sweet waffles"
+                    width={100}
+                    height={100}
+                    className="rounded"
+                  />
+                  <h4 className="text-center text-[10px]">other</h4>
+                </div>
               </div>
-              <div className="flex-column m-[2px] flex-nowrap">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGu8ustiJM8aWmo4zKtE4XDlpQRNzYzXCrMg&usqp=CAU"
-                  alt="sweet waffles"
-                  width={100}
-                  height={100}
-                  className="rounded"
-                />
-                <h4 className="text-center text-[10px]">other</h4>
-              </div>
+            )}
+            {/* Products from food */}
+            <div>
+              <InView
+                as="div"
+                onChange={(inView, entry) => setSaltedWaffles(inView)}
+                className="h-[400px] w-full bg-slate-900"
+              ></InView>
+              <InView
+                as="div"
+                onChange={(inView, entry) => setSweetWaffles(inView)}
+                className="h-[400px] w-full bg-slate-600"
+              ></InView>
+              <InView
+                as="div"
+                onChange={(inView, entry) => setOther(inView)}
+                className="h-[400px] w-full bg-slate-400"
+              ></InView>
             </div>
           </div>
         )}
