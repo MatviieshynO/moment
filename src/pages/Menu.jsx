@@ -61,10 +61,10 @@ const Menu = () => {
         >
           <img
             className="rounded"
-            src="https://plus.unsplash.com/premium_photo-1675716443562-b771d72a3da7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29mZmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+            src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
             alt="Drinks"
             width={scroll ? 110 : 200}
-            height={scroll ? 110 : 200}
+            height={scroll ? 60 : 200}
           />
           <h4 className="text-center bg-white">Drinks</h4>
         </div>
@@ -78,10 +78,10 @@ const Menu = () => {
         >
           <img
             className="rounded"
-            src="https://www.foodandwine.com/thmb/lSmwEvqVN1VtBDUuAdIJ1vn03ks=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/light-and-crispy-waffles-FT-RECIPE1021-561d9a8be2274dc9b8384a1c58a71fcf.jpg"
+            src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
             alt="Drinks"
             width={scroll ? 110 : 200}
-            height={scroll ? 110 : 200}
+            height={scroll ? 60 : 200}
           />
           <h4 className="text-center bg-white">Food</h4>
         </div>
@@ -94,8 +94,8 @@ const Menu = () => {
             <div
               className={
                 scroll
-                  ? 'fixed  top-[110px] z-50 flex items-center bg-white w-full gap-8 overflow-auto px-2 gsap-05-menu-1'
-                  : 'flex items-center border-y-[1px] border-black gap-8 overflow-auto mx-2'
+                  ? 'fixed  top-[110px] z-50 flex  bg-white w-full gap-[28px] overflow-auto gsap-05-menu-1 pl-2'
+                  : 'flex border-y-[1px] border-black gap-4 overflow-scroll pl-2'
               }
             >
               <div className="flex-column m-[2px] h-full shrink-0">
@@ -106,11 +106,11 @@ const Menu = () => {
                   height={scroll ? 90 : 100}
                   className="rounded"
                 />
-                <h4 className="text-center text-[13px]">black coffee</h4>
+                <h4 className="text-center text-[10px]">black coffee</h4>
               </div>
               <div className="flex-column m-[2px] h-full shrink-0">
                 <img
-                  src="https://d1ralsognjng37.cloudfront.net/22759c8b-fb62-44a0-b3de-57d0ee706983.jpeg"
+                  src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="coffee drinks"
                   width={scroll ? 90 : 100}
                   height={scroll ? 90 : 100}
@@ -121,7 +121,7 @@ const Menu = () => {
               </div>
               <div className="flex-column m-[2px] h-full shrink-0">
                 <img
-                  src="https://www.runtastic.com/blog/wp-content/uploads/2015/06/hot-chocolate-after-workout_ft-1024x683.jpg.webp"
+                  src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="chocolate"
                   width={scroll ? 90 : 100}
                   height={scroll ? 90 : 100}
@@ -131,7 +131,7 @@ const Menu = () => {
               </div>
               <div className="flex-column m-[2px] h-full shrink-0">
                 <img
-                  src="https://www.thrive.org.uk/files/images/_hero/Herbal-teas_hero-image.jpg"
+                  src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="tea"
                   width={scroll ? 90 : 100}
                   height={scroll ? 90 : 100}
@@ -141,7 +141,7 @@ const Menu = () => {
               </div>
               <div className="flex-column m-[2px] h-full shrink-0">
                 <img
-                  src="https://szefsmaku.pl/wp-content/uploads/2022/05/matcha.jpg"
+                  src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="matcha"
                   width={scroll ? 90 : 100}
                   height={scroll ? 90 : 100}
@@ -149,9 +149,9 @@ const Menu = () => {
                 />
                 <h4 className="text-center text-[10px]">matcha</h4>
               </div>
-              <div className="flex-column m-[2px] h-full shrink-0">
+              <div className="flex-column m-[2px] h- shrink-0">
                 <img
-                  src="https://www.todocanada.ca/wp-content/uploads/Tim_Hortons_OREO-DOUBLE_STUF__Iced_Capp__OREO__Strawberry_Creamy.jpg"
+                  src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="cold menu"
                   width={scroll ? 90 : 100}
                   height={scroll ? 90 : 100}
@@ -159,9 +159,9 @@ const Menu = () => {
                 />
                 <h4 className="text-center text-[10px]">cold menu</h4>
               </div>
-              <div className="flex-column m-[2px] h-full shrink-0">
+              <div className="flex-column  h-full m-[2px] shrink-0">
                 <img
-                  src="https://shottbeverages.com/wp-content/uploads/2018/11/Tahitian-Limonade_small.jpg"
+                  src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="limonade and other"
                   width={scroll ? 90 : 100}
                   height={scroll ? 90 : 100}
@@ -169,9 +169,9 @@ const Menu = () => {
                 />
                 <h4 className="text-center text-[10px]">limonade and other</h4>
               </div>
-              <div className="flex-column m-[2px] h-full shrink-0">
+              <div className="flex-column  h-full m-[2px] shrink-0">
                 <img
-                  src="https://thedairyalliance.com/wp-content/uploads/2020/05/blueberry-strawberry-and-banana-milk-shake-26493995.jpg"
+                  src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="milkshakes"
                   width={scroll ? 90 : 100}
                   height={scroll ? 90 : 100}
@@ -205,13 +205,13 @@ const Menu = () => {
             <div
               className={
                 scroll
-                  ? 'fixed top-[110px] z-50 flex justify-center bg-white w-full gsap-05-menu-1 gap-4'
-                  : 'flex justify-center items-center gap-4 border-y-[1px] border-black bg-white'
+                  ? 'fixed top-[110px] z-50 flex  bg-white w-full gsap-05-menu-1 gap-[28px] overflow-scroll pl-2'
+                  : 'flex  gap-4 border-y-[1px] border-black bg-white pl-2'
               }
             >
               <div className="flex-column m-[2px]">
                 <img
-                  src="https://prostoway.com/wp-content/uploads/2022/07/vafli_s_kuricei_i_zelyonim_lukom-516748-1280x720.jpg"
+                  src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="salted waffles"
                   width={scroll ? 90 : 100}
                   height={scroll ? 90 : 100}
@@ -221,7 +221,7 @@ const Menu = () => {
               </div>
               <div className="flex-column m-[2px]">
                 <img
-                  src="https://cdn.abo.media/upload/article/o_1fma0tbome861ee21g7dmtijfp1k.jpg"
+                  src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="sweet waffles"
                   width={scroll ? 90 : 100}
                   height={scroll ? 90 : 100}
@@ -230,9 +230,9 @@ const Menu = () => {
 
                 <h4 className="text-center text-[10px]">sweet waffles</h4>
               </div>
-              <div className="flex-column m-[2px] flex-nowrap">
+              <div className="flex-column m-[2px] ">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGu8ustiJM8aWmo4zKtE4XDlpQRNzYzXCrMg&usqp=CAU"
+                  src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="sweet waffles"
                   width={scroll ? 90 : 100}
                   height={scroll ? 90 : 100}
