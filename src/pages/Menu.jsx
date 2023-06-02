@@ -37,7 +37,7 @@ const Menu = () => {
         className={
           scroll
             ? 'fixed top-[1px] flex bg-white z-50 w-full justify-center gap-4 pt-1'
-            : 'flex justify-center gap-10'
+            : 'flex justify-center'
         }
       >
         <div
@@ -52,8 +52,8 @@ const Menu = () => {
             className="rounded"
             src="https://plus.unsplash.com/premium_photo-1675716443562-b771d72a3da7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29mZmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
             alt="Drinks"
-            width={scroll ? 125 : 125}
-            height={scroll ? 125 : 125}
+            width={scroll ? 125 : 200}
+            height={scroll ? 125 : 200}
           />
           <h4 className="text-center bg-white">Drinks</h4>
         </div>
@@ -69,8 +69,8 @@ const Menu = () => {
             className="rounded"
             src="https://www.foodandwine.com/thmb/lSmwEvqVN1VtBDUuAdIJ1vn03ks=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/light-and-crispy-waffles-FT-RECIPE1021-561d9a8be2274dc9b8384a1c58a71fcf.jpg"
             alt="Drinks"
-            width={scroll ? 125 : 125}
-            height={scroll ? 125 : 125}
+            width={scroll ? 125 : 200}
+            height={scroll ? 125 : 200}
           />
           <h4 className="text-center bg-white">Food</h4>
         </div>
