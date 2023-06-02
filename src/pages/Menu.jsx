@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { InView } from 'react-intersection-observer'
+import gsap from 'gsap'
 
 //Components
 
@@ -13,6 +14,17 @@ const Menu = () => {
 
   //Functions
   useEffect(() => {
+    gsap.fromTo(
+      '.gsap-05-menu-1',
+      { y: -50 },
+      {
+        y: 0,
+        duration: 0.5,
+      }
+    )
+  }, [scroll])
+
+  useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 200) {
         setScroll(true)
@@ -20,8 +32,7 @@ const Menu = () => {
         setScroll(false)
       }
     })
-  }, [])
-  console.log(scroll)
+  }, [scroll])
   const openToToggleMenuHandlerDrinks = () => {
     setOpenToggleMenu(() => true)
   }
@@ -36,14 +47,14 @@ const Menu = () => {
       <div
         className={
           scroll
-            ? 'fixed top-[1px] flex bg-white z-50 w-full justify-center gap-4 pt-1'
-            : 'flex justify-center'
+            ? 'fixed top-[1px] flex bg-white z-50 w-full justify-center pb-2 gsap-05-menu-1'
+            : 'flex justify-center '
         }
       >
         <div
           className={
             openToggleMenu
-              ? 'flex-column  mx-2 justify-center items-center cursor-pointer rounded '
+              ? 'flex-column  mx-2 justify-center items-center cursor-pointer rounded border border-black p-[1px]'
               : 'flex-column mx-2 p-[1px] justify-center items-center cursor-pointer rounded opacity-50'
           }
           onClick={openToToggleMenuHandlerDrinks}
@@ -61,7 +72,7 @@ const Menu = () => {
           className={
             openToggleMenu
               ? 'flex-column p-[1px] mx-2 justify-center items-center cursor-pointer rounded opacity-50'
-              : 'flex-column  mx-2 justify-center items-center cursor-pointer rounded '
+              : 'flex-column  mx-2 justify-center items-center cursor-pointer rounded border border-black p-[1px]'
           }
           onClick={openToToggleMenuHandlerFood}
         >
@@ -83,7 +94,7 @@ const Menu = () => {
             <div
               className={
                 scroll
-                  ? 'fixed  top-[115px] z-50 flex items-center bg-white w-full gap-8 overflow-auto px-2'
+                  ? 'fixed  top-[121px] z-50 flex items-center bg-white w-full gap-8 overflow-auto px-2 gsap-05-menu-1'
                   : 'flex items-center border-y-[1px] border-black gap-8 overflow-auto mx-2'
               }
             >
@@ -194,7 +205,7 @@ const Menu = () => {
             <div
               className={
                 scroll
-                  ? 'fixed top-[115px] z-50 flex justify-center bg-white w-full gap-6'
+                  ? 'fixed top-[121px] z-50 flex justify-center bg-white w-full gsap-05-menu-1 gap-4'
                   : 'flex justify-center items-center gap-4 border-y-[1px] border-black bg-white'
               }
             >
