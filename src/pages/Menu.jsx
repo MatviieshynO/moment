@@ -244,7 +244,7 @@ const Menu = () => {
               </div>
               <div
                 className="flex-column m-[2px]"
-                onClick={() => scrollToSectionHundler(wafflesSw)}
+                onClick={() => scrollToSectionHundler(another)}
               >
                 <img
                   src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
