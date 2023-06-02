@@ -52,8 +52,8 @@ const Menu = () => {
             className="rounded"
             src="https://plus.unsplash.com/premium_photo-1675716443562-b771d72a3da7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29mZmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
             alt="Drinks"
-            width={scroll ? 75 : 200}
-            height={scroll ? 75 : 200}
+            width={scroll ? 150 : 200}
+            height={scroll ? 150 : 200}
           />
           <h4 className="text-center bg-white">Drinks</h4>
         </div>
@@ -69,8 +69,8 @@ const Menu = () => {
             className="rounded"
             src="https://www.foodandwine.com/thmb/lSmwEvqVN1VtBDUuAdIJ1vn03ks=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/light-and-crispy-waffles-FT-RECIPE1021-561d9a8be2274dc9b8384a1c58a71fcf.jpg"
             alt="Drinks"
-            width={scroll ? 75 : 200}
-            height={scroll ? 75 : 200}
+            width={scroll ? 150 : 200}
+            height={scroll ? 150 : 200}
           />
           <h4 className="text-center bg-white">Food</h4>
         </div>
@@ -170,7 +170,7 @@ const Menu = () => {
             <div
               className={
                 scroll
-                  ? 'fixed top-[78px] z-50 flex justify-center bg-white w-full'
+                  ? 'fixed top-[125px] z-50 flex justify-center bg-white w-full gap-6'
                   : 'flex justify-center items-center gap-4 border-y-[1px] border-black bg-white'
               }
             >
@@ -178,8 +178,8 @@ const Menu = () => {
                 <img
                   src="https://prostoway.com/wp-content/uploads/2022/07/vafli_s_kuricei_i_zelyonim_lukom-516748-1280x720.jpg"
                   alt="salted waffles"
-                  width={scroll ? 50 : 100}
-                  height={scroll ? 50 : 100}
+                  width={scroll ? 100 : 100}
+                  height={scroll ? 100 : 100}
                   className="rounded"
                 />
                 <h4 className="text-center text-[10px]">salted waffles</h4>
@@ -188,8 +188,8 @@ const Menu = () => {
                 <img
                   src="https://cdn.abo.media/upload/article/o_1fma0tbome861ee21g7dmtijfp1k.jpg"
                   alt="sweet waffles"
-                  width={scroll ? 50 : 100}
-                  height={scroll ? 50 : 100}
+                  width={scroll ? 100 : 100}
+                  height={scroll ? 100 : 100}
                   className="rounded"
                 />
 
@@ -199,8 +199,8 @@ const Menu = () => {
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGu8ustiJM8aWmo4zKtE4XDlpQRNzYzXCrMg&usqp=CAU"
                   alt="sweet waffles"
-                  width={scroll ? 50 : 100}
-                  height={scroll ? 50 : 100}
+                  width={scroll ? 100 : 100}
+                  height={scroll ? 100 : 100}
                   className="rounded"
                 />
                 <h4 className="text-center text-[10px]">other</h4>
