@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { InView } from 'react-intersection-observer'
 import gsap from 'gsap'
 
@@ -11,8 +11,11 @@ const Menu = () => {
   const [saltedWaffles, setSaltedWaffles] = useState(null)
   const [sweetWaffles, setSweetWaffles] = useState(null)
   const [other, setOther] = useState(null)
-
-  //Functions
+  //ref
+  const wafflesSl = useRef(null)
+  const wafflesSw = useRef(null)
+  const another = useRef(null)
+  console.log(wafflesSl)
   useEffect(() => {
     gsap.fromTo(
       '.gsap-05-menu-1',
@@ -33,6 +36,13 @@ const Menu = () => {
       }
     })
   }, [scroll])
+  //Functions
+  const scrollToSectionHundler = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: 'smooth',
+    })
+  }
   const openToToggleMenuHandlerDrinks = () => {
     setOpenToggleMenu(() => true)
   }
@@ -216,6 +226,7 @@ const Menu = () => {
                   width={scroll ? 90 : 100}
                   height={scroll ? 90 : 100}
                   className="rounded"
+                  onClick={() => scrollToSectionHundler(wafflesSl)}
                 />
                 <h4 className="text-center text-[10px]">salted waffles</h4>
               </div>
@@ -226,11 +237,15 @@ const Menu = () => {
                   width={scroll ? 90 : 100}
                   height={scroll ? 90 : 100}
                   className="rounded"
+                  onClick={() => scrollToSectionHundler(wafflesSw)}
                 />
 
                 <h4 className="text-center text-[10px]">sweet waffles</h4>
               </div>
-              <div className="flex-column m-[2px] ">
+              <div
+                className="flex-column m-[2px]"
+                onClick={() => scrollToSectionHundler(wafflesSw)}
+              >
                 <img
                   src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="sweet waffles"
@@ -243,21 +258,33 @@ const Menu = () => {
             </div>
             {/* Products from food */}
             <div>
-              <InView
+              <div className="h-[600px] w-full bg-slate-900 mt-20">
+                <div ref={wafflesSl}></div>
+              </div>
+              <div className="h-[600px] w-full bg-slate-700">
+                <div ref={wafflesSw}></div>
+              </div>
+              <div className="h-[600px] w-full bg-slate-400">
+                <div ref={another}></div>
+              </div>
+              {/* <InView
+                ref={wafflesSl}
                 as="div"
                 onChange={(inView, entry) => setSaltedWaffles(inView)}
-                className="h-[400px] w-full bg-slate-900"
+                className="h-[600px] w-full bg-slate-900"
               ></InView>
               <InView
+                ref={wafflesSw}
                 as="div"
                 onChange={(inView, entry) => setSweetWaffles(inView)}
-                className="h-[400px] w-full bg-slate-600"
+                className="h-[600px] w-full bg-slate-600"
               ></InView>
               <InView
+                ref={another}
                 as="div"
                 onChange={(inView, entry) => setOther(inView)}
-                className="h-[400px] w-full bg-slate-400"
-              ></InView>
+                className="h-[600px] w-full bg-slate-400"
+              ></InView> */}
             </div>
           </div>
         )}
