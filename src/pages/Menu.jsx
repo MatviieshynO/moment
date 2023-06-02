@@ -36,15 +36,15 @@ const Menu = () => {
       <div
         className={
           scroll
-            ? 'fixed top-[1px] flex bg-white z-50 w-full justify-center'
-            : 'flex'
+            ? 'fixed top-[1px] flex bg-white z-50 w-full justify-center gap-4 pt-1'
+            : 'flex justify-center gap-10'
         }
       >
         <div
           className={
             openToggleMenu
               ? 'flex-column  mx-2 justify-center items-center cursor-pointer rounded '
-              : 'flex-column border-2 mx-2 justify-center items-center cursor-pointer rounded opacity-50'
+              : 'flex-column mx-2 p-[1px] justify-center items-center cursor-pointer rounded opacity-50'
           }
           onClick={openToToggleMenuHandlerDrinks}
         >
@@ -52,15 +52,15 @@ const Menu = () => {
             className="rounded"
             src="https://plus.unsplash.com/premium_photo-1675716443562-b771d72a3da7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29mZmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
             alt="Drinks"
-            width={scroll ? 150 : 200}
-            height={scroll ? 150 : 200}
+            width={scroll ? 125 : 125}
+            height={scroll ? 125 : 125}
           />
           <h4 className="text-center bg-white">Drinks</h4>
         </div>
         <div
           className={
             openToggleMenu
-              ? 'flex-column border-2 mx-2 justify-center items-center cursor-pointer rounded opacity-50'
+              ? 'flex-column p-[1px] mx-2 justify-center items-center cursor-pointer rounded opacity-50'
               : 'flex-column  mx-2 justify-center items-center cursor-pointer rounded '
           }
           onClick={openToToggleMenuHandlerFood}
@@ -69,8 +69,8 @@ const Menu = () => {
             className="rounded"
             src="https://www.foodandwine.com/thmb/lSmwEvqVN1VtBDUuAdIJ1vn03ks=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/light-and-crispy-waffles-FT-RECIPE1021-561d9a8be2274dc9b8384a1c58a71fcf.jpg"
             alt="Drinks"
-            width={scroll ? 150 : 200}
-            height={scroll ? 150 : 200}
+            width={scroll ? 125 : 125}
+            height={scroll ? 125 : 125}
           />
           <h4 className="text-center bg-white">Food</h4>
         </div>
@@ -80,13 +80,19 @@ const Menu = () => {
         {openToggleMenu ? (
           <div className="w-full h-full mt-2">
             {/* Drinks subsections*/}
-            <div className="flex items-center border-y-[1px] border-black gap-8 overflow-auto mx-2">
+            <div
+              className={
+                scroll
+                  ? 'fixed  top-[115px] z-50 flex items-center bg-white w-full gap-8 overflow-auto px-2'
+                  : 'flex items-center border-y-[1px] border-black gap-8 overflow-auto mx-2'
+              }
+            >
               <div className="flex-column m-[2px] h-full shrink-0">
                 <img
                   src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="Black coffee"
-                  width={100}
-                  height={100}
+                  width={scroll ? 100 : 100}
+                  height={scroll ? 100 : 100}
                   className="rounded"
                 />
                 <h4 className="text-center text-[13px]">black coffee</h4>
@@ -95,8 +101,8 @@ const Menu = () => {
                 <img
                   src="https://d1ralsognjng37.cloudfront.net/22759c8b-fb62-44a0-b3de-57d0ee706983.jpeg"
                   alt="coffee drinks"
-                  width={100}
-                  height={100}
+                  width={scroll ? 100 : 100}
+                  height={scroll ? 100 : 100}
                   className="rounded"
                 />
 
@@ -106,8 +112,8 @@ const Menu = () => {
                 <img
                   src="https://www.runtastic.com/blog/wp-content/uploads/2015/06/hot-chocolate-after-workout_ft-1024x683.jpg.webp"
                   alt="chocolate"
-                  width={100}
-                  height={100}
+                  width={scroll ? 100 : 100}
+                  height={scroll ? 100 : 100}
                   className="rounded"
                 />
                 <h4 className="text-center text-[10px]">chocolate</h4>
@@ -116,8 +122,8 @@ const Menu = () => {
                 <img
                   src="https://www.thrive.org.uk/files/images/_hero/Herbal-teas_hero-image.jpg"
                   alt="tea"
-                  width={100}
-                  height={100}
+                  width={scroll ? 100 : 100}
+                  height={scroll ? 100 : 100}
                   className="rounded"
                 />
                 <h4 className="text-center text-[10px]">tea</h4>
@@ -126,8 +132,8 @@ const Menu = () => {
                 <img
                   src="https://szefsmaku.pl/wp-content/uploads/2022/05/matcha.jpg"
                   alt="matcha"
-                  width={100}
-                  height={100}
+                  width={scroll ? 100 : 100}
+                  height={scroll ? 100 : 100}
                   className="rounded"
                 />
                 <h4 className="text-center text-[10px]">matcha</h4>
@@ -136,8 +142,8 @@ const Menu = () => {
                 <img
                   src="https://www.todocanada.ca/wp-content/uploads/Tim_Hortons_OREO-DOUBLE_STUF__Iced_Capp__OREO__Strawberry_Creamy.jpg"
                   alt="cold menu"
-                  width={100}
-                  height={100}
+                  width={scroll ? 100 : 100}
+                  height={scroll ? 100 : 100}
                   className="rounded"
                 />
                 <h4 className="text-center text-[10px]">cold menu</h4>
@@ -146,8 +152,8 @@ const Menu = () => {
                 <img
                   src="https://shottbeverages.com/wp-content/uploads/2018/11/Tahitian-Limonade_small.jpg"
                   alt="limonade and other"
-                  width={100}
-                  height={100}
+                  width={scroll ? 100 : 100}
+                  height={scroll ? 100 : 100}
                   className="rounded"
                 />
                 <h4 className="text-center text-[10px]">limonade and other</h4>
@@ -156,12 +162,30 @@ const Menu = () => {
                 <img
                   src="https://thedairyalliance.com/wp-content/uploads/2020/05/blueberry-strawberry-and-banana-milk-shake-26493995.jpg"
                   alt="milkshakes"
-                  width={100}
-                  height={100}
+                  width={scroll ? 100 : 100}
+                  height={scroll ? 100 : 100}
                   className="rounded"
                 />
                 <h4 className="text-center text-[10px]">milkshakes</h4>
               </div>
+            </div>
+            {/* Products from food */}
+            <div>
+              <InView
+                as="div"
+                onChange={(inView, entry) => setSaltedWaffles(inView)}
+                className="h-[400px] w-full bg-slate-900"
+              ></InView>
+              <InView
+                as="div"
+                onChange={(inView, entry) => setSweetWaffles(inView)}
+                className="h-[400px] w-full bg-slate-600"
+              ></InView>
+              <InView
+                as="div"
+                onChange={(inView, entry) => setOther(inView)}
+                className="h-[400px] w-full bg-slate-400"
+              ></InView>
             </div>
           </div>
         ) : (
@@ -170,7 +194,7 @@ const Menu = () => {
             <div
               className={
                 scroll
-                  ? 'fixed top-[125px] z-50 flex justify-center bg-white w-full gap-6'
+                  ? 'fixed top-[115px] z-50 flex justify-center bg-white w-full gap-6'
                   : 'flex justify-center items-center gap-4 border-y-[1px] border-black bg-white'
               }
             >
