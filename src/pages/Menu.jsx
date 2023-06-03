@@ -55,7 +55,7 @@ const Menu = () => {
   //Functions
   const scrollToSectionHundler = (elementRef) => {
     window.scrollTo({
-      top: elementRef.current.offsetTop + 10,
+      top: elementRef.current.offsetTop + 100,
       behavior: 'smooth',
     })
   }
@@ -120,8 +120,8 @@ const Menu = () => {
             <div
               className={
                 scroll
-                  ? 'fixed  top-[111px] z-50 flex  bg-white w-full gap-[28px] overflow-auto gsap-05-menu-1 pl-2'
-                  : 'flex border-y-[1px] border-black gap-4 overflow-auto pl-2'
+                  ? 'fixed  top-[111px] z-50 flex  bg-white w-full gap-[28px] overflow-x-scroll gsap-05-menu-1 pl-2 '
+                  : 'flex border-y-[1px] border-black gap-4 overflow-x-scroll pl-2'
               }
             >
               <div
