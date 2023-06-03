@@ -39,7 +39,7 @@ const Menu = () => {
   //Functions
   const scrollToSectionHundler = (elementRef) => {
     window.scrollTo({
-      top: elementRef.current.offsetTop + 100,
+      top: elementRef.current.offsetTop + 10,
       behavior: 'smooth',
     })
   }
@@ -264,7 +264,7 @@ const Menu = () => {
                 className={
                   !sweetWaffles && !other
                     ? 'flex-column m-[2px] border border-black rounded p-[1px]'
-                    : 'flex-column m-[2px]'
+                    : 'flex-column m-[2px] opacity-50'
                 }
                 onClick={() => scrollToSectionHundler(wafflesSl)}
               >
@@ -281,7 +281,7 @@ const Menu = () => {
                 className={
                   !saltedWaffles && !other
                     ? 'flex-column m-[2px] border border-black rounded p-[1px]'
-                    : 'flex-column m-[2px]'
+                    : 'flex-column m-[2px] opacity-50'
                 }
                 onClick={() => scrollToSectionHundler(wafflesSw)}
               >
@@ -299,7 +299,7 @@ const Menu = () => {
                 className={
                   !saltedWaffles && !sweetWaffles
                     ? 'flex-column m-[2px] border border-black p-[1px] rounded'
-                    : 'flex-column m-[2px]'
+                    : 'flex-column m-[2px] opacity-50'
                 }
                 onClick={() => scrollToSectionHundler(another)}
               >
@@ -314,25 +314,25 @@ const Menu = () => {
               </div>
             </div>
             {/* Products from food */}
-            <div>
+            <div className={scroll ? 'mt-[200px]' : ''}>
               <InView
                 as="div"
                 onChange={(inView, entry) => setSaltedWaffles(inView)}
-                className="h-[1000px] w-full bg-slate-900"
+                className="h-[800px] w-full bg-slate-900"
               >
                 <div ref={wafflesSl}></div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setSweetWaffles(inView)}
-                className="h-[1000px] w-full bg-slate-600"
+                className="h-[800px] w-full bg-slate-600"
               >
                 <div ref={wafflesSw}></div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setOther(inView)}
-                className="h-[1000px] w-full bg-slate-400 "
+                className="h-[800px] w-full bg-slate-400 "
               >
                 <div ref={another}></div>
               </InView>
