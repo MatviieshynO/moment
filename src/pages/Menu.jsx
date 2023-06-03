@@ -104,7 +104,7 @@ const Menu = () => {
             <div
               className={
                 scroll
-                  ? 'fixed  top-[110px] z-50 flex  bg-white w-full gap-[28px] overflow-auto gsap-05-menu-1 pl-2'
+                  ? 'fixed  top-[111px] z-50 flex  bg-white w-full gap-[28px] overflow-auto gsap-05-menu-1 pl-2'
                   : 'flex border-y-[1px] border-black gap-4 overflow-scroll pl-2'
               }
             >
@@ -256,14 +256,14 @@ const Menu = () => {
             <div
               className={
                 scroll
-                  ? 'fixed top-[110px] z-50 flex  bg-white w-full gsap-05-menu-1 gap-[28px] overflow-scroll pl-2'
+                  ? 'fixed top-[111px] z-50 flex  bg-white w-full gsap-05-menu-1 gap-[28px] overflow-scroll pl-2'
                   : 'flex  gap-4 border-y-[1px] border-black bg-white pl-2'
               }
             >
               <div
                 className={
                   !sweetWaffles && !other
-                    ? 'flex-column m-[2px] border-2 border-[red]'
+                    ? 'flex-column m-[2px] border border-black rounded p-[1px]'
                     : 'flex-column m-[2px]'
                 }
                 onClick={() => scrollToSectionHundler(wafflesSl)}
@@ -280,7 +280,7 @@ const Menu = () => {
               <div
                 className={
                   !saltedWaffles && !other
-                    ? 'flex-column m-[2px] border-2 border-[red]'
+                    ? 'flex-column m-[2px] border border-black rounded p-[1px]'
                     : 'flex-column m-[2px]'
                 }
                 onClick={() => scrollToSectionHundler(wafflesSw)}
@@ -298,7 +298,7 @@ const Menu = () => {
               <div
                 className={
                   !saltedWaffles && !sweetWaffles
-                    ? 'flex-column m-[2px] border-2 border-[red]'
+                    ? 'flex-column m-[2px] border border-black p-[1px] rounded'
                     : 'flex-column m-[2px]'
                 }
                 onClick={() => scrollToSectionHundler(another)}
