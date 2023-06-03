@@ -8,13 +8,14 @@ const Menu = () => {
   //States
   const [scroll, setScroll] = useState(false)
   const [openToggleMenu, setOpenToggleMenu] = useState(false)
-  const [saltedWaffles, setSaltedWaffles] = useState(null)
-  const [sweetWaffles, setSweetWaffles] = useState(null)
-  const [other, setOther] = useState(null)
+  const [saltedWaffles, setSaltedWaffles] = useState(false)
+  const [sweetWaffles, setSweetWaffles] = useState(false)
+  const [other, setOther] = useState(false)
   //ref
   const wafflesSl = useRef(null)
   const wafflesSw = useRef(null)
   const another = useRef(null)
+
   useEffect(() => {
     gsap.fromTo(
       '.gsap-05-menu-1',
@@ -38,7 +39,7 @@ const Menu = () => {
   //Functions
   const scrollToSectionHundler = (elementRef) => {
     window.scrollTo({
-      top: elementRef.current.offsetTop - 200,
+      top: elementRef.current.offsetTop + 100,
       behavior: 'smooth',
     })
   }
@@ -261,7 +262,7 @@ const Menu = () => {
             >
               <div
                 className={
-                  saltedWaffles
+                  !sweetWaffles && !other
                     ? 'flex-column m-[2px] border-2 border-[red]'
                     : 'flex-column m-[2px]'
                 }
@@ -278,7 +279,7 @@ const Menu = () => {
               </div>
               <div
                 className={
-                  sweetWaffles
+                  !saltedWaffles && !other
                     ? 'flex-column m-[2px] border-2 border-[red]'
                     : 'flex-column m-[2px]'
                 }
@@ -296,7 +297,7 @@ const Menu = () => {
               </div>
               <div
                 className={
-                  other
+                  !saltedWaffles && !sweetWaffles
                     ? 'flex-column m-[2px] border-2 border-[red]'
                     : 'flex-column m-[2px]'
                 }
