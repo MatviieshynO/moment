@@ -11,18 +11,34 @@ const Menu = () => {
   const [saltedWaffles, setSaltedWaffles] = useState(false)
   const [sweetWaffles, setSweetWaffles] = useState(false)
   const [other, setOther] = useState(false)
-  //ref
+  const [blackCoffee, setBlackCoffee] = useState(false)
+  const [coffeeDrinks, setCoffeeDrinks] = useState(false)
+  const [chocolate, setChocolate] = useState(false)
+  const [tea, setTea] = useState(false)
+  const [matcha, setMatcha] = useState(false)
+  const [coldMenu, setColdMenu] = useState(false)
+  const [limonade, setLimonade] = useState(false)
+  const [milkshakes, setMilkshakes] = useState(false)
+  //ref                                                           !blackCoffee&&!coffeeDrinks&&!chocolate&&!tea&&!matcha&&!coldMenu&&!limonade
   const wafflesSl = useRef(null)
   const wafflesSw = useRef(null)
   const another = useRef(null)
+  const blackCof = useRef(null)
+  const coffeeDr = useRef(null)
+  const chocol = useRef(null)
+  const theTea = useRef(null)
+  const theMatcha = useRef(null)
+  const coldMen = useRef(null)
+  const limon = useRef(null)
+  const milkSha = useRef(null)
 
   useEffect(() => {
     gsap.fromTo(
       '.gsap-05-menu-1',
-      { y: -350 },
+      { y: -300 },
       {
         y: 0,
-        duration: 0.5,
+        duration: 0.3,
       }
     )
   }, [scroll])
@@ -105,10 +121,23 @@ const Menu = () => {
               className={
                 scroll
                   ? 'fixed  top-[111px] z-50 flex  bg-white w-full gap-[28px] overflow-auto gsap-05-menu-1 pl-2'
-                  : 'flex border-y-[1px] border-black gap-4 overflow-scroll pl-2'
+                  : 'flex border-y-[1px] border-black gap-4 overflow-auto pl-2'
               }
             >
-              <div className="flex-column m-[2px] h-full shrink-0">
+              <div
+                className={
+                  !coffeeDrinks &&
+                  !chocolate &&
+                  !tea &&
+                  !matcha &&
+                  !coldMenu &&
+                  !limonade &&
+                  !milkshakes
+                    ? 'flex-column m-[2px] h-full shrink-0 border border-black rounded p-[1px]'
+                    : 'flex-column m-[2px] h-full shrink-0'
+                }
+                onClick={() => scrollToSectionHundler(blackCof)}
+              >
                 <img
                   src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="Black coffee"
@@ -118,7 +147,20 @@ const Menu = () => {
                 />
                 <h4 className="text-center text-[10px]">black coffee</h4>
               </div>
-              <div className="flex-column m-[2px] h-full shrink-0">
+              <div
+                className={
+                  !blackCoffee &&
+                  !chocolate &&
+                  !tea &&
+                  !matcha &&
+                  !coldMenu &&
+                  !limonade &&
+                  !milkshakes
+                    ? 'flex-column m-[2px] h-full shrink-0 border border-black rounded p-[1px]'
+                    : 'flex-column m-[2px] h-full shrink-0'
+                }
+                onClick={() => scrollToSectionHundler(coffeeDr)}
+              >
                 <img
                   src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="coffee drinks"
@@ -129,7 +171,20 @@ const Menu = () => {
 
                 <h4 className="text-center text-[10px]">coffe drinks</h4>
               </div>
-              <div className="flex-column m-[2px] h-full shrink-0">
+              <div
+                className={
+                  !blackCoffee &&
+                  !coffeeDrinks &&
+                  !tea &&
+                  !matcha &&
+                  !coldMenu &&
+                  !limonade &&
+                  !milkshakes
+                    ? 'flex-column m-[2px] h-full shrink-0 border border-black rounded p-[1px]'
+                    : 'flex-column m-[2px] h-full shrink-0'
+                }
+                onClick={() => scrollToSectionHundler(chocol)}
+              >
                 <img
                   src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="chocolate"
@@ -139,7 +194,20 @@ const Menu = () => {
                 />
                 <h4 className="text-center text-[10px]">chocolate</h4>
               </div>
-              <div className="flex-column m-[2px] h-full shrink-0">
+              <div
+                className={
+                  !blackCoffee &&
+                  !coffeeDrinks &&
+                  !chocolate &&
+                  !matcha &&
+                  !coldMenu &&
+                  !limonade &&
+                  !milkshakes
+                    ? 'flex-column m-[2px] h-full shrink-0 border border-black rounded p-[1px]'
+                    : 'flex-column m-[2px] h-full shrink-0'
+                }
+                onClick={() => scrollToSectionHundler(theTea)}
+              >
                 <img
                   src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="tea"
@@ -149,7 +217,20 @@ const Menu = () => {
                 />
                 <h4 className="text-center text-[10px]">tea</h4>
               </div>
-              <div className="flex-column m-[2px] h-full shrink-0">
+              <div
+                className={
+                  !blackCoffee &&
+                  !coffeeDrinks &&
+                  !chocolate &&
+                  !tea &&
+                  !coldMenu &&
+                  !limonade &&
+                  !milkshakes
+                    ? 'flex-column m-[2px] h-full shrink-0 border border-black rounded p-[1px]'
+                    : 'flex-column m-[2px] h-full shrink-0'
+                }
+                onClick={() => scrollToSectionHundler(theMatcha)}
+              >
                 <img
                   src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="matcha"
@@ -159,7 +240,20 @@ const Menu = () => {
                 />
                 <h4 className="text-center text-[10px]">matcha</h4>
               </div>
-              <div className="flex-column m-[2px] h- shrink-0">
+              <div
+                className={
+                  !blackCoffee &&
+                  !coffeeDrinks &&
+                  !chocolate &&
+                  !tea &&
+                  !matcha &&
+                  !limonade &&
+                  !milkshakes
+                    ? 'flex-column m-[2px] h-full shrink-0 border border-black rounded p-[1px]'
+                    : 'flex-column m-[2px] h-full shrink-0'
+                }
+                onClick={() => scrollToSectionHundler(coldMen)}
+              >
                 <img
                   src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="cold menu"
@@ -169,7 +263,20 @@ const Menu = () => {
                 />
                 <h4 className="text-center text-[10px]">cold menu</h4>
               </div>
-              <div className="flex-column  h-full m-[2px] shrink-0">
+              <div
+                className={
+                  !blackCoffee &&
+                  !coffeeDrinks &&
+                  !chocolate &&
+                  !tea &&
+                  !matcha &&
+                  !coldMenu &&
+                  !milkshakes
+                    ? 'flex-column m-[2px] h-full shrink-0 border border-black rounded p-[1px]'
+                    : 'flex-column m-[2px] h-full shrink-0'
+                }
+                onClick={() => scrollToSectionHundler(limon)}
+              >
                 <img
                   src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="limonade and other"
@@ -179,7 +286,20 @@ const Menu = () => {
                 />
                 <h4 className="text-center text-[10px]">limonade and other</h4>
               </div>
-              <div className="flex-column  h-full m-[2px] shrink-0">
+              <div
+                className={
+                  !blackCoffee &&
+                  !coffeeDrinks &&
+                  !chocolate &&
+                  !tea &&
+                  !matcha &&
+                  !coldMenu &&
+                  !limonade
+                    ? 'flex-column m-[2px] h-full shrink-0 border border-black rounded p-[1px]'
+                    : 'flex-column m-[2px] h-full shrink-0'
+                }
+                onClick={() => scrollToSectionHundler(milkSha)}
+              >
                 <img
                   src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
                   alt="milkshakes"
@@ -192,62 +312,62 @@ const Menu = () => {
             </div>
             {/* Products from Drinks */}
             <div>
-              {/* <InView
+              <InView
                 as="div"
-                onChange={(inView, entry) => setSaltedWaffles(inView)}
-                className="h-[600px] w-full bg-slate-900"
+                onChange={(inView, entry) => setBlackCoffee(inView)}
+                className="h-[800px] w-full bg-slate-900"
               >
-                <div ref={wafflesSl}></div>
+                <div ref={blackCof}></div>
               </InView>
               <InView
                 as="div"
-                onChange={(inView, entry) => setSweetWaffles(inView)}
-                className="h-[600px] w-full bg-slate-600"
+                onChange={(inView, entry) => setCoffeeDrinks(inView)}
+                className="h-[800px] w-full bg-slate-800"
               >
-                <div ref={wafflesSw}></div>
+                <div ref={coffeeDr}></div>
               </InView>
               <InView
                 as="div"
-                onChange={(inView, entry) => setOther(inView)}
-                className="h-[600px] w-full bg-slate-400"
+                onChange={(inView, entry) => setChocolate(inView)}
+                className="h-[800px] w-full bg-slate-700"
               >
-                <div ref={another}></div>
+                <div ref={chocol}></div>
               </InView>
               <InView
                 as="div"
-                onChange={(inView, entry) => setSaltedWaffles(inView)}
-                className="h-[600px] w-full bg-slate-900"
+                onChange={(inView, entry) => setTea(inView)}
+                className="h-[800px] w-full bg-slate-600"
               >
-                <div ref={wafflesSl}></div>
+                <div ref={theTea}></div>
               </InView>
               <InView
                 as="div"
-                onChange={(inView, entry) => setSweetWaffles(inView)}
-                className="h-[600px] w-full bg-slate-600"
+                onChange={(inView, entry) => setMatcha(inView)}
+                className="h-[800px] w-full bg-slate-500"
               >
-                <div ref={wafflesSw}></div>
+                <div ref={theMatcha}></div>
               </InView>
               <InView
                 as="div"
-                onChange={(inView, entry) => setOther(inView)}
-                className="h-[600px] w-full bg-slate-400"
+                onChange={(inView, entry) => setColdMenu(inView)}
+                className="h-[800px] w-full bg-slate-400"
               >
-                <div ref={another}></div>
+                <div ref={coldMen}></div>
               </InView>
               <InView
                 as="div"
-                onChange={(inView, entry) => setSweetWaffles(inView)}
-                className="h-[600px] w-full bg-slate-600"
+                onChange={(inView, entry) => setLimonade(inView)}
+                className="h-[800px] w-full bg-slate-300"
               >
-                <div ref={wafflesSw}></div>
+                <div ref={limon}></div>
               </InView>
               <InView
                 as="div"
-                onChange={(inView, entry) => setOther(inView)}
-                className="h-[600px] w-full bg-slate-400"
+                onChange={(inView, entry) => setMilkshakes(inView)}
+                className="h-[800px] w-full bg-slate-200"
               >
-                <div ref={another}></div>
-              </InView> */}
+                <div ref={milkSha}></div>
+              </InView>
             </div>
           </div>
         ) : (
