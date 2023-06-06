@@ -11,7 +11,7 @@ const Menu = () => {
   const [saltedWaffles, setSaltedWaffles] = useState(true)
   const [sweetWaffles, setSweetWaffles] = useState(false)
   const [other, setOther] = useState(false)
-  const [blackCoffee, setBlackCoffee] = useState(false)
+  const [blackCoffee, setBlackCoffee] = useState(true)
   const [coffeeDrinks, setCoffeeDrinks] = useState(false)
   const [chocolate, setChocolate] = useState(false)
   const [tea, setTea] = useState(false)
@@ -19,7 +19,7 @@ const Menu = () => {
   const [coldMenu, setColdMenu] = useState(false)
   const [limonade, setLimonade] = useState(false)
   const [milkshakes, setMilkshakes] = useState(false)
-  const [offSet, setOffSet] = useState(false)
+  const [offSet, setOffSet] = useState(0)
 
   //ref                                                           !blackCoffee&&!coffeeDrinks&&!chocolate&&!tea&&!matcha&&!coldMenu&&!limonade
   const wafflesSl = useRef(null)
@@ -33,11 +33,24 @@ const Menu = () => {
   const coldMen = useRef(null)
   const limon = useRef(null)
   const milkSha = useRef(null)
+  useEffect(() => {
+    if (blackCoffee) {
+      setOffSet((currentOffSet) => {
+        let newOffSet = (currentOffSet = 0)
 
+        newOffSet = 0
+        return newOffSet
+      })
+    } else {
+      setOffSet((currentOffSet) => {
+        return currentOffSet
+      })
+    }
+  }, [blackCoffee])
   useEffect(() => {
     if (chocolate) {
       setOffSet((currentOffSet) => {
-        let newOffSet = currentOffSet
+        let newOffSet = (currentOffSet = 0)
 
         newOffSet = -122
         return newOffSet
@@ -95,7 +108,7 @@ const Menu = () => {
       setOffSet((currentOffSet) => {
         let newOffSet = currentOffSet
 
-        newOffSet = -610
+        newOffSet = -680
         return newOffSet
       })
     } else {
@@ -141,7 +154,7 @@ const Menu = () => {
   }
   return (
     <div className="mt-32">
-      <h1 className="text-center uppercase text-3xl my-6">Menu</h1>
+      <h1 className="text-center uppercase text-5xl my-6 opacity-70">Меню</h1>
 
       {/*  drinks and food section  */}
       <div
@@ -154,36 +167,22 @@ const Menu = () => {
         <div
           className={
             openToggleMenu
-              ? 'flex-column  mx-2 justify-center items-center cursor-pointer rounded border border-[red] p-[1px]'
-              : 'flex-column mx-2 p-[1px] justify-center items-center cursor-pointer rounded opacity-50'
+              ? 'flex  mx-2 justify-center items-center cursor-pointer rounded  p-[1px] '
+              : 'flex mx-2 p-[1px] justify-center items-center cursor-pointer rounded opacity-60 '
           }
           onClick={openToToggleMenuHandlerDrinks}
         >
-          <img
-            className="rounded"
-            src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
-            alt="Drinks"
-            width={scroll ? 110 : 200}
-            height={scroll ? 60 : 200}
-          />
-          <h4 className="text-center bg-white">Drinks</h4>
+          <h2 className="text-center text-3xl px-2">НАПОЇ</h2>
         </div>
         <div
           className={
             openToggleMenu
-              ? 'flex-column p-[1px] mx-2 justify-center items-center cursor-pointer rounded opacity-50'
-              : 'flex-column  mx-2 justify-center items-center cursor-pointer rounded border border-[red] p-[1px]'
+              ? 'flex-column p-[1px] mx-2 justify-center items-center cursor-pointer rounded opacity-60 '
+              : 'flex-column  mx-2 justify-center items-center cursor-pointer rounded  p-[1px]'
           }
           onClick={openToToggleMenuHandlerFood}
         >
-          <img
-            className="rounded"
-            src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
-            alt="Drinks"
-            width={scroll ? 110 : 200}
-            height={scroll ? 60 : 200}
-          />
-          <h4 className="text-center bg-white">Food</h4>
+          <h2 className="text-center text-3xl p-2">ЇЖА</h2>
         </div>
       </div>
       {/* subsections */}
@@ -194,8 +193,8 @@ const Menu = () => {
             <div
               className={
                 scroll
-                  ? 'fixed  top-[111px] z-50 flex  bg-white w-full overflow-hidden gsap-05-menu-1 pl-2 '
-                  : 'flex border-y-[1px] border-black gap-4 overflow-hidden pl-2  w-full'
+                  ? 'fixed  top-[55px] z-50 flex  bg-white w-full overflow-hidden gsap-05-menu-1 pl-2 '
+                  : 'flex  gap-4 overflow-hidden pl-2  w-full'
               }
             >
               <div
@@ -205,141 +204,82 @@ const Menu = () => {
                 <div
                   className={
                     blackCoffee && !coffeeDrinks
-                      ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
-                      : 'flex-column m-[2px] h-full shrink-0 opacity-50'
+                      ? 'flex m-[2px] h-full shrink-0 border border-[red] rounded p-2'
+                      : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
                   }
                   onClick={() => scrollToSectionHundler(blackCof)}
                 >
-                  <img
-                    src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
-                    alt="Black coffee"
-                    width={scroll ? 90 : 100}
-                    height={scroll ? 90 : 100}
-                    className="rounded"
-                  />
-                  <h4 className="text-center text-[10px]">black coffee</h4>
+                  <h4 className="text-center text-xl">Чорна кава</h4>
                 </div>
                 <div
                   className={
                     coffeeDrinks && !chocolate
-                      ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
-                      : 'flex-column m-[2px] h-full shrink-0 opacity-50'
+                      ? 'flex m-[2px] h-full shrink-0 border border-[red] rounded p-2'
+                      : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
                   }
                   onClick={() => scrollToSectionHundler(coffeeDr)}
                 >
-                  <img
-                    src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
-                    alt="coffee drinks"
-                    width={scroll ? 90 : 100}
-                    height={scroll ? 90 : 100}
-                    className="rounded"
-                  />
-
-                  <h4 className="text-center text-[10px]">coffe drinks</h4>
+                  <h4 className="text-center text-xl">Кавові напої</h4>
                 </div>
                 <div
                   className={
                     chocolate && !tea
-                      ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
-                      : 'flex-column m-[2px] h-full shrink-0 opacity-50'
+                      ? 'flex m-[2px] h-full shrink-0 border border-[red] rounded p-2 items-center'
+                      : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
                   }
                   onClick={() => scrollToSectionHundler(chocol)}
                 >
-                  <img
-                    src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
-                    alt="chocolate"
-                    width={scroll ? 90 : 100}
-                    height={scroll ? 90 : 100}
-                    className="rounded"
-                  />
-                  <h4 className="text-center text-[10px]">chocolate</h4>
+                  <h4 className="text-center text-xl">Какао</h4>
                 </div>
                 <div
                   className={
                     tea && !matcha
-                      ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
-                      : 'flex-column m-[2px] h-full shrink-0 opacity-50'
+                      ? 'flex m-[2px] h-full shrink-0 border border-[red] rounded p-2'
+                      : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
                   }
                   onClick={() => scrollToSectionHundler(theTea)}
                 >
-                  <img
-                    src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
-                    alt="tea"
-                    width={scroll ? 90 : 100}
-                    height={scroll ? 90 : 100}
-                    className="rounded"
-                  />
-                  <h4 className="text-center text-[10px]">tea</h4>
+                  <h4 className="text-center text-xl">Чай</h4>
                 </div>
                 <div
                   className={
                     matcha && !coldMenu
-                      ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
-                      : 'flex-column m-[2px] h-full shrink-0 opacity-50'
+                      ? 'flex m-[2px] h-full shrink-0 border border-[red] rounded p-2'
+                      : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
                   }
                   onClick={() => scrollToSectionHundler(theMatcha)}
                 >
-                  <img
-                    src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
-                    alt="matcha"
-                    width={scroll ? 90 : 100}
-                    height={scroll ? 90 : 100}
-                    className="rounded"
-                  />
-                  <h4 className="text-center text-[10px]">matcha</h4>
+                  <h4 className="text-center text-xl">Матча</h4>
                 </div>
                 <div
                   className={
                     coldMenu && !limonade
-                      ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
-                      : 'flex-column m-[2px] h-full shrink-0 opacity-50'
+                      ? 'flex m-[2px] h-full shrink-0 border border-[red] rounded p-2'
+                      : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
                   }
                   onClick={() => scrollToSectionHundler(coldMen)}
                 >
-                  <img
-                    src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
-                    alt="cold menu"
-                    width={scroll ? 90 : 100}
-                    height={scroll ? 90 : 100}
-                    className="rounded"
-                  />
-                  <h4 className="text-center text-[10px]">cold menu</h4>
+                  <h4 className="text-center text-xl">Холодне меню</h4>
                 </div>
                 <div
                   className={
                     limonade && !milkshakes
-                      ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
-                      : 'flex-column m-[2px] h-full shrink-0 opacity-50'
+                      ? 'flex m-[2px] h-full shrink-0 border border-[red] rounded p-2'
+                      : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
                   }
                   onClick={() => scrollToSectionHundler(limon)}
                 >
-                  <img
-                    src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
-                    alt="limonade and other"
-                    width={scroll ? 90 : 100}
-                    height={scroll ? 90 : 100}
-                    className="rounded"
-                  />
-                  <h4 className="text-center text-[10px]">
-                    limonade and other
-                  </h4>
+                  <h4 className="text-center text-xl">Лимонади та інше</h4>
                 </div>
                 <div
                   className={
                     milkshakes
-                      ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
-                      : 'flex-column m-[2px] h-full shrink-0 opacity-50'
+                      ? 'flex m-[2px] h-full shrink-0 border border-[red] rounded p-2'
+                      : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
                   }
                   onClick={() => scrollToSectionHundler(milkSha)}
                 >
-                  <img
-                    src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
-                    alt="milkshakes"
-                    width={scroll ? 90 : 100}
-                    height={scroll ? 90 : 100}
-                    className="rounded"
-                  />
-                  <h4 className="text-center text-[10px]">milkshakes</h4>
+                  <h4 className="text-center text-xl">Мілкшейки</h4>
                 </div>
               </div>
             </div>
@@ -409,61 +349,39 @@ const Menu = () => {
             <div
               className={
                 scroll
-                  ? 'fixed top-[111px] z-50 flex  bg-white w-full gsap-05-menu-1 gap-[28px] overflow-scroll pl-2'
+                  ? 'fixed top-[55px] z-50 flex justify-center   bg-white w-full gsap-05-menu-1 gap-4 overflow-scroll pl-2'
                   : 'flex  gap-4 border-y-[1px] border-black bg-white pl-2'
               }
             >
               <div
                 className={
                   saltedWaffles && !sweetWaffles
-                    ? 'flex-column m-[2px] border border-[red] rounded p-[1px]'
-                    : 'flex-column m-[2px] opacity-50'
+                    ? 'flex m-[2px] h-full shrink-0 border items-center border-[red] rounded p-2'
+                    : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
                 }
                 onClick={() => scrollToSectionHundler(wafflesSl)}
               >
-                <img
-                  src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
-                  alt="salted waffles"
-                  width={scroll ? 90 : 100}
-                  height={scroll ? 90 : 100}
-                  className="rounded"
-                />
-                <h4 className="text-center text-[10px]">salted waffles</h4>
+                <h2 className="text-center text-xl">Солоні вафлі</h2>
               </div>
               <div
                 className={
                   sweetWaffles && !other
-                    ? 'flex-column m-[2px] border border-[red] rounded p-[1px]'
-                    : 'flex-column m-[2px] opacity-50'
+                    ? 'flex m-[2px] h-full shrink-0 border items-center border-[red] rounded p-2'
+                    : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
                 }
                 onClick={() => scrollToSectionHundler(wafflesSw)}
               >
-                <img
-                  src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
-                  alt="sweet waffles"
-                  width={scroll ? 90 : 100}
-                  height={scroll ? 90 : 100}
-                  className="rounded"
-                />
-
-                <h4 className="text-center text-[10px]">sweet waffles</h4>
+                <h2 className="text-center text-xl">Солодкі вафлі</h2>
               </div>
               <div
                 className={
                   other
-                    ? 'flex-column m-[2px] border border-[red] p-[1px] rounded'
-                    : 'flex-column m-[2px] opacity-50'
+                    ? 'flex m-[2px] h-full shrink-0 border items-center border-[red] rounded p-2'
+                    : 'flex m-[2px] h-full shrink-0 opacity-50 items-center '
                 }
                 onClick={() => scrollToSectionHundler(another)}
               >
-                <img
-                  src="https://blogstudio.s3.theshoppad.net/coffeeheroau/5b3d5ebf8a5442199dad3293c8ce8227.jpg"
-                  alt="sweet waffles"
-                  width={scroll ? 90 : 100}
-                  height={scroll ? 90 : 100}
-                  className="rounded"
-                />
-                <h4 className="text-center text-[10px]">other</h4>
+                <h2 className="text-center text-xl">Інше</h2>
               </div>
             </div>
             {/* Products from food */}
