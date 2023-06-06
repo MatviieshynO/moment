@@ -55,7 +55,7 @@ const Menu = () => {
   //Functions
   const scrollToSectionHundler = (elementRef) => {
     window.scrollTo({
-      top: elementRef.current.offsetTop + 100,
+      top: elementRef.current.offsetTop - 220,
       behavior: 'smooth',
     })
   }
@@ -126,14 +126,8 @@ const Menu = () => {
             >
               <div
                 className={
-                  !coffeeDrinks &&
-                  !chocolate &&
-                  !tea &&
-                  !matcha &&
-                  !coldMenu &&
-                  !limonade &&
-                  !milkshakes
-                    ? 'flex-column m-[2px] h-full shrink-0 border border-black rounded p-[1px]'
+                  blackCoffee && !coffeeDrinks
+                    ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
                     : 'flex-column m-[2px] h-full shrink-0'
                 }
                 onClick={() => scrollToSectionHundler(blackCof)}
@@ -149,14 +143,8 @@ const Menu = () => {
               </div>
               <div
                 className={
-                  !blackCoffee &&
-                  !chocolate &&
-                  !tea &&
-                  !matcha &&
-                  !coldMenu &&
-                  !limonade &&
-                  !milkshakes
-                    ? 'flex-column m-[2px] h-full shrink-0 border border-black rounded p-[1px]'
+                  coffeeDrinks && !chocolate
+                    ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
                     : 'flex-column m-[2px] h-full shrink-0'
                 }
                 onClick={() => scrollToSectionHundler(coffeeDr)}
@@ -173,14 +161,8 @@ const Menu = () => {
               </div>
               <div
                 className={
-                  !blackCoffee &&
-                  !coffeeDrinks &&
-                  !tea &&
-                  !matcha &&
-                  !coldMenu &&
-                  !limonade &&
-                  !milkshakes
-                    ? 'flex-column m-[2px] h-full shrink-0 border border-black rounded p-[1px]'
+                  chocolate && !tea
+                    ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
                     : 'flex-column m-[2px] h-full shrink-0'
                 }
                 onClick={() => scrollToSectionHundler(chocol)}
@@ -196,14 +178,8 @@ const Menu = () => {
               </div>
               <div
                 className={
-                  !blackCoffee &&
-                  !coffeeDrinks &&
-                  !chocolate &&
-                  !matcha &&
-                  !coldMenu &&
-                  !limonade &&
-                  !milkshakes
-                    ? 'flex-column m-[2px] h-full shrink-0 border border-black rounded p-[1px]'
+                  tea && !matcha
+                    ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
                     : 'flex-column m-[2px] h-full shrink-0'
                 }
                 onClick={() => scrollToSectionHundler(theTea)}
@@ -219,14 +195,8 @@ const Menu = () => {
               </div>
               <div
                 className={
-                  !blackCoffee &&
-                  !coffeeDrinks &&
-                  !chocolate &&
-                  !tea &&
-                  !coldMenu &&
-                  !limonade &&
-                  !milkshakes
-                    ? 'flex-column m-[2px] h-full shrink-0 border border-black rounded p-[1px]'
+                  matcha && !coldMenu
+                    ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
                     : 'flex-column m-[2px] h-full shrink-0'
                 }
                 onClick={() => scrollToSectionHundler(theMatcha)}
@@ -242,14 +212,8 @@ const Menu = () => {
               </div>
               <div
                 className={
-                  !blackCoffee &&
-                  !coffeeDrinks &&
-                  !chocolate &&
-                  !tea &&
-                  !matcha &&
-                  !limonade &&
-                  !milkshakes
-                    ? 'flex-column m-[2px] h-full shrink-0 border border-black rounded p-[1px]'
+                  coldMenu && !limonade
+                    ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
                     : 'flex-column m-[2px] h-full shrink-0'
                 }
                 onClick={() => scrollToSectionHundler(coldMen)}
@@ -265,14 +229,8 @@ const Menu = () => {
               </div>
               <div
                 className={
-                  !blackCoffee &&
-                  !coffeeDrinks &&
-                  !chocolate &&
-                  !tea &&
-                  !matcha &&
-                  !coldMenu &&
-                  !milkshakes
-                    ? 'flex-column m-[2px] h-full shrink-0 border border-black rounded p-[1px]'
+                  limonade && !milkshakes
+                    ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
                     : 'flex-column m-[2px] h-full shrink-0'
                 }
                 onClick={() => scrollToSectionHundler(limon)}
@@ -288,14 +246,8 @@ const Menu = () => {
               </div>
               <div
                 className={
-                  !blackCoffee &&
-                  !coffeeDrinks &&
-                  !chocolate &&
-                  !tea &&
-                  !matcha &&
-                  !coldMenu &&
-                  !limonade
-                    ? 'flex-column m-[2px] h-full shrink-0 border border-black rounded p-[1px]'
+                  milkshakes
+                    ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
                     : 'flex-column m-[2px] h-full shrink-0'
                 }
                 onClick={() => scrollToSectionHundler(milkSha)}
@@ -315,56 +267,56 @@ const Menu = () => {
               <InView
                 as="div"
                 onChange={(inView, entry) => setBlackCoffee(inView)}
-                className="h-[800px] w-full bg-slate-900"
+                className="h-[400px] w-full bg-slate-900"
               >
                 <div ref={blackCof}></div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setCoffeeDrinks(inView)}
-                className="h-[800px] w-full bg-slate-800"
+                className="h-[400px] w-full bg-slate-800"
               >
                 <div ref={coffeeDr}></div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setChocolate(inView)}
-                className="h-[800px] w-full bg-slate-700"
+                className="h-[400px] w-full bg-slate-700"
               >
                 <div ref={chocol}></div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setTea(inView)}
-                className="h-[800px] w-full bg-slate-600"
+                className="h-[400px] w-full bg-slate-600"
               >
                 <div ref={theTea}></div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setMatcha(inView)}
-                className="h-[800px] w-full bg-slate-500"
+                className="h-[400px] w-full bg-slate-500"
               >
                 <div ref={theMatcha}></div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setColdMenu(inView)}
-                className="h-[800px] w-full bg-slate-400"
+                className="h-[400px] w-full bg-slate-400"
               >
                 <div ref={coldMen}></div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setLimonade(inView)}
-                className="h-[800px] w-full bg-slate-300"
+                className="h-[400px] w-full bg-slate-300"
               >
                 <div ref={limon}></div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setMilkshakes(inView)}
-                className="h-[800px] w-full bg-slate-200"
+                className="h-[400px] w-full bg-slate-200"
               >
                 <div ref={milkSha}></div>
               </InView>
@@ -382,8 +334,8 @@ const Menu = () => {
             >
               <div
                 className={
-                  !sweetWaffles && !other
-                    ? 'flex-column m-[2px] border border-black rounded p-[1px]'
+                  saltedWaffles && !sweetWaffles
+                    ? 'flex-column m-[2px] border border-[red] rounded p-[1px]'
                     : 'flex-column m-[2px] opacity-50'
                 }
                 onClick={() => scrollToSectionHundler(wafflesSl)}
@@ -399,8 +351,8 @@ const Menu = () => {
               </div>
               <div
                 className={
-                  !saltedWaffles && !other
-                    ? 'flex-column m-[2px] border border-black rounded p-[1px]'
+                  sweetWaffles && !other
+                    ? 'flex-column m-[2px] border border-[red] rounded p-[1px]'
                     : 'flex-column m-[2px] opacity-50'
                 }
                 onClick={() => scrollToSectionHundler(wafflesSw)}
@@ -417,8 +369,8 @@ const Menu = () => {
               </div>
               <div
                 className={
-                  !saltedWaffles && !sweetWaffles
-                    ? 'flex-column m-[2px] border border-black p-[1px] rounded'
+                  other
+                    ? 'flex-column m-[2px] border border-[red] p-[1px] rounded'
                     : 'flex-column m-[2px] opacity-50'
                 }
                 onClick={() => scrollToSectionHundler(another)}
@@ -438,21 +390,21 @@ const Menu = () => {
               <InView
                 as="div"
                 onChange={(inView, entry) => setSaltedWaffles(inView)}
-                className="h-[800px] w-full bg-slate-900"
+                className="h-[400px] w-full bg-slate-900"
               >
                 <div ref={wafflesSl}></div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setSweetWaffles(inView)}
-                className="h-[800px] w-full bg-slate-600"
+                className="h-[400px] w-full bg-slate-600"
               >
                 <div ref={wafflesSw}></div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setOther(inView)}
-                className="h-[800px] w-full bg-slate-400 "
+                className="h-[400px] w-full bg-slate-400 "
               >
                 <div ref={another}></div>
               </InView>
