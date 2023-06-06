@@ -369,7 +369,7 @@ const Menu = () => {
               <InView
                 as="div"
                 onChange={(inView, entry) => setTea(inView)}
-                className="h-[400px] w-full bg-slate-600"
+                className="h-[700px] w-full bg-slate-600"
               >
                 <div ref={theTea}></div>
               </InView>
