@@ -263,7 +263,7 @@ const Menu = () => {
               </div>
             </div>
             {/* Products from Drinks */}
-            <div>
+            <div className={scroll ? 'mt-[200px]' : ''}>
               <InView
                 as="div"
                 onChange={(inView, entry) => setBlackCoffee(inView)}
