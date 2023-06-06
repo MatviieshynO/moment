@@ -55,7 +55,7 @@ const Menu = () => {
   //Functions
   const scrollToSectionHundler = (elementRef) => {
     window.scrollTo({
-      top: elementRef.current.offsetTop - 220,
+      top: elementRef.current.offsetTop - 120,
       behavior: 'smooth',
     })
   }
@@ -80,7 +80,7 @@ const Menu = () => {
         <div
           className={
             openToggleMenu
-              ? 'flex-column  mx-2 justify-center items-center cursor-pointer rounded border border-black p-[1px]'
+              ? 'flex-column  mx-2 justify-center items-center cursor-pointer rounded border border-[red] p-[1px]'
               : 'flex-column mx-2 p-[1px] justify-center items-center cursor-pointer rounded opacity-50'
           }
           onClick={openToToggleMenuHandlerDrinks}
@@ -98,7 +98,7 @@ const Menu = () => {
           className={
             openToggleMenu
               ? 'flex-column p-[1px] mx-2 justify-center items-center cursor-pointer rounded opacity-50'
-              : 'flex-column  mx-2 justify-center items-center cursor-pointer rounded border border-black p-[1px]'
+              : 'flex-column  mx-2 justify-center items-center cursor-pointer rounded border border-[red] p-[1px]'
           }
           onClick={openToToggleMenuHandlerFood}
         >
@@ -128,7 +128,7 @@ const Menu = () => {
                 className={
                   blackCoffee && !coffeeDrinks
                     ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
-                    : 'flex-column m-[2px] h-full shrink-0'
+                    : 'flex-column m-[2px] h-full shrink-0 opacity-50'
                 }
                 onClick={() => scrollToSectionHundler(blackCof)}
               >
@@ -145,7 +145,7 @@ const Menu = () => {
                 className={
                   coffeeDrinks && !chocolate
                     ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
-                    : 'flex-column m-[2px] h-full shrink-0'
+                    : 'flex-column m-[2px] h-full shrink-0 opacity-50'
                 }
                 onClick={() => scrollToSectionHundler(coffeeDr)}
               >
@@ -163,7 +163,7 @@ const Menu = () => {
                 className={
                   chocolate && !tea
                     ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
-                    : 'flex-column m-[2px] h-full shrink-0'
+                    : 'flex-column m-[2px] h-full shrink-0 opacity-50'
                 }
                 onClick={() => scrollToSectionHundler(chocol)}
               >
@@ -180,7 +180,7 @@ const Menu = () => {
                 className={
                   tea && !matcha
                     ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
-                    : 'flex-column m-[2px] h-full shrink-0'
+                    : 'flex-column m-[2px] h-full shrink-0 opacity-50'
                 }
                 onClick={() => scrollToSectionHundler(theTea)}
               >
@@ -197,7 +197,7 @@ const Menu = () => {
                 className={
                   matcha && !coldMenu
                     ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
-                    : 'flex-column m-[2px] h-full shrink-0'
+                    : 'flex-column m-[2px] h-full shrink-0 opacity-50'
                 }
                 onClick={() => scrollToSectionHundler(theMatcha)}
               >
@@ -214,7 +214,7 @@ const Menu = () => {
                 className={
                   coldMenu && !limonade
                     ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
-                    : 'flex-column m-[2px] h-full shrink-0'
+                    : 'flex-column m-[2px] h-full shrink-0 opacity-50'
                 }
                 onClick={() => scrollToSectionHundler(coldMen)}
               >
@@ -231,7 +231,7 @@ const Menu = () => {
                 className={
                   limonade && !milkshakes
                     ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
-                    : 'flex-column m-[2px] h-full shrink-0'
+                    : 'flex-column m-[2px] h-full shrink-0 opacity-50'
                 }
                 onClick={() => scrollToSectionHundler(limon)}
               >
@@ -248,7 +248,7 @@ const Menu = () => {
                 className={
                   milkshakes
                     ? 'flex-column m-[2px] h-full shrink-0 border border-[red] rounded p-[1px]'
-                    : 'flex-column m-[2px] h-full shrink-0'
+                    : 'flex-column m-[2px] h-full shrink-0 opacity-50'
                 }
                 onClick={() => scrollToSectionHundler(milkSha)}
               >
