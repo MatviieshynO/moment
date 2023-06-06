@@ -200,7 +200,7 @@ const Menu = () => {
             >
               <div
                 style={{ transform: `translateX(${offSet}px)` }}
-                className="w-full flex gap-[28px] duration-1000"
+                className="w-full flex gap-[28px] duration-1000 pb-1"
               >
                 <div
                   className={
