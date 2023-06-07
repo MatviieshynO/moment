@@ -135,7 +135,7 @@ export default function Navbar() {
   }, [mobileMenuOpen])
   return (
     <div className="fixed inset-x-0 top-0 z-40 snap-y lg:w-[85%] lg:mx-auto">
-      <SocialMedia />
+      {/* <SocialMedia /> */}
       <nav
         className={
           showScrollNavbar

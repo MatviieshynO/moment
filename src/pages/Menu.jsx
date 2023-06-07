@@ -8,7 +8,7 @@ const Menu = () => {
   //States
   const [scroll, setScroll] = useState(false)
   const [openToggleMenu, setOpenToggleMenu] = useState(true)
-  const [saltedWaffles, setSaltedWaffles] = useState(true)
+  const [saltedWaffles, setSaltedWaffles] = useState(false)
   const [sweetWaffles, setSweetWaffles] = useState(false)
   const [other, setOther] = useState(false)
   const [blackCoffee, setBlackCoffee] = useState(true)
@@ -108,7 +108,7 @@ const Menu = () => {
       setOffSet((currentOffSet) => {
         let newOffSet = currentOffSet
 
-        newOffSet = -680
+        newOffSet = -555
         return newOffSet
       })
     } else {
@@ -132,7 +132,7 @@ const Menu = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 160) {
+      if (window.scrollY > 190) {
         setScroll(true)
       } else {
         setScroll(false)
@@ -153,26 +153,26 @@ const Menu = () => {
     setOpenToggleMenu(() => false)
   }
   return (
-    <div className="mt-32">
-      <h1 className="text-center uppercase text-5xl my-6 opacity-70">Меню</h1>
+    <div className="mt-32 font-syne-mono">
+      <h1 className="text-center text-5xl my-6 opacity-70 uppercase">Меню</h1>
 
       {/*  drinks and food section  */}
       <div
         className={
           scroll
-            ? 'fixed top-[1px] flex bg-white z-50 w-full justify-center pb-2 gap-8 gsap-05-menu-1'
-            : 'flex justify-center '
+            ? 'fixed top-0 flex bg-white z-50 w-full justify-center pb-2 gap-8 gsap-05-menu-1 border-[#256469] border-b-2 text-[#256469]'
+            : 'flex justify-center border-[#256469] border-b-2 [#256469] text-[#256469]'
         }
       >
         <div
           className={
             openToggleMenu
-              ? 'flex  mx-2 justify-center items-center cursor-pointer rounded  p-[1px] '
-              : 'flex mx-2 p-[1px] justify-center items-center cursor-pointer rounded opacity-60 '
+              ? 'flex  mx-2 justify-center items-center cursor-pointer rounded'
+              : 'flex mx-2 justify-center items-center cursor-pointer rounded opacity-60 '
           }
           onClick={openToToggleMenuHandlerDrinks}
         >
-          <h2 className="text-center text-3xl px-2">НАПОЇ</h2>
+          <h2 className="text-center text-3xl px-2 uppercase">Напої</h2>
         </div>
         <div
           className={
@@ -182,104 +182,104 @@ const Menu = () => {
           }
           onClick={openToToggleMenuHandlerFood}
         >
-          <h2 className="text-center text-3xl p-2">ЇЖА</h2>
+          <h2 className="text-center text-3xl p-2 uppercase">Їжа</h2>
         </div>
       </div>
       {/* subsections */}
-      <div className="flex w-full ">
+      <div>
         {openToggleMenu ? (
-          <div className="w-full h-full mt-2">
+          <div className="w-full h-full">
             {/* Drinks subsections*/}
             <div
               className={
                 scroll
-                  ? 'fixed  top-[55px] z-50 flex  bg-white w-full overflow-hidden gsap-05-menu-1 pl-2 '
-                  : 'flex  gap-4 overflow-hidden pl-2  w-full'
+                  ? 'fixed top-[63px] z-50 flex bg-white overflow-hidden gsap-05-menu-1 py-2 px-[2px]'
+                  : 'flex overflow-hidden py-2 px-[2px] w-full '
               }
             >
               <div
                 style={{ transform: `translateX(${offSet}px)` }}
-                className="w-full flex gap-[28px] duration-1000 pb-1"
+                className="flex pb-1 text-center text-lg gap-2 duration-700"
               >
                 <div
                   className={
                     blackCoffee && !coffeeDrinks
-                      ? 'flex m-[2px] h-full shrink-0 border border-[red] rounded p-2'
-                      : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
+                      ? 'flex h-full shrink-0 border-2 border-[#256469] text-[#256469] rounded px-2'
+                      : 'flex h-full shrink-0 items-center p-2 border rounded border-[#256469] text-[#256469] opacity-70'
                   }
                   onClick={() => scrollToSectionHundler(blackCof)}
                 >
-                  <h4 className="text-center text-xl">Чорна кава</h4>
+                  <button>Чорна кава</button>
                 </div>
                 <div
                   className={
                     coffeeDrinks && !chocolate
-                      ? 'flex m-[2px] h-full shrink-0 border border-[red] rounded p-2'
-                      : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
+                      ? 'flex h-full shrink-0 border-2 border-[#256469] text-[#256469] rounded px-2'
+                      : 'flex h-full shrink-0 items-center p-2 border rounded border-[#256469] text-[#256469] opacity-70'
                   }
                   onClick={() => scrollToSectionHundler(coffeeDr)}
                 >
-                  <h4 className="text-center text-xl">Кавові напої</h4>
+                  <button>Кавові напої</button>
                 </div>
                 <div
                   className={
                     chocolate && !tea
-                      ? 'flex m-[2px] h-full shrink-0 border border-[red] rounded p-2 items-center'
-                      : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
+                      ? 'flex h-full shrink-0 border-2 border-[#256469] text-[#256469] rounded px-2'
+                      : 'flex h-full shrink-0 items-center p-2 border rounded border-[#256469] text-[#256469] opacity-70'
                   }
                   onClick={() => scrollToSectionHundler(chocol)}
                 >
-                  <h4 className="text-center text-xl">Какао</h4>
+                  <button>Какао</button>
                 </div>
                 <div
                   className={
                     tea && !matcha
-                      ? 'flex m-[2px] h-full shrink-0 border border-[red] rounded p-2'
-                      : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
+                      ? 'flex h-full shrink-0 border-2 border-[#256469] text-[#256469] rounded px-2'
+                      : 'flex h-full shrink-0 items-center p-2 border rounded border-[#256469] text-[#256469] opacity-70'
                   }
                   onClick={() => scrollToSectionHundler(theTea)}
                 >
-                  <h4 className="text-center text-xl">Чай</h4>
+                  <button>Чай</button>
                 </div>
                 <div
                   className={
                     matcha && !coldMenu
-                      ? 'flex m-[2px] h-full shrink-0 border border-[red] rounded p-2'
-                      : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
+                      ? 'flex h-full shrink-0 border-2 border-[#256469] text-[#256469] rounded px-2'
+                      : 'flex h-full shrink-0 items-center p-2 border rounded border-[#256469] text-[#256469] opacity-70'
                   }
                   onClick={() => scrollToSectionHundler(theMatcha)}
                 >
-                  <h4 className="text-center text-xl">Матча</h4>
+                  <button>Матча</button>
                 </div>
                 <div
                   className={
                     coldMenu && !limonade
-                      ? 'flex m-[2px] h-full shrink-0 border border-[red] rounded p-2'
-                      : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
+                      ? 'flex h-full shrink-0 border-2 border-[#256469] text-[#256469] rounded px-2'
+                      : 'flex h-full shrink-0 items-center p-2 border rounded border-[#256469] text-[#256469] opacity-70'
                   }
                   onClick={() => scrollToSectionHundler(coldMen)}
                 >
-                  <h4 className="text-center text-xl">Холодне меню</h4>
+                  <button>Холодне меню</button>
                 </div>
                 <div
                   className={
                     limonade && !milkshakes
-                      ? 'flex m-[2px] h-full shrink-0 border border-[red] rounded p-2'
-                      : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
+                      ? 'flex h-full shrink-0 border-2 border-[#256469] text-[#256469] rounded px-2'
+                      : 'flex h-full shrink-0 items-center p-2 border rounded border-[#256469] text-[#256469] opacity-70'
                   }
                   onClick={() => scrollToSectionHundler(limon)}
                 >
-                  <h4 className="text-center text-xl">Лимонади та інше</h4>
+                  <button>Лимонади та інше</button>
                 </div>
                 <div
                   className={
                     milkshakes
-                      ? 'flex m-[2px] h-full shrink-0 border border-[red] rounded p-2'
-                      : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
+                      ? 'flex h-full shrink-0 border-2 border-[#256469] text-[#256469] rounded px-2'
+                      : 'flex h-full shrink-0 items-center p-2 border rounded border-[#256469] text-[#256469] opacity-70'
                   }
                   onClick={() => scrollToSectionHundler(milkSha)}
                 >
-                  <h4 className="text-center text-xl">Мілкшейки</h4>
+                  <button>Мілкшейки</button>
                 </div>
               </div>
             </div>
@@ -344,44 +344,44 @@ const Menu = () => {
             </div>
           </div>
         ) : (
-          <div className="w-full h-full mt-2">
+          <div className="w-full h-full">
             {/* Food subsections*/}
             <div
               className={
                 scroll
-                  ? 'fixed top-[55px] z-50 flex justify-center   bg-white w-full gsap-05-menu-1 gap-4 overflow-scroll pl-2'
-                  : 'flex  gap-4 border-y-[1px] border-black bg-white pl-2'
+                  ? 'fixed top-[63px] z-50 flex bg-white w-full overflow-scroll gsap-05-menu-1 py-2 px-[2px] text-lg gap-2 '
+                  : 'flex overflow-scroll py-2 px-[2px] w-full text-lg gap-2'
               }
             >
               <div
                 className={
                   saltedWaffles && !sweetWaffles
-                    ? 'flex m-[2px] h-full shrink-0 border items-center border-[red] rounded p-2'
-                    : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
+                    ? 'flex h-full shrink-0 border-2 border-[#256469] text-[#256469] rounded px-2 p-2'
+                    : 'flex h-full shrink-0 items-center p-2 border rounded border-[#256469] text-[#256469] opacity-70'
                 }
                 onClick={() => scrollToSectionHundler(wafflesSl)}
               >
-                <h2 className="text-center text-xl">Солоні вафлі</h2>
+                <button>Солоні вафлі</button>
               </div>
               <div
                 className={
                   sweetWaffles && !other
-                    ? 'flex m-[2px] h-full shrink-0 border items-center border-[red] rounded p-2'
-                    : 'flex m-[2px] h-full shrink-0 opacity-50 items-center'
+                    ? 'flex h-full shrink-0 border-2 border-[#256469] text-[#256469] rounded px-2 p-2'
+                    : 'flex h-full shrink-0 items-center p-2 border rounded border-[#256469] text-[#256469] opacity-70'
                 }
                 onClick={() => scrollToSectionHundler(wafflesSw)}
               >
-                <h2 className="text-center text-xl">Солодкі вафлі</h2>
+                <button>Солодкі вафлі</button>
               </div>
               <div
                 className={
                   other
-                    ? 'flex m-[2px] h-full shrink-0 border items-center border-[red] rounded p-2'
-                    : 'flex m-[2px] h-full shrink-0 opacity-50 items-center '
+                    ? 'flex h-full shrink-0 border-2 border-[#256469] text-[#256469] rounded px-2 p-2'
+                    : 'flex h-full shrink-0 items-center p-2 border rounded border-[#256469] text-[#256469] opacity-70'
                 }
                 onClick={() => scrollToSectionHundler(another)}
               >
-                <h2 className="text-center text-xl">Інше</h2>
+                <button>Інше</button>
               </div>
             </div>
             {/* Products from food */}
