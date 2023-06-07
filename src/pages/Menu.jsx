@@ -3,6 +3,7 @@ import { InView } from 'react-intersection-observer'
 import gsap from 'gsap'
 
 //Components
+import ProductCards from '../components/ProductCards'
 
 const Menu = () => {
   //States
@@ -394,7 +395,17 @@ const Menu = () => {
                 onChange={(inView, entry) => setSaltedWaffles(inView)}
                 className="h-[700px] w-full bg-slate-900"
               >
-                <div ref={wafflesSl}></div>
+                <div ref={wafflesSl}>
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle Batter'}
+                    text={'In a medium bowl, whisk together the flour, sugar'}
+                    price={'50 грн'}
+                  />
+                </div>
               </InView>
               <InView
                 as="div"
