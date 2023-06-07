@@ -108,7 +108,7 @@ const Menu = () => {
       setOffSet((currentOffSet) => {
         let newOffSet = currentOffSet
 
-        newOffSet = -555
+        newOffSet = -580
         return newOffSet
       })
     } else {
@@ -153,8 +153,10 @@ const Menu = () => {
     setOpenToggleMenu(() => false)
   }
   return (
-    <div className="mt-32 font-syne-mono">
-      <h1 className="text-center text-5xl my-6 opacity-70 uppercase">Меню</h1>
+    <div className="mt-20 font-syne-mono bg-white">
+      <h1 className="text-center text-5xl my-6 opacity-70 uppercase pt-20">
+        Меню
+      </h1>
 
       {/*  drinks and food section  */}
       <div
@@ -344,13 +346,13 @@ const Menu = () => {
             </div>
           </div>
         ) : (
-          <div className="w-full h-full">
+          <div className=" h-full">
             {/* Food subsections*/}
             <div
               className={
                 scroll
-                  ? 'fixed top-[63px] z-50 flex bg-white w-full overflow-scroll gsap-05-menu-1 py-2 px-[2px] text-lg gap-2 '
-                  : 'flex overflow-scroll py-2 px-[2px] w-full text-lg gap-2'
+                  ? 'fixed top-[63px] z-50 flex bg-white w-full overflow-hidden gsap-05-menu-1 py-2 px-[2px] text-lg gap-1 '
+                  : 'flex overflow-hidden py-2 px-[2px] w-full text-lg gap-2'
               }
             >
               <div
