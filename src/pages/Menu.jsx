@@ -108,7 +108,7 @@ const Menu = () => {
       setOffSet((currentOffSet) => {
         let newOffSet = currentOffSet
 
-        newOffSet = -580
+        newOffSet = -600
         return newOffSet
       })
     } else {
@@ -351,8 +351,8 @@ const Menu = () => {
             <div
               className={
                 scroll
-                  ? 'fixed top-[63px] z-50 flex bg-white w-full overflow-hidden gsap-05-menu-1 py-2 px-[2px] text-lg gap-1 '
-                  : 'flex overflow-hidden py-2 px-[2px] w-full text-lg gap-2'
+                  ? 'fixed top-[63px] z-50 flex bg-white w-full overflow-hidden gsap-05-menu-1 py-2 px-[2px] text-base gap-2 '
+                  : 'flex overflow-hidden py-2 px-[2px] w-full text-base gap-2'
               }
             >
               <div
