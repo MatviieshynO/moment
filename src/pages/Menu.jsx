@@ -108,7 +108,7 @@ const Menu = () => {
       setOffSet((currentOffSet) => {
         let newOffSet = currentOffSet
 
-        newOffSet = -600
+        newOffSet = -620
         return newOffSet
       })
     } else {
@@ -159,6 +159,7 @@ const Menu = () => {
       </h1>
 
       {/*  drinks and food section  */}
+      <hr />
       <div
         className={
           scroll
