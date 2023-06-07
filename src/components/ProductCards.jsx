@@ -16,8 +16,8 @@ const ProductCards = ({ url, alt, title, text, price }) => {
           <img
             src={url}
             alt={alt}
-            width={200}
-            height={200}
+            width={180}
+            height={130}
             className="rounded shrink-0"
           />
         </div>

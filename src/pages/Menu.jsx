@@ -133,7 +133,7 @@ const Menu = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 190) {
+      if (window.scrollY > 230) {
         setScroll(true)
       } else {
         setScroll(false)
@@ -154,7 +154,7 @@ const Menu = () => {
     setOpenToggleMenu(() => false)
   }
   return (
-    <div className="mt-20 font-syne-mono bg-white">
+    <div className="mt-[80px] font-syne-mono bg-white">
       <h1 className="text-center text-5xl my-6 opacity-70 uppercase pt-20">
         Меню
       </h1>
@@ -197,13 +197,13 @@ const Menu = () => {
             <div
               className={
                 scroll
-                  ? 'fixed top-[63px] z-50 flex bg-white overflow-hidden gsap-05-menu-1 py-2 px-[2px]'
-                  : 'flex overflow-hidden py-2 px-[2px] w-full '
+                  ? 'fixed top-[63px] z-50 flex bg-white overflow-auto gsap-05-menu-1 py-2 px-[2px]'
+                  : 'flex overflow-auto py-2 px-[2px] w-full '
               }
             >
               <div
                 style={{ transform: `translateX(${offSet}px)` }}
-                className="flex pb-1 text-center text-lg gap-2 duration-700"
+                className="flex pb-1 text-center text-base gap-2 duration-700"
               >
                 <div
                   className={
