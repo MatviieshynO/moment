@@ -48,11 +48,11 @@ export default function Navbar() {
     gsap.fromTo(
       '.gsap-04',
       {
-        x: -50,
+        opacity: 0,
       },
       {
-        x: 0,
-        duration: 2,
+        opacity: 1,
+        duration: 4,
       }
     )
   }, [])
@@ -135,7 +135,6 @@ export default function Navbar() {
   }, [mobileMenuOpen])
   return (
     <div className="fixed inset-x-0 top-0 z-40 snap-y lg:w-[85%] lg:mx-auto">
-      {/* <SocialMedia /> */}
       <nav
         className={
           showScrollNavbar

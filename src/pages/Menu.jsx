@@ -34,15 +34,16 @@ const Menu = () => {
   const coldMen = useRef(null)
   const limon = useRef(null)
   const milkSha = useRef(null)
+
   useEffect(() => {
     if (blackCoffee) {
       setOffSet((currentOffSet) => {
-        let newOffSet = (currentOffSet = 0)
+        let newOffSet = currentOffSet
 
         newOffSet = 0
         return newOffSet
       })
-    } else {
+    } else if (!blackCoffee) {
       setOffSet((currentOffSet) => {
         return currentOffSet
       })
@@ -51,9 +52,9 @@ const Menu = () => {
   useEffect(() => {
     if (chocolate) {
       setOffSet((currentOffSet) => {
-        let newOffSet = (currentOffSet = 0)
+        let newOffSet = currentOffSet
 
-        newOffSet = -100
+        newOffSet = -20
         return newOffSet
       })
     } else {
@@ -62,12 +63,26 @@ const Menu = () => {
       })
     }
   }, [chocolate])
+  // useEffect(() => {
+  //   if (chocolate) {
+  //     setOffSet((currentOffSet) => {
+  //       let newOffSet = (currentOffSet = 0)
+
+  //       newOffSet = -18
+  //       return newOffSet
+  //     })
+  //   } else {
+  //     setOffSet((currentOffSet) => {
+  //       return currentOffSet
+  //     })
+  //   }
+  // }, [chocolate])
   useEffect(() => {
     if (tea) {
       setOffSet((currentOffSet) => {
         let newOffSet = currentOffSet
 
-        newOffSet = -180
+        newOffSet = -22
         return newOffSet
       })
     } else {
@@ -81,7 +96,7 @@ const Menu = () => {
       setOffSet((currentOffSet) => {
         let newOffSet = currentOffSet
 
-        newOffSet = -235
+        newOffSet = -35
         return newOffSet
       })
     } else {
@@ -95,7 +110,7 @@ const Menu = () => {
       setOffSet((currentOffSet) => {
         let newOffSet = currentOffSet
 
-        newOffSet = -360
+        newOffSet = -58
         return newOffSet
       })
     } else {
@@ -109,7 +124,7 @@ const Menu = () => {
       setOffSet((currentOffSet) => {
         let newOffSet = currentOffSet
 
-        newOffSet = -440
+        newOffSet = -73
         return newOffSet
       })
     } else {
@@ -123,7 +138,7 @@ const Menu = () => {
       setOffSet((currentOffSet) => {
         let newOffSet = currentOffSet
 
-        newOffSet = -520
+        newOffSet = -80
         return newOffSet
       })
     } else {
@@ -147,7 +162,7 @@ const Menu = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 230) {
+      if (window.scrollY > 210) {
         setScroll(true)
       } else {
         setScroll(false)
@@ -168,10 +183,10 @@ const Menu = () => {
     setOpenToggleMenu(() => false)
   }
   return (
-    <div className="mt-[80px] font-syne-mono bg-white">
-      <h1 className="text-center text-5xl my-6 opacity-70 uppercase pt-20">
+    <div className="mt-[120px] font-syne-mono bg-white">
+      {/* <h1 className="text-center text-5xl my-6 opacity-70 uppercase pt-20">
         Меню
-      </h1>
+      </h1> */}
 
       {/*  drinks and food section  */}
       <hr />
@@ -179,14 +194,14 @@ const Menu = () => {
         className={
           scroll
             ? 'fixed top-0 flex bg-white z-50 w-full justify-center pb-2 gap-8 gsap-05-menu-1 border-[#256469] border-b-2 text-[#256469]'
-            : 'flex justify-center border-[#256469] border-b-2 [#256469] text-[#256469]'
+            : 'flex justify-center border-[#256469] border-b-2 [#256469] text-[#256469] pb-2'
         }
       >
         <div
           className={
             openToggleMenu
-              ? 'flex  mx-2 justify-center items-center cursor-pointer rounded'
-              : 'flex mx-2 justify-center items-center cursor-pointer rounded opacity-60 '
+              ? 'flex  mx-2 justify-center items-center cursor-pointer  border-b border-[#256469]'
+              : 'flex mx-2 justify-center items-center cursor-pointer opacity-60 '
           }
           onClick={openToToggleMenuHandlerDrinks}
         >
@@ -195,8 +210,8 @@ const Menu = () => {
         <div
           className={
             openToggleMenu
-              ? 'flex-column p-[1px] mx-2 justify-center items-center cursor-pointer rounded opacity-60 '
-              : 'flex-column  mx-2 justify-center items-center cursor-pointer rounded  p-[1px]'
+              ? 'flex-column p-[1px] mx-2 justify-center items-center cursor-pointer  opacity-60 '
+              : 'flex-column  mx-2 justify-center items-center cursor-pointer  p-[1px] border-b border-[#256469]'
           }
           onClick={openToToggleMenuHandlerFood}
         >
@@ -216,8 +231,8 @@ const Menu = () => {
               }
             >
               <div
-                style={{ transform: `translateX(${offSet}px)` }}
-                className="flex pb-1 text-center text-base gap-2 duration-700"
+                style={{ transform: `translateX(${offSet}%)` }}
+                className="flex pb-1 text-center text-base gap-2 duration-300"
               >
                 <div
                   className={
@@ -227,7 +242,7 @@ const Menu = () => {
                   }
                   onClick={() => scrollToSectionHundler(blackCof)}
                 >
-                  <button className='text'>Чорна кава</button>
+                  <button className="text">Чорна кава</button>
                 </div>
                 <div
                   className={
@@ -306,58 +321,298 @@ const Menu = () => {
               <InView
                 as="div"
                 onChange={(inView, entry) => setBlackCoffee(inView)}
-                className="h-[700px] w-full bg-slate-900"
+                className=" w-full bg-[#256469]"
               >
-                <div ref={blackCof}></div>
+                <h2 className="text-center text-[6vw] text-white">
+                  Чорна кава
+                </h2>
+                <div ref={blackCof}>
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                </div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setCoffeeDrinks(inView)}
-                className="h-[700px] w-full bg-slate-800"
+                className=" w-full bg-[#256469]"
               >
-                <div ref={coffeeDr}></div>
+                <h2 className="text-center text-[6vw] text-white">
+                  Кавові напої
+                </h2>
+                <div ref={coffeeDr}>
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                </div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setChocolate(inView)}
-                className="h-[700px] w-full bg-slate-700"
+                className=" w-full bg-[#256469]"
               >
-                <div ref={chocol}></div>
+                <h2 className="text-center text-[6vw] text-white">Какао</h2>
+                <div ref={chocol}>
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                </div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setTea(inView)}
-                className="h-[700px] w-full bg-slate-600"
+                className=" w-full bg-[#256469]"
               >
-                <div ref={theTea}></div>
+                <h2 className="text-center text-[6vw] text-white">Чай</h2>
+                <div ref={theTea}>
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                </div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setMatcha(inView)}
-                className="h-[700px] w-full bg-slate-500"
+                className=" w-full bg-[#256469]"
               >
-                <div ref={theMatcha}></div>
+                <h2 className="text-center text-[6vw] text-white">Матча</h2>
+                <div ref={theMatcha}>
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                </div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setColdMenu(inView)}
-                className="h-[700px] w-full bg-slate-400"
+                className=" w-full bg-[#256469]"
               >
-                <div ref={coldMen}></div>
+                <h2 className="text-center text-[6vw] text-white">
+                  Холодне меню
+                </h2>
+                <div ref={coldMen}>
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                </div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setLimonade(inView)}
-                className="h-[700px] w-full bg-slate-300"
+                className="w-full bg-[#256469]"
               >
-                <div ref={limon}></div>
+                <h2 className="text-center text-[6vw] text-white">
+                  Лимонади та інше
+                </h2>
+                <div ref={limon}>
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                </div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setMilkshakes(inView)}
-                className="h-[700px] w-full bg-slate-200"
+                className=" w-full bg-[#256469]"
               >
-                <div ref={milkSha}></div>
+                <h2 className="text-center text-[6vw] text-white">Мілкшейки</h2>
+                <div ref={milkSha}>
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                </div>
               </InView>
             </div>
           </div>
