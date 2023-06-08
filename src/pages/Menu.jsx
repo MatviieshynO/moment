@@ -53,7 +53,7 @@ const Menu = () => {
       setOffSet((currentOffSet) => {
         let newOffSet = (currentOffSet = 0)
 
-        newOffSet = -122
+        newOffSet = -100
         return newOffSet
       })
     } else {
@@ -67,7 +67,7 @@ const Menu = () => {
       setOffSet((currentOffSet) => {
         let newOffSet = currentOffSet
 
-        newOffSet = -244
+        newOffSet = -180
         return newOffSet
       })
     } else {
@@ -81,7 +81,7 @@ const Menu = () => {
       setOffSet((currentOffSet) => {
         let newOffSet = currentOffSet
 
-        newOffSet = -366
+        newOffSet = -235
         return newOffSet
       })
     } else {
@@ -95,7 +95,7 @@ const Menu = () => {
       setOffSet((currentOffSet) => {
         let newOffSet = currentOffSet
 
-        newOffSet = -488
+        newOffSet = -360
         return newOffSet
       })
     } else {
@@ -109,7 +109,7 @@ const Menu = () => {
       setOffSet((currentOffSet) => {
         let newOffSet = currentOffSet
 
-        newOffSet = -620
+        newOffSet = -440
         return newOffSet
       })
     } else {
@@ -118,6 +118,20 @@ const Menu = () => {
       })
     }
   }, [limonade])
+  useEffect(() => {
+    if (milkshakes) {
+      setOffSet((currentOffSet) => {
+        let newOffSet = currentOffSet
+
+        newOffSet = -520
+        return newOffSet
+      })
+    } else {
+      setOffSet((currentOffSet) => {
+        return currentOffSet
+      })
+    }
+  }, [milkshakes])
 
   //////////////////////
   useEffect(() => {
@@ -197,7 +211,7 @@ const Menu = () => {
             <div
               className={
                 scroll
-                  ? 'fixed top-[63px] z-50 flex bg-white overflow-auto gsap-05-menu-1 py-2 px-[2px]'
+                  ? 'fixed top-[63px] z-50 justify-center flex bg-white overflow-auto gsap-05-menu-1 py-2 px-[2px]'
                   : 'flex overflow-auto py-2 px-[2px] w-full '
               }
             >
@@ -353,8 +367,8 @@ const Menu = () => {
             <div
               className={
                 scroll
-                  ? 'fixed top-[63px] z-50 flex bg-white w-full overflow-hidden gsap-05-menu-1 py-2 px-[2px] text-base gap-2 '
-                  : 'flex overflow-hidden py-2 px-[2px] w-full text-base gap-2'
+                  ? 'fixed top-[63px] z-50 justify-center flex bg-white w-full overflow-hidden gsap-05-menu-1 py-2 px-[2px] text-base gap-2 '
+                  : 'flex overflow-hidden py-2 px-[2px] justify-center w-full text-base gap-2'
               }
             >
               <div
@@ -401,8 +415,10 @@ const Menu = () => {
                       'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
                     }
                     alt={'Waffle'}
-                    title={'Simple Waffle Batter'}
-                    text={'In a medium bowl, whisk together the flour, sugar'}
+                    title={'Simple Waffle Batter adasda d asd adsa sda sd ad a'}
+                    text={
+                      'In a medium bowl, whisk together the flour, sugar dasdasdssda adsad adasd adasds adas das adasdas adasd ads asd a'
+                    }
                     price={'50 грн'}
                   />
                 </div>
