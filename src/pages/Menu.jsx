@@ -227,7 +227,7 @@ const Menu = () => {
                   }
                   onClick={() => scrollToSectionHundler(blackCof)}
                 >
-                  <button>Чорна кава</button>
+                  <button className='text'>Чорна кава</button>
                 </div>
                 <div
                   className={
@@ -407,18 +407,37 @@ const Menu = () => {
               <InView
                 as="div"
                 onChange={(inView, entry) => setSaltedWaffles(inView)}
-                className="h-[700px] w-full bg-slate-900"
+                className="w-full bg-[#256469]"
               >
+                <h2 className="text-center text-[6vw] text-white">
+                  Солені вафлі
+                </h2>
                 <div ref={wafflesSl}>
                   <ProductCards
                     url={
                       'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
                     }
                     alt={'Waffle'}
-                    title={'Simple Waffle Batter adasda d asd adsa sda sd ad a'}
-                    text={
-                      'In a medium bowl, whisk together the flour, sugar dasdasdssda adsad adasd adasds adas das adasdas adasd ads asd a'
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
                     }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
                     price={'50 грн'}
                   />
                 </div>
@@ -426,16 +445,78 @@ const Menu = () => {
               <InView
                 as="div"
                 onChange={(inView, entry) => setSweetWaffles(inView)}
-                className="h-[700px] w-full bg-slate-600"
+                className="w-full bg-[#256469]"
               >
-                <div ref={wafflesSw}></div>
+                <h2 className="text-center text-[6vw] text-white">
+                  Солодкі вафлі
+                </h2>
+                <div ref={wafflesSw}>
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdasdsad'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdasdsad'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdasdsad'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                </div>
               </InView>
               <InView
                 as="div"
                 onChange={(inView, entry) => setOther(inView)}
-                className="h-[700px] w-full bg-slate-400 "
+                className="w-full bg-slate-400 "
               >
-                <div ref={another}></div>
+                <h2 className="text-center text-[6vw] bg-[#256469] text-white">
+                  Інше
+                </h2>
+                <div ref={another}>
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                  <ProductCards
+                    url={
+                      'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
+                    }
+                    alt={'Waffle'}
+                    title={'Simple Waffle dasda asdas'}
+                    text={'In a medium bowl, whisk together the flour, sugar '}
+                    price={'50 грн'}
+                  />
+                </div>
               </InView>
             </div>
           </div>

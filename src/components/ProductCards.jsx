@@ -1,25 +1,21 @@
 const ProductCards = ({ url, alt, title, text, price }) => {
   return (
-    <div className="flex w-full justify-center bg-slate-50 min-h-[130px] flex-nowrap p-2 border-y border-black">
-      <div className="flex mx-2">
-        <div className="flex-column grow break-words">
-          <h3 className="text-[16px] text-center">{title}</h3>
-          <p className="text-center text-[red]">{price}</p>
-          <p className="text-[10px] overflow-hidden">{text}</p>
-          <div className="flex justify-center gap-20">
-            <div></div>
-            <button className="text-[10px] border-b">...</button>
-          </div>
+    <div className="flex w-full h-[150px] bg-slate-50 p-1">
+      <div className="flex p-2  overflow-hidden">
+        <div className="flex-column items-center">
+          <h3 className="text-[4.5vw] text-center">{title}</h3>
+          <p className="text-[3vw]">{text}</p>
+          <button className="text-[10px] border-b">...</button>
         </div>
-
-        <div className="min-w-[120px] h-full items-center flex pl-2">
+        <div className="flex-column">
           <img
             src={url}
             alt={alt}
-            width={180}
-            height={130}
+            width={240}
+            height={200}
             className="rounded shrink-0"
           />
+          <p className="text-center text-[red]">{price}</p>
         </div>
       </div>
     </div>
