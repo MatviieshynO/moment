@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { InView } from 'react-intersection-observer'
 import gsap from 'gsap'
+import { MdArrowBackIosNew } from 'react-icons/md'
 
 //Components
 import ProductCards from '../components/ProductCards'
@@ -83,7 +84,7 @@ const Menu = () => {
             setOffSet((currentOffSet) => {
                 let newOffSet = currentOffSet
 
-                newOffSet = -50
+                newOffSet = -45
                 return newOffSet
             })
         } else {
@@ -97,7 +98,7 @@ const Menu = () => {
             setOffSet((currentOffSet) => {
                 let newOffSet = currentOffSet
 
-                newOffSet = -75
+                newOffSet = -54
                 return newOffSet
             })
         } else {
@@ -111,7 +112,7 @@ const Menu = () => {
             setOffSet((currentOffSet) => {
                 let newOffSet = currentOffSet
 
-                newOffSet = -85
+                newOffSet = -65
                 return newOffSet
             })
         } else {
@@ -125,7 +126,7 @@ const Menu = () => {
             setOffSet((currentOffSet) => {
                 let newOffSet = currentOffSet
 
-                newOffSet = -95
+                newOffSet = -88
                 return newOffSet
             })
         } else {
@@ -186,7 +187,7 @@ const Menu = () => {
                     }
                     onClick={openToToggleMenuHandlerDrinks}
                 >
-                    <h2 className="text-center text-3xl px-2 uppercase">
+                    <h2 className="text-center text-xl px-2 uppercase">
                         Напої
                     </h2>
                 </div>
@@ -198,7 +199,7 @@ const Menu = () => {
                     }
                     onClick={openToToggleMenuHandlerFood}
                 >
-                    <h2 className="text-center text-3xl p-2 uppercase">Їжа</h2>
+                    <h2 className="text-center text-xl p-2 uppercase">Їжа</h2>
                 </div>
             </div>
             {/* subsections */}
@@ -209,7 +210,7 @@ const Menu = () => {
                         <div
                             className={
                                 scroll
-                                    ? 'fixed top-[63px] z-50 justify-center flex bg-white overflow-auto gsap-05-menu-1 py-2 px-[2px]'
+                                    ? 'fixed top-[45px] z-50 justify-center flex bg-white overflow-auto gsap-05-menu-1 py-2 px-[2px]'
                                     : 'flex overflow-auto py-2 px-[2px] w-full '
                             }
                         >
@@ -312,6 +313,14 @@ const Menu = () => {
                                     }
                                 >
                                     <button>Мілкшейки</button>
+                                </div>
+                                <div
+                                    className="flex  h-full shrink-0 border border-[#256469] text-[#256469] rounded px-2 items-center"
+                                    onClick={() =>
+                                        scrollToSectionHundler(blackCof)
+                                    }
+                                >
+                                    <MdArrowBackIosNew className="w-8 text-2xl" />
                                 </div>
                             </div>
                         </div>
@@ -691,7 +700,7 @@ const Menu = () => {
                         <div
                             className={
                                 scroll
-                                    ? 'fixed top-[63px] z-50 justify-center flex bg-white w-full overflow-hidden gsap-05-menu-1 py-2 px-[2px] text-base gap-2 '
+                                    ? 'fixed top-[45px] z-50 justify-center flex bg-white w-full overflow-hidden gsap-05-menu-1 py-2 px-[2px] text-base gap-2 '
                                     : 'flex overflow-hidden py-2 px-[2px] justify-center w-full text-base gap-2'
                             }
                         >
@@ -751,7 +760,7 @@ const Menu = () => {
                                         text={
                                             'Суперсирна вафля із трьох видів сирів з волоським горіхом полита бальзамічним соусом.'
                                         }
-                                        price={'50 грн'}
+                                        price={'140'}
                                     />
                                     <ProductCards
                                         url={
@@ -761,7 +770,7 @@ const Menu = () => {
                                         text={
                                             'Ніжний крем сир, свіже авокадо, соковитий тунець з додаванням в"ялених томатів під бальзамічним соусом.'
                                         }
-                                        price={'50 грн'}
+                                        price={'140'}
                                     />
                                 </div>
                             </InView>
