@@ -772,6 +772,46 @@ const Menu = () => {
                                         }
                                         price={'140'}
                                     />
+                                    <ProductCards
+                                        url={
+                                            'https://res.cloudinary.com/dlmgm4bya/image/upload/v1688990441/%D0%97_%D0%B1%D0%B5%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC_83a073.jpg'
+                                        }
+                                        title={'З беконом'}
+                                        text={
+                                            'Ніжний крем сир, соковитий смажений бекон, грильовані грибочки, вишуканий пармезан та яскравий часниковий соус.'
+                                        }
+                                        price={'140'}
+                                    />
+                                    <ProductCards
+                                        url={
+                                            'https://res.cloudinary.com/dlmgm4bya/image/upload/v1688990815/%D0%97%20%D1%85%D0%B0%D0%BC%D0%BE%D0%BD%D0%BE%D0%BC.jpg'
+                                        }
+                                        title={'З хамоном та моцарелою'}
+                                        text={
+                                            'Вишуканий хамон, ніжна моцарела, свіжі томати, яскравий часниковий соус, мікс салату у завершені бальзамічного соусу.'
+                                        }
+                                        price={'140'}
+                                    />
+                                    <ProductCards
+                                        url={
+                                            'https://res.cloudinary.com/dlmgm4bya/image/upload/v1688991222/Chicken.jpg'
+                                        }
+                                        title={'Chicken'}
+                                        text={
+                                            "Бельгійська вафелька зі смаженим курчам, грибочками та соковитими в'яленими томатами у гармонії з сирним соусом."
+                                        }
+                                        price={'120'}
+                                    />
+                                    <ProductCards
+                                        url={
+                                            'https://res.cloudinary.com/dlmgm4bya/image/upload/v1688992271/%D0%97%20%20%D0%9C%D0%98%D0%A1%D0%9B%D0%98%D0%92%D0%A1%D0%AC%D0%9A%D0%98%D0%9C%D0%98%20%D0%9A%D0%9E%D0%92%D0%91%D0%90%D0%A1%D0%9A%D0%90%D0%9C%D0%98.jpg'
+                                        }
+                                        title={`З мисливськими ковбасками  `}
+                                        text={
+                                            'Ідеальна композиція смажених ковбасок, фіолетової цибульки та пікантних маринованих огірочків ніжністю став розтанувший сир, а кисло-солодкий соус буде гармонійним до останнього шматочка.'
+                                        }
+                                        price={'120'}
+                                    />
                                 </div>
                             </InView>
                             <InView
@@ -784,7 +824,58 @@ const Menu = () => {
                                 <h2 className="text-center text-3xl text-white">
                                     Солодкі вафлі
                                 </h2>
-                                <div ref={wafflesSw}></div>
+                                <div ref={wafflesSw}>
+                                    <ProductCards
+                                        url={
+                                            'https://res.cloudinary.com/dlmgm4bya/image/upload/v1688991531/%D0%A8%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%B4%20%D0%B1%D0%B0%D0%BD%D0%B0%D0%BD.jpg'
+                                        }
+                                        title={'Шоколад банан'}
+                                        text={
+                                            'Класичний,  але неповторний та завжди актуальний тандем.'
+                                        }
+                                        price={'80'}
+                                    />
+                                    <ProductCards
+                                        url={
+                                            'https://res.cloudinary.com/dlmgm4bya/image/upload/v1688992787/%D0%9A%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D0%BB%D1%8C%20%D0%B1%D0%B0%D0%BD%D0%B0%D0%BD.jpg'
+                                        }
+                                        title={'Карамель банан'}
+                                        text={
+                                            'Вершково ніжнка солона карамель власного приготування у поєднанні з бананом.'
+                                        }
+                                        price={'80'}
+                                    />
+                                    <ProductCards
+                                        url={
+                                            'https://res.cloudinary.com/dlmgm4bya/image/upload/v1688991903/Raffaello.jpg'
+                                        }
+                                        title={'Raffaello'}
+                                        text={
+                                            'Найроманиичніша вафля,  з мега ніжним кокосовим кремом у завершені мигдальних пластівців.'
+                                        }
+                                        price={'100'}
+                                    />
+                                    <ProductCards
+                                        url={
+                                            'https://res.cloudinary.com/dlmgm4bya/image/upload/v1688993135/%D0%A4%D1%96%D1%81%D1%82%D0%B0%D1%88%D0%BA%D0%B0-%D1%81%D0%BE%D0%BB%D0%B5%D0%BD%D0%B0%20%D0%BA%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D0%BB%D1%8C.jpg'
+                                        }
+                                        title={'Фісташка-солена карамель'}
+                                        text={
+                                            'Неперевершена паста із хрумкою фісташкою у поєднані з солоною карамелю власного приготування.'
+                                        }
+                                        price={'90'}
+                                    />
+                                    <ProductCards
+                                        url={
+                                            'https://res.cloudinary.com/dlmgm4bya/image/upload/v1688993454/%D0%A1%D0%BC%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%20%D1%87%D1%96%D0%B7.jpg'
+                                        }
+                                        title={'Смородина чіз'}
+                                        text={
+                                            'Ніжний крем сир у поєднані з смородиною під повітряними рослинними вершками, які так нагадують пломбір.'
+                                        }
+                                        price={'90'}
+                                    />
+                                </div>
                             </InView>
                             <InView
                                 as="div"
