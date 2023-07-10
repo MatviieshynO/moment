@@ -714,7 +714,9 @@ const Menu = () => {
                                     scrollToSectionHundler(wafflesSl)
                                 }
                             >
-                                <button className='text-sm'>Солоні вафлі</button>
+                                <button className="text-[0.950rem]">
+                                    Солоні вафлі
+                                </button>
                             </div>
                             <div
                                 className={
@@ -726,7 +728,9 @@ const Menu = () => {
                                     scrollToSectionHundler(wafflesSw)
                                 }
                             >
-                                <button className='text-sm'>Солодкі вафлі</button>
+                                <button className="text-[0.950rem]">
+                                    Солодкі вафлі
+                                </button>
                             </div>
                             <div
                                 className={
@@ -736,7 +740,9 @@ const Menu = () => {
                                 }
                                 onClick={() => scrollToSectionHundler(another)}
                             >
-                                <button className='text-sm'>Додатки</button>
+                                <button className="text-[0.950rem]">
+                                    Додатки
+                                </button>
                             </div>
                         </div>
                         {/* Products from food */}
