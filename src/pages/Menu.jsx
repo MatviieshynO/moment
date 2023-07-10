@@ -333,46 +333,10 @@ const Menu = () => {
                                 }
                                 className=" w-full bg-[#256469] py-2"
                             >
-                                <h2 className="text-center text-[6vw] text-white">
+                                <h2 className="text-center text-3xl text-white">
                                     Чорна кава
                                 </h2>
-                                <div ref={blackCof}>
-                                    <ProductCards
-                                        url={
-                                            'https://st.depositphotos.com/1020804/1263/i/450/depositphotos_12638853-stock-photo-coffee-cup-and-beans.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Чорна кава'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                    <ProductCards
-                                        url={
-                                            'https://media-cdn.tripadvisor.com/media/photo-p/0e/96/7f/97/coffe-latte-100-arabica.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={
-                                            'Simple Waffle dasda asdas dadsd a adsdasda adasd asd asd ada sd '
-                                        }
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                </div>
+                                <div ref={blackCof}></div>
                             </InView>
                             <InView
                                 as="div"
@@ -381,44 +345,10 @@ const Menu = () => {
                                 }
                                 className=" w-full bg-[#256469] py-2"
                             >
-                                <h2 className="text-center text-[6vw] text-white">
+                                <h2 className="text-center text-3xl text-white">
                                     Кавові напої
                                 </h2>
-                                <div ref={coffeeDr}>
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                </div>
+                                <div ref={coffeeDr}></div>
                             </InView>
                             <InView
                                 as="div"
@@ -427,132 +357,30 @@ const Menu = () => {
                                 }
                                 className=" w-full bg-[#256469] py-2"
                             >
-                                <h2 className="text-center text-[6vw] text-white">
+                                <h2 className="text-center text-3xl text-white">
                                     Какао
                                 </h2>
-                                <div ref={chocol}>
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                </div>
+                                <div ref={chocol}></div>
                             </InView>
                             <InView
                                 as="div"
                                 onChange={(inView, entry) => setTea(inView)}
                                 className=" w-full bg-[#256469] py-2"
                             >
-                                <h2 className="text-center text-[6vw] text-white">
+                                <h2 className="text-center text-3xl text-white">
                                     Чай
                                 </h2>
-                                <div ref={theTea}>
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                </div>
+                                <div ref={theTea}></div>
                             </InView>
                             <InView
                                 as="div"
                                 onChange={(inView, entry) => setMatcha(inView)}
                                 className=" w-full bg-[#256469] py-2"
                             >
-                                <h2 className="text-center text-[6vw] text-white">
+                                <h2 className="text-center text-3xl text-white">
                                     Матча
                                 </h2>
-                                <div ref={theMatcha}>
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                </div>
+                                <div ref={theMatcha}></div>
                             </InView>
                             <InView
                                 as="div"
@@ -561,44 +389,10 @@ const Menu = () => {
                                 }
                                 className=" w-full bg-[#256469] py-2"
                             >
-                                <h2 className="text-center text-[6vw] text-white">
+                                <h2 className="text-center text-3xl text-white">
                                     Холодне меню
                                 </h2>
-                                <div ref={coldMen}>
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                </div>
+                                <div ref={coldMen}></div>
                             </InView>
                             <InView
                                 as="div"
@@ -607,44 +401,10 @@ const Menu = () => {
                                 }
                                 className="w-full bg-[#256469] py-2"
                             >
-                                <h2 className="text-center text-[6vw] text-white">
+                                <h2 className="text-center text-3xl text-white">
                                     Лимонади та інше
                                 </h2>
-                                <div ref={limon}>
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                </div>
+                                <div ref={limon}></div>
                             </InView>
                             <InView
                                 as="div"
@@ -653,44 +413,10 @@ const Menu = () => {
                                 }
                                 className=" w-full bg-[#256469] py-2"
                             >
-                                <h2 className="text-center text-[6vw] text-white">
+                                <h2 className="text-center text-3xl text-white">
                                     Мілкшейки
                                 </h2>
-                                <div ref={milkSha}>
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                    <ProductCards
-                                        url={
-                                            'https://www.dinnerwithjulie.com/wp-content/uploads/2013/03/Pecan-waffles-with-salted-caramel-bananas.jpg'
-                                        }
-                                        alt={'Waffle'}
-                                        title={'Simple Waffle dasda asdas'}
-                                        text={
-                                            'In a medium bowl, whisk together the flour, sugar '
-                                        }
-                                        price={'50 грн'}
-                                    />
-                                </div>
+                                <div ref={milkSha}></div>
                             </InView>
                         </div>
                     </div>
@@ -715,7 +441,7 @@ const Menu = () => {
                                 }
                             >
                                 <button className="text-[0.950rem]">
-                                    Солоні вафлі
+                                    Солені вафлі
                                 </button>
                             </div>
                             <div

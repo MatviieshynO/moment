@@ -20,10 +20,10 @@ const ScrollToTopButton = () => {
     })
   }
   return (
-    <div className="fixed sm:bottom-[10%] sm:right-[1%] md:bottom-[10%] md:right-[3%] bottom-[-20px] left-1/2 transform -translate-x-1/2 ">
+    <div className="fixed sm:bottom-[10%] sm:right-[1%] md:bottom-[10%] md:right-[3%] bottom-[-18px] left-1/2 transform -translate-x-1/2 ">
       {showScrollButton && (
         <BsFillArrowUpCircleFill
-          className="cursor-pointer bg-incherit text-5xl text-[#256469]"
+          className="cursor-pointer bg-incherit text-4xl text-[#256469]"
           onClick={scrollToTop}
         />
       )}
