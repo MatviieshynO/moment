@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'syne-mono': ['"Syne Mono"', 'monospace'],
-        syne: ['"Syne"', 'sans-serif'],
+        'syne': ['"Syne"', 'sans-serif'],
         'space-grotesk': ['"Space Grotesk"', 'sans-serif'],
       },
     },

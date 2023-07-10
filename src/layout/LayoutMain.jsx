@@ -6,14 +6,14 @@ import ScrollToTopButton from '../components/ScrollToTopButton'
 import Navbar from '../components/Navbar'
 
 const layout = ({ children }) => {
-  return (
-    <>
-      <Navbar />
-      <Main>{children}</Main>
-      <Footer />
-      <ScrollToTopButton />
-    </>
-  )
+    return (
+        <div>
+            <Navbar />
+            <Main>{children}</Main>
+            <Footer />
+            <ScrollToTopButton />
+        </div>
+    )
 }
 
 export default layout

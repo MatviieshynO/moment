@@ -10,21 +10,21 @@ import LayoutMenu from './layout/LayoutMenu'
 import Page404 from './pages/Page404'
 
 function App() {
-  return (
-    <>
-      <Routes>
-        <Route>
-          <Route index element={<Layout />} />
-          <Route indexelement={<Main />} />
-          <Route path="/legal" element={<Legal />} />
-          <Route path="/privacy" element={<PrivacyPolicy />} />
-          <Route path="/terms" element={<TermsOfUse />} />
-          <Route path="/menu" element={<LayoutMenu />} />
-          <Route path="*" element={<Page404 />} />
-        </Route>
-      </Routes>
-    </>
-  )
+    return (
+        <div className="sm:hidden">
+            <Routes>
+                <Route>
+                    <Route index element={<Layout />} />
+                    <Route indexelement={<Main />} />
+                    <Route path="/legal" element={<Legal />} />
+                    <Route path="/privacy" element={<PrivacyPolicy />} />
+                    <Route path="/terms" element={<TermsOfUse />} />
+                    <Route path="/menu" element={<LayoutMenu />} />
+                    <Route path="*" element={<Page404 />} />
+                </Route>
+            </Routes>
+        </div>
+    )
 }
 
 export default App

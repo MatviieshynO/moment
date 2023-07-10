@@ -8,15 +8,8 @@ export default function Footer() {
       </ul>
       <div className="p-6 text-center">
         <span className="text-xs">
-          Всі права захищені © 2023 авторське право :{' '}
+          Всі права захищені © 2023 Момент смаку {' '}
         </span>
-        <a
-          className="text-xs font-semibold text-neutral-300"
-          href="https://matviieshyn.vercel.app/"
-          target="blank"
-        >
-          Oleh Matviieshyn
-        </a>
       </div>
     </footer>
   )
