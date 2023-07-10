@@ -700,14 +700,14 @@ const Menu = () => {
                         <div
                             className={
                                 scroll
-                                    ? 'fixed top-[45px] z-50 justify-center flex bg-white w-full overflow-hidden gsap-05-menu-1 py-2 px-[2px] text-base gap-2 '
+                                    ? 'fixed top-[45px] z-50 justify-center flex bg-white w-full overflow-hidden gsap-05-menu-1 py-2 px-[2px] text-base gap-1 '
                                     : 'flex overflow-hidden py-2 px-[2px] justify-center w-full text-base gap-2'
                             }
                         >
                             <div
                                 className={
                                     saltedWaffles && !sweetWaffles
-                                        ? 'flex h-full shrink-0 border-2 border-[#256469] text-[#256469] rounded px-2 p-2'
+                                        ? 'flex h-full shrink-0 border-2 border-[#256469] text-[#256469] rounded px-1 p-2'
                                         : 'flex h-full shrink-0 items-center p-2 border rounded border-[#256469] text-[#256469] opacity-70'
                                 }
                                 onClick={() =>
@@ -719,7 +719,7 @@ const Menu = () => {
                             <div
                                 className={
                                     sweetWaffles && !other
-                                        ? 'flex h-full shrink-0 border-2 border-[#256469] text-[#256469] rounded px-2 p-2'
+                                        ? 'flex h-full shrink-0 border-2 border-[#256469] text-[#256469] rounded  p-2'
                                         : 'flex h-full shrink-0 items-center p-2 border rounded border-[#256469] text-[#256469] opacity-70'
                                 }
                                 onClick={() =>
@@ -731,7 +731,7 @@ const Menu = () => {
                             <div
                                 className={
                                     other
-                                        ? 'flex h-full shrink-0 border-2 border-[#256469] text-[#256469] rounded px-2 p-2'
+                                        ? 'flex h-full shrink-0 border-2 border-[#256469] text-[#256469] rounded  p-2'
                                         : 'flex h-full shrink-0 items-center p-2 border rounded border-[#256469] text-[#256469] opacity-70'
                                 }
                                 onClick={() => scrollToSectionHundler(another)}
