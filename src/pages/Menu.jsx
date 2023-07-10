@@ -112,7 +112,7 @@ const Menu = () => {
             setOffSet((currentOffSet) => {
                 let newOffSet = currentOffSet
 
-                newOffSet = -65
+                newOffSet = -70
                 return newOffSet
             })
         } else {
